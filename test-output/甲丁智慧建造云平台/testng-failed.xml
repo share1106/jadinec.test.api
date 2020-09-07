@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [甲丁智慧建造云平台]">
+  <listeners>
+    <listener class-name="jadinec.test.api.config.ExtentTestNGIReporterListener"/>
+  </listeners>
+  <test name="APP接口测试(failed)">
+    <classes>
+      <class name="jadinec.test.api.cases.GetEngineeringPlaneTest">
+        <methods>
+          <include name="getEngineeringPlaneTest"/>
+        </methods>
+      </class> <!-- jadinec.test.api.cases.GetEngineeringPlaneTest -->
+      <class name="jadinec.test.api.cases.VerificationCodeLoginTest">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- jadinec.test.api.cases.VerificationCodeLoginTest -->
+    </classes>
+  </test> <!-- APP接口测试(failed) -->
+</suite> <!-- Failed suite [甲丁智慧建造云平台] -->
