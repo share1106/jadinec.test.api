@@ -16,42 +16,38 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAppUpdateTest {
+public class ProcessItemsTest {
 
-	// app版本更新
+	// 查询工序列表
 	@Test(enabled=false)
-	public void getAppUpdateTest() throws IOException {
+	public void processItemsTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
 		String data = null;
-		String data1 = null;
+
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
 			data = jsonObject.getString("success");
-			data1 = jsonObject.getString("data");
-
 		}
-		JSONArray ja = new JSONArray();
-		JSONArray jsa = ja.element(data1);
-		Object resultData = null;
-		JSONObject jsonObject = new JSONObject();
-		jsonObject = (JSONObject) jsa.get(0);
-		resultData = jsonObject.get("downFileUrl");
-		System.out.println(resultData);
+
 		// 验证结果
 		Assert.assertEquals("true", data);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAppUpdateUrl);
-		System.out.println(TestConfig.getAppUpdateUrl);
+		HttpPost post = new HttpPost(TestConfig.processItemsUrl);
+		System.out.println(TestConfig.processItemsUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
+
+		param2.put("engineeringCode", "JTDQ-1-011-001-002-201-010-000");
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");

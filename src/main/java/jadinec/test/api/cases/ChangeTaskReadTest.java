@@ -16,42 +16,41 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetEngineeringItemPlaneTest {
+public class ChangeTaskReadTest {
 
-	//地图平面数据
+	// 查询部门组织及人员信息
 		@Test(enabled=false)
-		public void getEngineeringItemPlaneTest() throws IOException {
+		public void changeTaskReadTest() throws IOException {
 
 			// 发送请求
 			JSONArray result = getJsonResult();
 			System.out.println(result);
 
 			String data = null;
+
 			for (int i = 0; i < result.size(); i++) {
 				JSONObject jsonObject = result.getJSONObject(i);
 				data = jsonObject.getString("success");
-				
 			}
-			
+
 			// 验证结果
 			Assert.assertEquals("true", data);
 		}
 
 		private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-			HttpPost post = new HttpPost(TestConfig.getEngineeringItemPlaneUrl);
-			System.out.println(TestConfig.getEngineeringItemPlaneUrl);
+			HttpPost post = new HttpPost(TestConfig.changeTaskReadUrl);
+			System.out.println(TestConfig.changeTaskReadUrl);
 			JSONObject param1 = new JSONObject();
 			JSONObject param2 = new JSONObject();
 
-			param2.put("proCode", "7");
+			param2.put("myTaskId", "1");
 			
 			param1.put("client", "android");
 			param1.put("version", "1.0");
 			param1.put("content", param2);
-			param1.put("token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
 
 			post.setHeader("Content-Type", "application/json;charset=UTF-8");
-			post.setHeader("access_token", "13b22fdb-01c6-4925-818b-b702cc3aa33b");
+			post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
 			post.setHeader("client", "android");
 
 			StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

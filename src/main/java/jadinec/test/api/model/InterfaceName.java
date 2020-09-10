@@ -8,5 +8,18 @@ public enum InterfaceName {
 	GetEngineeringItemHorizontal,GetProcessDetail,
 	GetSubEngineeringList,GetORGDepartmentList,
 	UpdateTaskReadStatus,SendVerifyCodeToPhoneUpdatePassword,
-	GetSysUserDetailInfo,SwitchPhone,VerificationCodeLogin
+	UpdatePassword,GetSysUserDetailInfo,CommitFeedback,
+	SendVerifyCodeToPhoneSwitchPhone,UpdateImage,VerificationCodeLogin,
+	GetTaskFormList,GetAttendanceRules,CommitClockInRecord,
+	GetMonthClockInStatistics,GetTaskTable,GetEngineeringStepItem,
+	RefreshAccessToken,UpdateUserRole,GetTaskDetail,GetMessageNotice,
+	GetMessageNoticeNew,BatchDealWithMsg,GetAllDevice,GetLastBindDevice,
+	UpdateDeviceBindStatus,UpdateDeviceWorkStatus,UpdateMessageNoticeStatus,
+	DelMessageNotice,GetRedoStep,GetMenuList,GetTaskFlowStepList,
+	GetAllTeams,GetTeamCaptainList,GetTeamStaffList,AddTeam,UpdateTeam,
+	DeleteTeam,GetPoiData,GetAllocTabNew,GetAllocListNew,GetTechProcess,
+	GetFenEngineeringData,GetSignPeopleData,GetContratorNick,
+	CommitDailyPlans,GetArrangedMonthPlan,RevokeDailyPlan,GetTechOrSafeCom,
+	GetTechOrSafeDetail,ModiPouringSequenceAll,ModiPouringSequence,
+	ModiPouringStatus,ModiPouringBeginTime
 }

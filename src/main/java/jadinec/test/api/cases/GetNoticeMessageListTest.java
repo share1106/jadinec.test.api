@@ -16,38 +16,30 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAppUpdateTest {
+public class GetNoticeMessageListTest {
 
-	// app版本更新
+	// 消息通知已读、未读列表
 	@Test(enabled=false)
-	public void getAppUpdateTest() throws IOException {
+	public void getNoticeMessageListTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
 		String data = null;
-		String data1 = null;
+
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
 			data = jsonObject.getString("success");
-			data1 = jsonObject.getString("data");
-
 		}
-		JSONArray ja = new JSONArray();
-		JSONArray jsa = ja.element(data1);
-		Object resultData = null;
-		JSONObject jsonObject = new JSONObject();
-		jsonObject = (JSONObject) jsa.get(0);
-		resultData = jsonObject.get("downFileUrl");
-		System.out.println(resultData);
+
 		// 验证结果
 		Assert.assertEquals("true", data);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAppUpdateUrl);
-		System.out.println(TestConfig.getAppUpdateUrl);
+		HttpPost post = new HttpPost(TestConfig.getNoticeMessageListUrl);
+		System.out.println(TestConfig.getNoticeMessageListUrl);
 		JSONObject param1 = new JSONObject();
 
 		param1.put("client", "android");
