@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class SaveTeamTest {
 
 	// 班组添加
-	@Test(enabled=false)
+	@Test
 	public void saveTeamTest() throws IOException {
 
 		// 发送请求
@@ -55,8 +55,7 @@ public class SaveTeamTest {
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
-		param1.put("content", param2);
-
+		
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
 		post.setHeader("client", "android");

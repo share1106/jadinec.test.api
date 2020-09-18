@@ -33,11 +33,6 @@
 					<include name="getEngineeringItemPlaneTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.AddUserToGroupTest">
-				<method>
-					<include name="addUserToGroupTest" />
-				</method>
-			</class>
 			<class name="jadinec.test.api.cases.GetSigTest">
 				<method>
 					<include name="getSigTest" />
@@ -328,6 +323,367 @@
 					<include name="changeWorkBeginTimeTest" />
 				</method>
 			</class>
+			<class name="jadinec.test.api.cases.GetMixingStationTest">
+				<method>
+					<include name="getMixingStationTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.SavePouringTest">
+				<method>
+					<include name="savePouringTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetPouringDetailTest">
+				<method>
+					<include name="getPouringDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.IsBindingTest">
+				<method>
+					<include name="IsBindingStateTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetBaseInfoTest">
+				<method>
+					<include name="getBaseInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMaterialListTest">
+				<method>
+					<include name="getMaterialListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSlagHoleTaskDetailTest">
+				<method>
+					<include name="getSlagHoleTaskDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSlagHoleTaskDetailByStepIdTest">
+				<method>
+					<include name="getSlagHoleTaskDetailByStepIdTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetOtherMechanicalTypeCodeTest">
+				<method>
+					<include name="getOtherMechanicalTypeCodeTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMixingStationProdLineTest">
+				<method>
+					<include name="getMixingStationProdLineTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.BindingMixingStationProdLineTest">
+				<method>
+					<include name="bindingMixingStationProdLineTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.StartProdLineTest">
+				<method>
+					<include name="startProdLineTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetPouringArrangeListTest">
+				<method>
+					<include name="getPouringArrangeListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.TaskStepTableTest">
+				<method>
+					<include name="taskStepTableTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetFreeCarTest">
+				<method>
+					<include name="getFreeCarTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ObtainTransportFormTest">
+				<method>
+					<include name="obtainTransportFormTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetBussinesTableTest">
+				<method>
+					<include name="getBussinesTableTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProdTaskTest">
+				<method>
+					<include name="getProdTaskTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetConstructionLogPageTest">
+				<method>
+					<include name="getConstructionLogPageTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSpecifiedUserStatisticInfoTest">
+				<method>
+					<include name="getSpecifiedUserStatisticInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetDictionaryByGroupTest">
+				<method>
+					<include name="getDictionaryByGroupTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.UpdatePhoneNumTest">
+				<method>
+					<include name="updatePhoneNumTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetApplyFormItemTest">
+				<method>
+					<include name="getApplyFormItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ProdTransCollectTest">
+				<method>
+					<include name="prodTransCollectTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DelProdTransFormTest">
+				<method>
+					<include name="delProdTransFormTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddProdTransFormTest">
+				<method>
+					<include name="addProdTransFormTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.EditProdTransFormTest">
+				<method>
+					<include name="editProdTransFormTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTransTaskTest">
+				<method>
+					<include name="getTransTaskTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetPlansTest">
+				<method>
+					<include name="getPlansTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DealWithNoticeTest">
+				<method>
+					<include name="dealWithNoticeTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetAllotDetailsTest">
+				<method>
+					<include name="getAllotDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMapTextMarkTest">
+				<method>
+					<include name="getMapTextMarkTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringDesignDetailsTest">
+				<method>
+					<include name="getEngineeringDesignDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMechanicalTraceTest">
+				<method>
+					<include name="getMechanicalTraceTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetConcreteApplyListTest">
+				<method>
+					<include name="getConcreteApplyListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetUserInfoDetailEveryDayWorkUserInfoTest">
+				<method>
+					<include name="getUserInfoDetailEveryDayWorkUserInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetUserInfoDetailAllTest">
+				<method>
+					<include name="getUserInfoDetailAllTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetUserInfoDetailTest">
+				<method>
+					<include name="getUserInfoDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ListMaterialDetailTest">
+				<method>
+					<include name="listMaterialDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringRebarDetailTest">
+				<method>
+					<include name="getEngineeringRebarDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProductByWorkareaTest">
+				<method>
+					<include name="getProductByWorkareaTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEquipmentArchivesTest">
+				<method>
+					<include name="getEquipmentArchivesTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEquipmentDetailsTest">
+				<method>
+					<include name="getEquipmentDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEquipmentInfoDetailsTest">
+				<method>
+					<include name="getEquipmentInfoDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.PendingTest">
+				<method>
+					<include name="pendingTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetFacilitiesNameTest">
+				<method>
+					<include name="getFacilitiesNameTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTransDriverPointTest">
+				<method>
+					<include name="getTransDriverPointTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTransDetailsTest">
+				<method>
+					<include name="getTransDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ConcretePouringInformTest">
+				<method>
+					<include name="concretePouringInformTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetConstRatioStepDetailTest">
+				<method>
+					<include name="getConstRatioStepDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetConstRateDetailsTest">
+				<method>
+					<include name="getConstRateDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DriverConfirmTest">
+				<method>
+					<include name="driverConfirmTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetConstRateTaskTest">
+				<method>
+					<include name="getConstRateTaskTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.SendPouringTokenTest">
+				<method>
+					<include name="sendPouringTokenTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProcessBarTest">
+				<method>
+					<include name="getProcessBarTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetOptPersionListTest">
+				<method>
+					<include name="getOptPersionListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetWorkMonthPlanItemInfoTest">
+				<method>
+					<include name="getWorkMonthPlanItemInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringCodeListTest">
+				<method>
+					<include name="getEngineeringCodeListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetItemStateListTest">
+				<method>
+					<include name="getItemStateListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetWorkMonthPlanItemPageListTest">
+				<method>
+					<include name="getWorkMonthPlanItemPageListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.QueryEngineeringTypeToCodeListTest">
+				<method>
+					<include name="queryEngineeringTypeToCodeListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetWorkMonthPlanPageListTest">
+				<method>
+					<include name="getWorkMonthPlanPageListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddMonthPlanItemTest">
+				<method>
+					<include name="addMonthPlanItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOrChangeMonthPlanItemTest">
+				<method>
+					<include name="updateOrChangeMonthPlanItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMonthPlanRatioMonthTest">
+				<method>
+					<include name="getMonthPlanRatioMonthTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMonthPlanItemViewTest">
+				<method>
+					<include name="getMonthPlanItemViewTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMonthPlanViewListTest">
+				<method>
+					<include name="getMonthPlanViewListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ReviewTemporaryMoneyTest">
+				<method>
+					<include name="reviewTemporaryMoneyTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.LaunchTemporaryMoneyTest">
+				<method>
+					<include name="launchTemporaryMoneyTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTemporaryMoneyByProcessOddTest">
+				<method>
+					<include name="getTemporaryMoneyByProcessOddTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTemporaryTypeListTest">
+				<method>
+					<include name="getTemporaryTypeListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringItemListTest">
+				<method>
+					<include name="getEngineeringItemListTest" />
+				</method>
+			</class>
+			
 		</classes>
 	</test>
 

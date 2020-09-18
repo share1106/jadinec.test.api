@@ -51,9 +51,8 @@ public class GetEngineeringItemPlaneTest {
 			param1.put("token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
 
 			post.setHeader("Content-Type", "application/json;charset=UTF-8");
-			post.setHeader("access_token", "13b22fdb-01c6-4925-818b-b702cc3aa33b");
-			post.setHeader("client", "android");
-
+			post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
+			
 			StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 			post.setEntity(entity);
 

@@ -68,7 +68,6 @@ public class GetTokenTest {
 		String access_token = VerificationCodeLoginTest.token;
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token",access_token);
-		post.setHeader("client", "android");
 		System.out.println(VerificationCodeLoginTest.token);
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

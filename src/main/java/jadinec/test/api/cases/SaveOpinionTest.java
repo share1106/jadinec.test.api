@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class SaveOpinionTest {
 
 	// 信息反馈
-	@Test(enabled=false)
+	@Test
 	public void saveOpinionTest() throws IOException {
 
 		// 发送请求
@@ -53,8 +53,7 @@ public class SaveOpinionTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

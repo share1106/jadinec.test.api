@@ -1,11 +1,8 @@
 package jadinec.test.api.cases;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
@@ -19,43 +16,35 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class AddUserToGroupTest {
+public class GetFacilitiesNameTest {
 
-	//往群内添加人员
+	// 获取用户搜索结果
 	@Test(enabled=false)
-	public void addUserToGroupTest() throws IOException {
+	public void getFacilitiesNameTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
 		String data = null;
-		
+
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
 			data = jsonObject.getString("success");
-			
-
 		}
-		
+
 		// 验证结果
 		Assert.assertEquals("true", data);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.addUserToGroupUrl);
-		System.out.println(TestConfig.addUserToGroupUrl);
+		HttpPost post = new HttpPost(TestConfig.getFacilitiesNameUrl);
+		System.out.println(TestConfig.getFacilitiesNameUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
-		Map<String,String> mapParam = new HashMap<String,String>();
-		mapParam.put("member_Account", "14");
-		mapParam.put("member_Account", "13");
-							
-		JSONArray jarray = new JSONArray();
-		jarray.add(mapParam);
 		
-		param2.put("groupId", "@TGS#22K62J6FI");
-		param2.put("memberList", jarray);
+		param2.put("proCode", 7);//项目code
+		param2.put("name", "");//搜索名字
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
@@ -63,7 +52,6 @@ public class AddUserToGroupTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

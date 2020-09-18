@@ -32,7 +32,6 @@ public class VerificationCodeLoginTest {
 		TestConfig.getEngineeringPlaneUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringPlane);
 		TestConfig.getUserUrl = ConfigFile.getUrl(InterfaceName.GetUserInfo);
 		TestConfig.getEngineeringItemPlaneUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringItemPlane);
-		TestConfig.addUserToGroupUrl = ConfigFile.getUrl(InterfaceName.AddUserToGroup);
 		TestConfig.getSigUrl = ConfigFile.getUrl(InterfaceName.GetIMSign);
 		TestConfig.getORGUserDetailUrl = ConfigFile.getUrl(InterfaceName.GetORGUserDetail);
 		TestConfig.getTaskItemsUrl = ConfigFile.getUrl(InterfaceName.GetTaskItem);
@@ -90,6 +89,79 @@ public class VerificationCodeLoginTest {
 		TestConfig.applyFormSortForOneUrl = ConfigFile.getUrl(InterfaceName.ModiPouringSequence);
 		TestConfig.confirmApplyFormUrl = ConfigFile.getUrl(InterfaceName.ModiPouringStatus);
 		TestConfig.changeWorkBeginTimeUrl = ConfigFile.getUrl(InterfaceName.ModiPouringBeginTime);
+		TestConfig.getMixingStationUrl = ConfigFile.getUrl(InterfaceName.GetAllMixStation);
+		TestConfig.savePouringUrl = ConfigFile.getUrl(InterfaceName.PostPouringPlanAmount);
+		TestConfig.getPouringDetailUrl = ConfigFile.getUrl(InterfaceName.GetPouringDetail);
+		TestConfig.isBindingUrl = ConfigFile.getUrl(InterfaceName.GetBindLineState);
+		TestConfig.getBaseInfoUrl = ConfigFile.getUrl(InterfaceName.TunnelSlagHoleGetBaseInfo);
+		TestConfig.getMaterialListUrl = ConfigFile.getUrl(InterfaceName.TunnelSlagHoleGetMaterialList);
+		TestConfig.getSlagHoleTaskDetailUrl = ConfigFile.getUrl(InterfaceName.GetSlagHoleTaskDetail);
+		TestConfig.getSlagHoleTaskDetailByStepIdUrl = ConfigFile.getUrl(InterfaceName.GetSlagHoleTaskDetailByStepId);
+		TestConfig.getOtherMechanicalTypeCodeUrl = ConfigFile.getUrl(InterfaceName.GetOtherMechanicalTypeCode);
+		TestConfig.getMixingStationProdLineUrl = ConfigFile.getUrl(InterfaceName.GetProductAllLine);
+		TestConfig.bindingMixingStationProdLineUrl = ConfigFile.getUrl(InterfaceName.PostBindProductLine);
+		TestConfig.startProdLineUrl = ConfigFile.getUrl(InterfaceName.PostStartProductLine);
+		TestConfig.getPouringArrangeListUrl = ConfigFile.getUrl(InterfaceName.PostPouringListNew);
+		TestConfig.taskStepTableUrl = ConfigFile.getUrl(InterfaceName.GetTableList);
+		TestConfig.obtainTransportFormUrl = ConfigFile.getUrl(InterfaceName.GetTransportList);
+		TestConfig.getFreeCarUrl = ConfigFile.getUrl(InterfaceName.GetFreeTransportCarList);
+		TestConfig.getBussinesTableUrl = ConfigFile.getUrl(InterfaceName.GetTaskTable);
+		TestConfig.getProdTaskUrl = ConfigFile.getUrl(InterfaceName.PostGetOptTask);
+		TestConfig.getConstructionLogPageUrl = ConfigFile.getUrl(InterfaceName.GetConstructionLogPage);
+		TestConfig.getSpecifiedUserStatisticInfoUrl = ConfigFile.getUrl(InterfaceName.GetSpecifiedUserStatisticInfo);
+		TestConfig.getDictionaryByGroupUrl = ConfigFile.getUrl(InterfaceName.GetDictionaryByGroup);
+		TestConfig.updatePhoneNumUrl = ConfigFile.getUrl(InterfaceName.SwitchPhone);
+		TestConfig.getApplyFormItemUrl = ConfigFile.getUrl(InterfaceName.GetPouringlist);
+		TestConfig.prodTransCollectUrl = ConfigFile.getUrl(InterfaceName.GetPouringInfo);
+		TestConfig.delProdTransFormUrl = ConfigFile.getUrl(InterfaceName.DelTmpTransportOrder);
+		TestConfig.addProdTransFormUrl = ConfigFile.getUrl(InterfaceName.AddTmpTransportOrder);
+		TestConfig.editProdTransFormUrl = ConfigFile.getUrl(InterfaceName.UpdateTransportOrderInfo);
+		TestConfig.getTransTaskUrl = ConfigFile.getUrl(InterfaceName.GetTransportTaskList);
+		TestConfig.getPlansUrl = ConfigFile.getUrl(InterfaceName.GetNotArrangedMonthPlanNew);
+		TestConfig.dealWithNoticeUrl = ConfigFile.getUrl(InterfaceName.UpdateConfirmMessageStatus);
+		TestConfig.getAllotDetailsUrl = ConfigFile.getUrl(InterfaceName.GetAllocDetailNew);
+		TestConfig.getMapTextMarkUrl = ConfigFile.getUrl(InterfaceName.GetProBuildTextInfo);
+		TestConfig.getEngineeringDesignDetailsUrl = ConfigFile.getUrl(InterfaceName.GetProBuildTextInfo);
+		TestConfig.getMechanicalTraceUrl = ConfigFile.getUrl(InterfaceName.GetCarExtendInfo);
+		TestConfig.getConcreteApplyListUrl = ConfigFile.getUrl(InterfaceName.GetPouringlistNew);
+		TestConfig.getUserInfoDetailEveryDayWorkUserInfoUrl = ConfigFile.getUrl(InterfaceName.GetUserInfoDetailEveryDayWorkUserInfo);
+		TestConfig.getUserInfoDetailAllUrl = ConfigFile.getUrl(InterfaceName.GetUserInfoDetailAll);
+		TestConfig.getUserInfoDetailUrl = ConfigFile.getUrl(InterfaceName.GetUserInfoDetail);
+		TestConfig.listMaterialDetailUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringRebarDetailNew);
+		TestConfig.getEngineeringRebarDetailUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringRebarDetail);
+		TestConfig.getProductByWorkareaUrl = ConfigFile.getUrl(InterfaceName.GetProductByWorkarea);
+		TestConfig.getEquipmentArchivesUrl = ConfigFile.getUrl(InterfaceName.GetEquipmentArchives);
+		TestConfig.getEquipmentDetailsUrl = ConfigFile.getUrl(InterfaceName.GetEquipmentDetails);
+		TestConfig.getEquipmentInfoDetailsUrl = ConfigFile.getUrl(InterfaceName.GetEquipmentInfoDetails);
+		TestConfig.pendingUrl = ConfigFile.getUrl(InterfaceName.GetManagementRedRoundList);
+		TestConfig.getFacilitiesNameUrl = ConfigFile.getUrl(InterfaceName.GetSearchList);
+		TestConfig.getTransDriverPointUrl = ConfigFile.getUrl(InterfaceName.GetTransportHistory);
+		TestConfig.getTransDetailsUrl = ConfigFile.getUrl(InterfaceName.GetTransportTaskDetail);
+		TestConfig.concretePouringInformUrl = ConfigFile.getUrl(InterfaceName.GetPouringTaskDetail);
+		TestConfig.getConstRatioStepDetailUrl = ConfigFile.getUrl(InterfaceName.GetPouringRateSubmitDetailByStepId);
+		TestConfig.getConstRateDetailsUrl = ConfigFile.getUrl(InterfaceName.GetPouringRateSubmitDetail);
+		TestConfig.driverConfirmUrl = ConfigFile.getUrl(InterfaceName.DealTransportOrderStatus);
+		TestConfig.getConstRateTaskUrl = ConfigFile.getUrl(InterfaceName.GetPouringRate);
+		TestConfig.sendPouringTokenUrl = ConfigFile.getUrl(InterfaceName.AddPouringOrder);
+		TestConfig.getProcessBarUrl = ConfigFile.getUrl(InterfaceName.GetDailyPlanProcessList);
+		TestConfig.getOptPersionListUrl = ConfigFile.getUrl(InterfaceName.GetOptPersionList);
+		TestConfig.getWorkMonthPlanItemInfoUrl = ConfigFile.getUrl(InterfaceName.GetWorkMonthPlanItemInfo);
+		TestConfig.getEngineeringCodeListUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringCodeList);
+		TestConfig.getItemStateListUrl = ConfigFile.getUrl(InterfaceName.GetItemStateList);
+		TestConfig.getWorkMonthPlanItemInfoUrl = ConfigFile.getUrl(InterfaceName.GetWorkMonthPlanItemInfo);
+		TestConfig.getWorkMonthPlanItemPageListUrl = ConfigFile.getUrl(InterfaceName.GetWorkMonthPlanItemPageList);
+		TestConfig.queryEngineeringTypeToCodeListUrl = ConfigFile.getUrl(InterfaceName.QueryEngineeringTypeToCodeList);
+		TestConfig.getWorkMonthPlanPageListUrl = ConfigFile.getUrl(InterfaceName.GetWorkMonthPlanPageList);
+		TestConfig.addMonthPlanItemUrl = ConfigFile.getUrl(InterfaceName.AddMonthPlanItem);
+		TestConfig.updateOrChangeMonthPlanItemUrl = ConfigFile.getUrl(InterfaceName.UpdateOrChangeMonthPlanItem);
+		TestConfig.getMonthPlanRatioMonthUrl = ConfigFile.getUrl(InterfaceName.GetMonthPlanRatioMonth);
+		TestConfig.getMonthPlanItemViewUrl = ConfigFile.getUrl(InterfaceName.GetMonthPlanItemView);
+		TestConfig.getMonthPlanViewListUrl = ConfigFile.getUrl(InterfaceName.GetMonthPlanViewList);
+		TestConfig.reviewTemporaryMoneyUrl = ConfigFile.getUrl(InterfaceName.ReviewTemporaryMoney);
+		TestConfig.launchTemporaryMoneyUrl = ConfigFile.getUrl(InterfaceName.LaunchTemporaryMoney);
+		TestConfig.getTemporaryMoneyByProcessOddUrl = ConfigFile.getUrl(InterfaceName.GetTemporaryMoneyByProcessOdd);
+		TestConfig.getTemporaryTypeListUrl = ConfigFile.getUrl(InterfaceName.GetTemporaryTypeList);
+		TestConfig.getEngineeringItemListUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringItemList);
 		
 		TestConfig.defaultHttpClient = new DefaultHttpClient();
 	}
@@ -131,9 +203,9 @@ public class VerificationCodeLoginTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 				
-		param2.put("clientId", "app");
+		param2.put("permsSystem", "1728");
 		param2.put("phoneNum", "17700000000");
-		param2.put("phoneCode", "1537");
+		param2.put("phoneCode", "1728");
 		param2.put("deviceId", "35861430-6531-A809-FFFF-FFFFEB4C6F18");
 						
 		param1.put("client", "android");
@@ -142,8 +214,7 @@ public class VerificationCodeLoginTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "");
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

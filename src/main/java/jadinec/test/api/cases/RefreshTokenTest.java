@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class RefreshTokenTest {
 
 	// 令牌（token）刷新
-	@Test(dependsOnGroups = { "verificationCodeLoginSuccess" },enabled=false)
+	@Test
 	public void refreshTokenTest() throws IOException {
 
 		// 发送请求
@@ -43,7 +43,7 @@ public class RefreshTokenTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("refreshToken", VerificationCodeLoginTest.refreshToken);
+		param2.put("refreshToken", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
@@ -51,8 +51,7 @@ public class RefreshTokenTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

@@ -47,8 +47,7 @@ public class NoticeItemsTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", VerificationCodeLoginTest.token);
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

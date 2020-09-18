@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 
 public class ApplyFormSortForAllTest {
 
-	// 浇筑申请单排序（全部）
+	// 浇筑申请单排序(全部)
 	@Test(enabled=false)
 	public void applyFormSortForAllTest() throws IOException {
 
@@ -46,28 +46,27 @@ public class ApplyFormSortForAllTest {
 		JSONObject param3 = new JSONObject();
 		JSONObject param4 = new JSONObject();
 
-		param2.put("id", "1");
-		param2.put("sort", "1");
-		
-		param3.put("id", "2");
-		param3.put("sort", "2");
-		
-		param4.put("id", "3");
-		param4.put("sort", "3");
-		
-		List<JSONObject> listParam = new ArrayList<JSONObject>();
-		listParam.add(param2);
-		listParam.add(param3);
-		listParam.add(param4);
+		param2.put("id", "11795");//浇筑申请单ID
+		param2.put("sort", "9");
+				
+		param3.put("id", "11739");
+		param3.put("sort", "10");
+				
+		param4.put("id", "11725");
+		param4.put("sort", "11");
+				
+		JSONArray  jsonArray = new JSONArray();
+		jsonArray.add(param2);
+		jsonArray.add(param3);
+		jsonArray.add(param4);
 		
 		param1.put("client", "android");
 		param1.put("version", "1.0");
-		param1.put("content", listParam);
+		param1.put("content", jsonArray);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

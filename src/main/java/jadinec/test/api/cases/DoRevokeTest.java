@@ -43,7 +43,7 @@ public class DoRevokeTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("dayPlanId", "21");// 日计划id
+		param2.put("dayPlanId", "2");// 日计划id
 		
 		param1.put("client", "android");
 		param1.put("version", "1.0");
@@ -51,8 +51,7 @@ public class DoRevokeTest {
 		
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

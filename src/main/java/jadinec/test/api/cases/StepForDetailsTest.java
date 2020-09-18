@@ -18,7 +18,7 @@ import net.sf.json.JSONObject;
 
 public class StepForDetailsTest {
 
-	// 查询表单元素配置
+	// PC端4级页面根据步骤 查看任务信息
 	@Test(enabled=false)
 	public void stepForDetailsTest() throws IOException {
 
@@ -51,8 +51,7 @@ public class StepForDetailsTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
-
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 

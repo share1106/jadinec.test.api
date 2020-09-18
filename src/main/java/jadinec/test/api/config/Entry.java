@@ -2,7 +2,6 @@ package jadinec.test.api.config;
 
 import org.testng.TestNG;
 
-import jadinec.test.api.cases.AddUserToGroupTest;
 import jadinec.test.api.cases.GetAppUpdateTest;
 import jadinec.test.api.cases.GetEngineeringItemPlaneTest;
 import jadinec.test.api.cases.GetEngineeringPlaneTest;
@@ -16,7 +15,7 @@ public class Entry {
 	public static void main(String[] args) {
 		TestNG testNG = new TestNG();
 		Class[] classes = { GetTokenTest.class,VerificationCodeLoginTest.class,
-				AddUserToGroupTest.class,GetAppUpdateTest.class,GetEngineeringItemPlaneTest.class,
+				GetAppUpdateTest.class,GetEngineeringItemPlaneTest.class,
 				GetEngineeringPlaneTest.class,GetSigTest.class,GetUserTest.class};
 		testNG.setTestClasses(classes);
 		testNG.run();

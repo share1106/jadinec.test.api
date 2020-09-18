@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class ToggleRoleTest {
 
 	// 切换角色或账号
-	@Test(dependsOnGroups= {"verificationCodeLoginSuccess"},enabled=false)
+	@Test(enabled=false)
 	public void toggleRoleTest() throws IOException {
 
 		// 发送请求
@@ -50,9 +50,8 @@ public class ToggleRoleTest {
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
-		post.setHeader("access_token", VerificationCodeLoginTest.token);
-		post.setHeader("client", "android");
-
+		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
+		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
 
