@@ -1,6 +1,7 @@
 package jadinec.test.api.cases;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,11 +17,11 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetApplyFormItemTest {
+public class AddOrUpdateTest {
 
-	// 查询浇筑申请单列表
+	// 新增或者修改工时方案
 	@Test(enabled=false)
-	public void getApplyFormItemTest() throws IOException {
+	public void addOrUpdateTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -38,14 +39,39 @@ public class GetApplyFormItemTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getApplyFormItemUrl);
-		System.out.println(TestConfig.getApplyFormItemUrl);
+		HttpPost post = new HttpPost(TestConfig.addOrUpdateUrl);
+		System.out.println(TestConfig.addOrUpdateUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
-
-		param2.put("state", 1); 
-		param2.put("page", 1);
-		param2.put("stepCode", "BZ15701");// 固定值 混凝土浇筑申请单：BZ1201；路面施工混合料申请：BZ15701
+		JSONObject param3 = new JSONObject();
+		JSONObject param4 = new JSONObject();
+		
+		param3.put("processCode", "GX0101");//工序编码
+		param3.put("processName", "桩基成孔（挖孔灌注桩）");//工序名称
+		param3.put("stepCode", "BZ0201");//步骤编码
+		param3.put("stepName", "测量放样");//步骤名称
+		param3.put("hourNum", "1");//小时数量
+		param3.put("minuteNum", "1");//分钟数量
+		
+		param4.put("processCode", "GX0101");//工序编码
+		param4.put("processName", "桩基成孔（挖孔灌注桩）");//工序名称
+		param4.put("stepCode", "BZ0301");//步骤编码
+		param4.put("stepName", "挖孔开始");//步骤名称
+		param4.put("hourNum", "2");//小时数量
+		param4.put("minuteNum", "2");//分钟数量
+		
+		List<JSONObject> listParam = new ArrayList<JSONObject>();
+		listParam.add(param3);
+		listParam.add(param4);
+		
+		param2.put("id", 1);
+		param2.put("engineeringCategoryCode", "2");//工程类别编码
+		param2.put("engineeringCategoryName", "桥梁");//工程类别名称
+		param2.put("engineeringTypeCode", "FX01");//工程类型编码
+		param2.put("engineeringTypeName", "桩基（挖孔桩）");//工程类型名称
+		param2.put("totalHourNum", 8);//总小时数量
+		param2.put("totalMinuteNum", 8);//总分钟数量
+		param2.put("stepList", listParam);//步骤详细集合
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
@@ -53,6 +79,7 @@ public class GetApplyFormItemTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "c310c31b-3005-4190-aa9a-f82a59b95118");
+		post.setHeader("client","android");
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

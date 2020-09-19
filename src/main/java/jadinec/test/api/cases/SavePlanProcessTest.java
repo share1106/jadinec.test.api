@@ -23,7 +23,7 @@ import net.sf.json.JSONObject;
 public class SavePlanProcessTest {
 
 	// 指量保存日计划
-	@Test
+	@Test(enabled=false)
 	public void savePlanProcessTest() throws IOException {
 
 		// 发送请求

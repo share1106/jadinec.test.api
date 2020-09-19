@@ -140,6 +140,21 @@ public class TestConfig {
 	public static String getTemporaryMoneyByProcessOddUrl;
 	public static String getTemporaryTypeListUrl;
 	public static String getEngineeringItemListUrl;
+	public static String getTemporaryMoneyListUrl;
+	public static String getLedgerListUrl;
+	public static String getListUrl;
+	public static String getEngineeringCategoryListUrl;
+	public static String getEngineeringTypeListUrl;
+	public static String getProcessStepListUrl;
+	public static String addOrUpdateUrl;
+	public static String getDetailUrl;
+	public static String deleteUrl;
+	public static String getBasicInfoUrl;
+	public static String listEngineeringListsUrl;
+	public static String listWallRocksUrl;
+	public static String listLiningTypesUrl;
+	public static String listMaterialInfoUrl;
+	
 		
 	public static DefaultHttpClient defaultHttpClient;
 	public static CookieStore cookieStore;

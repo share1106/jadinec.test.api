@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class SaveAttendanceRecordInfoTest {
 
 	// 保存考勤打卡记录
-	@Test
+	@Test(enabled=false)
 	public void saveAttendanceRecordInfoTest() throws IOException {
 
 		// 发送请求

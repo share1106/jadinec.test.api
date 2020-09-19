@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class ReadNoticeTest {
 
 	// 更改消息为已读状态
-	@Test
+	@Test(enabled=false)
 	public void readNoticeTest() throws IOException {
 
 		// 发送请求

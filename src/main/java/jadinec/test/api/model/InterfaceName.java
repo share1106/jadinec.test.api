@@ -63,6 +63,9 @@ public enum InterfaceName {
 	ScheduleForDetails,GetEarthWorkTaskByTaskOdd,QueryTemplateByCode,
 	QueryMechanicalApplyRecordByAccount,queryTaskAgentsList,GetProjectMonthDateRule,
 	ManageInspectionList,QueryMechanicalInOutList,QueryMechanicalInfoByState,
-	QueryAllMechanicalInfoByState
+	QueryAllMechanicalInfoByState,TunnelWorkTimePlanGetList,TunnelGetEngineeringCategoryList,
+	TunnelGetEngineeringCategoryTypeList,TunnelGetProcessStepList,TunnelAddOrUpdate,
+	TunnelGetDetail,TunnelDelete,TunnelWallRockGetBasicInfo,TunnelWallRockListEngineeringLists,
+	TunnelWallRockList,TunnelWallRockListLiningTypes,TunnelWallRockListMaterialInfo
 	
 }

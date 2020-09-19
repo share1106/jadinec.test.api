@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class SaveOpinionTest {
 
 	// 信息反馈
-	@Test
+	@Test(enabled=false)
 	public void saveOpinionTest() throws IOException {
 
 		// 发送请求

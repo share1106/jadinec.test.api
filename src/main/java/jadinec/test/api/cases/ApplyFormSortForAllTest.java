@@ -44,28 +44,24 @@ public class ApplyFormSortForAllTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 		JSONObject param3 = new JSONObject();
-		JSONObject param4 = new JSONObject();
-
-		param2.put("id", "11795");//浇筑申请单ID
-		param2.put("sort", "9");
-				
-		param3.put("id", "11739");
-		param3.put("sort", "10");
-				
-		param4.put("id", "11725");
-		param4.put("sort", "11");
-				
-		JSONArray  jsonArray = new JSONArray();
-		jsonArray.add(param2);
-		jsonArray.add(param3);
-		jsonArray.add(param4);
 		
+		param2.put("id", "338");//浇筑申请单ID
+		param2.put("sort", "1");
+				
+		param3.put("id", "338");
+		param3.put("sort", "2");
+				
+		List<JSONObject> listParam = new ArrayList<JSONObject>();
+		listParam.add(param2);
+		listParam.add(param3);
+				
 		param1.put("client", "android");
 		param1.put("version", "1.0");
-		param1.put("content", jsonArray);
+		param1.put("content", listParam);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
-		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
+		post.setHeader("access_token", "c310c31b-3005-4190-aa9a-f82a59b95118");
+		post.setHeader("client","android");
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

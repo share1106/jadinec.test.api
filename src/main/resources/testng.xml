@@ -683,6 +683,76 @@
 					<include name="getEngineeringItemListTest" />
 				</method>
 			</class>
+			<class name="jadinec.test.api.cases.GetTemporaryMoneyListTest">
+				<method>
+					<include name="getTemporaryMoneyListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetLedgerListTest">
+				<method>
+					<include name="getLedgerListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetListTest">
+				<method>
+					<include name="getListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringCategoryListTest">
+				<method>
+					<include name="getEngineeringCategoryListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringTypeListTest">
+				<method>
+					<include name="getEngineeringTypeListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProcessStepListTest">
+				<method>
+					<include name="getProcessStepListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddOrUpdateTest">
+				<method>
+					<include name="addOrUpdateTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetDetailTest">
+				<method>
+					<include name="getDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DeleteTest">
+				<method>
+					<include name="deleteTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetBasicInfoTest">
+				<method>
+					<include name="getBasicInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ListEngineeringListsTest">
+				<method>
+					<include name="listEngineeringListsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ListWallRocksTest">
+				<method>
+					<include name="listWallRocksTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ListLiningTypesTest">
+				<method>
+					<include name="listLiningTypesTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ListMaterialInfoTest">
+				<method>
+					<include name="listMaterialInfoTest" />
+				</method>
+			</class>
 			
 		</classes>
 	</test>

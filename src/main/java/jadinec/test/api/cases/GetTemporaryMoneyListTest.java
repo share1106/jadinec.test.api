@@ -16,11 +16,11 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetApplyFormItemTest {
+public class GetTemporaryMoneyListTest {
 
-	// 查询浇筑申请单列表
+	// 查询临时费用申请列表
 	@Test(enabled=false)
-	public void getApplyFormItemTest() throws IOException {
+	public void getTemporaryMoneyListTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -38,21 +38,23 @@ public class GetApplyFormItemTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getApplyFormItemUrl);
-		System.out.println(TestConfig.getApplyFormItemUrl);
+		HttpPost post = new HttpPost(TestConfig.getTemporaryMoneyListUrl);
+		System.out.println(TestConfig.getTemporaryMoneyListUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
+		
+		param2.put("keyWord", "");
+		param2.put("startTime", "");
+		param2.put("endTime", "");
+		param2.put("ledgerCodeList", null);
 
-		param2.put("state", 1); 
-		param2.put("page", 1);
-		param2.put("stepCode", "BZ15701");// 固定值 混凝土浇筑申请单：BZ1201；路面施工混合料申请：BZ15701
-
-		param1.put("client", "android");
 		param1.put("version", "1.0");
+		param1.put("client", "android");
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "c310c31b-3005-4190-aa9a-f82a59b95118");
+		post.setHeader("client", "android");
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

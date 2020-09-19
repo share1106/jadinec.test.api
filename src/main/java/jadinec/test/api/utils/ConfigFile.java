@@ -426,6 +426,48 @@ public class ConfigFile {
 		if(name == InterfaceName.GetEngineeringItemList) {
 			uri = bundle.getString("getEngineeringItemList.uri");
 		}
+		if(name == InterfaceName.GetTemporaryMoneyList) {
+			uri = bundle.getString("getTemporaryMoneyList.uri");
+		}
+		if(name == InterfaceName.GetLedgerList) {
+			uri = bundle.getString("getLedgerList.uri");
+		}
+		if(name == InterfaceName.TunnelWorkTimePlanGetList) {
+			uri = bundle.getString("getList.uri");
+		}
+		if(name == InterfaceName.TunnelGetEngineeringCategoryList) {
+			uri = bundle.getString("getEngineeringCategoryList.uri");
+		}
+		if(name == InterfaceName.TunnelGetEngineeringCategoryTypeList) {
+			uri = bundle.getString("getEngineeringTypeList.uri");
+		}
+		if(name == InterfaceName.TunnelGetProcessStepList) {
+			uri = bundle.getString("getProcessStepList.uri");
+		}
+		if(name == InterfaceName.TunnelAddOrUpdate) {
+			uri = bundle.getString("addOrUpdate.uri");
+		}
+		if(name == InterfaceName.TunnelGetDetail) {
+			uri = bundle.getString("getDetail.uri");
+		}
+		if(name == InterfaceName.TunnelDelete) {
+			uri = bundle.getString("delete.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockGetBasicInfo) {
+			uri = bundle.getString("getBasicInfo.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockListEngineeringLists) {
+			uri = bundle.getString("listEngineeringLists.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockList) {
+			uri = bundle.getString("listWallRocks.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockListLiningTypes) {
+			uri = bundle.getString("listLiningTypes.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockListMaterialInfo) {
+			uri = bundle.getString("listMaterialInfo.uri");
+		}
 		
 		testUrl = address + uri;
 		return testUrl;

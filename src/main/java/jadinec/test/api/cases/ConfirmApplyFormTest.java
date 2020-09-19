@@ -43,15 +43,16 @@ public class ConfirmApplyFormTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("applyFormId", "11725");//浇筑申请单ID
-		param2.put("state", "1");//1确认； 0驳回
+		param2.put("applyFormId", 11577);//浇筑申请单ID
+		param2.put("state", 0);//1确认； 0驳回
 		
 		param1.put("client", "android");
 		param1.put("version", "1.0");
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
-		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
+		post.setHeader("access_token", "c310c31b-3005-4190-aa9a-f82a59b95118");
+		post.setHeader("client","android");
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

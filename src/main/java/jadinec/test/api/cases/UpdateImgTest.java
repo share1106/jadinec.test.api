@@ -44,14 +44,15 @@ public class UpdateImgTest {
 		JSONObject param2 = new JSONObject();
 
 		param2.put("imgUrl", "‪C:/Users/ganggang/Desktop/tea.jpg");
-		param2.put("type", "1");
+		param2.put("type", "3");
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
-		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
+		post.setHeader("access_token", "c310c31b-3005-4190-aa9a-f82a59b95118");
+		post.setHeader("client", "android");
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 public class ReviewTemporaryMoneyTest {
 
 	// 流程审核
-	@Test
+	@Test(enabled=false)
 	public void reviewTemporaryMoneyTest() throws IOException {
 
 		// 发送请求

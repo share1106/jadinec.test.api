@@ -16,11 +16,11 @@ import jadinec.test.api.config.TestConfig;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetApplyFormItemTest {
+public class GetEngineeringTypeListTest {
 
-	// 查询浇筑申请单列表
+	// 查询工程类型集合
 	@Test(enabled=false)
-	public void getApplyFormItemTest() throws IOException {
+	public void getEngineeringTypeListTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -38,14 +38,12 @@ public class GetApplyFormItemTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getApplyFormItemUrl);
-		System.out.println(TestConfig.getApplyFormItemUrl);
+		HttpPost post = new HttpPost(TestConfig.getEngineeringTypeListUrl);
+		System.out.println(TestConfig.getEngineeringTypeListUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
-
-		param2.put("state", 1); 
-		param2.put("page", 1);
-		param2.put("stepCode", "BZ15701");// 固定值 混凝土浇筑申请单：BZ1201；路面施工混合料申请：BZ15701
+		
+		param2.put("engineeringCategoryCode", "2");//工程类别编码
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");

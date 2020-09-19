@@ -1,6 +1,7 @@
 package jadinec.test.api.cases;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -44,16 +45,18 @@ public class OkForCloseStepTest {
 		System.out.println(TestConfig.okForCloseStepUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
+		JSONObject param3 = new JSONObject();
+		JSONObject param4 = new JSONObject();
 				
-		Map<String,String> mapParam = new HashMap<String,String>();
-		mapParam.put("engineering_name", "第6跨湿接缝");
-		mapParam.put("center_stump", "8.3");
-							
-		JSONArray jarray = new JSONArray();
-		jarray.add(mapParam);
+		param3.put("engineering_name", "第6跨湿接缝");
+		param4.put("center_stump", "8.3");
 		
+		List<JSONObject> listParam = new ArrayList<JSONObject>();
+		listParam.add(param3);
+		listParam.add(param4);
+							
 		param2.put("stepId", "320125");
-		param2.put("form", jarray);
+		param2.put("form", listParam);
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
@@ -61,6 +64,7 @@ public class OkForCloseStepTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
+		post.setHeader("client","android");
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

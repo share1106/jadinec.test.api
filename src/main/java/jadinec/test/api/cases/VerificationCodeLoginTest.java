@@ -162,6 +162,20 @@ public class VerificationCodeLoginTest {
 		TestConfig.getTemporaryMoneyByProcessOddUrl = ConfigFile.getUrl(InterfaceName.GetTemporaryMoneyByProcessOdd);
 		TestConfig.getTemporaryTypeListUrl = ConfigFile.getUrl(InterfaceName.GetTemporaryTypeList);
 		TestConfig.getEngineeringItemListUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringItemList);
+		TestConfig.getTemporaryMoneyListUrl = ConfigFile.getUrl(InterfaceName.GetTemporaryMoneyList);
+		TestConfig.getLedgerListUrl = ConfigFile.getUrl(InterfaceName.GetLedgerList);
+		TestConfig.getListUrl = ConfigFile.getUrl(InterfaceName.TunnelWorkTimePlanGetList);
+		TestConfig.getEngineeringCategoryListUrl = ConfigFile.getUrl(InterfaceName.TunnelGetEngineeringCategoryList);
+		TestConfig.getEngineeringTypeListUrl = ConfigFile.getUrl(InterfaceName.TunnelGetEngineeringCategoryTypeList);
+		TestConfig.getProcessStepListUrl = ConfigFile.getUrl(InterfaceName.TunnelGetProcessStepList);
+		TestConfig.addOrUpdateUrl = ConfigFile.getUrl(InterfaceName.TunnelAddOrUpdate);
+		TestConfig.getDetailUrl = ConfigFile.getUrl(InterfaceName.TunnelGetDetail);
+		TestConfig.deleteUrl = ConfigFile.getUrl(InterfaceName.TunnelDelete);
+		TestConfig.getBasicInfoUrl = ConfigFile.getUrl(InterfaceName.TunnelWallRockGetBasicInfo);
+		TestConfig.listEngineeringListsUrl = ConfigFile.getUrl(InterfaceName.TunnelWallRockListEngineeringLists);
+		TestConfig.listWallRocksUrl = ConfigFile.getUrl(InterfaceName.TunnelWallRockList);
+		TestConfig.listLiningTypesUrl = ConfigFile.getUrl(InterfaceName.TunnelWallRockListLiningTypes);
+		TestConfig.listMaterialInfoUrl = ConfigFile.getUrl(InterfaceName.TunnelWallRockListMaterialInfo);
 		
 		TestConfig.defaultHttpClient = new DefaultHttpClient();
 	}
@@ -191,7 +205,7 @@ public class VerificationCodeLoginTest {
 		token = jsonObject.get("accessToken").toString();
 		refreshToken = jsonObject.get("refreshToken").toString();
 		System.out.println(token);
-		//System.out.println(refreshToken);
+		System.out.println(refreshToken);
 		//验证结果
 		Assert.assertEquals("true", data);
 		
@@ -205,7 +219,7 @@ public class VerificationCodeLoginTest {
 				
 		param2.put("permsSystem", "1728");
 		param2.put("phoneNum", "17700000000");
-		param2.put("phoneCode", "1728");
+		param2.put("phoneCode", "1148");
 		param2.put("deviceId", "35861430-6531-A809-FFFF-FFFFEB4C6F18");
 						
 		param1.put("client", "android");
@@ -214,6 +228,7 @@ public class VerificationCodeLoginTest {
 
 		post.setHeader("Content-Type", "application/json;charset=UTF-8");
 		post.setHeader("access_token", "");
+		post.setHeader("client","android");
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
