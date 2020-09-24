@@ -13,6 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import jadinec.test.api.config.TestConfig;
+import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -45,8 +46,9 @@ public class GetEngineeringCategoryListTest {
 		param1.put("client", "android");
 		param1.put("version", "1.0");
 		
-		post.setHeader("Content-Type", "application/json;charset=UTF-8");
-		post.setHeader("access_token", "c310c31b-3005-4190-aa9a-f82a59b95118");
+		post.setHeader("Content-Type", ConfigFile.Content_Type);
+		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("client", ConfigFile.client);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

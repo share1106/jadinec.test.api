@@ -8,7 +8,12 @@ import jadinec.test.api.model.InterfaceName;
 public class ConfigFile {
 
 	private static ResourceBundle bundle = ResourceBundle.getBundle("application", Locale.CHINA);
-
+	public static String access_token = bundle.getString("access_token");
+	public static String Content_Type = bundle.getString("Content-Type");
+	public static String client = bundle.getString("client");
+	public static String version = bundle.getString("version");
+	
+	
 	public static String getUrl(InterfaceName name) {
 		String address = bundle.getString("test.url");
 		String uri = "";
@@ -33,9 +38,7 @@ public class ConfigFile {
 		if(name == InterfaceName.GetEngineeringItemPlane) {
 			uri = bundle.getString("getEngineeringItemPlane.uri");
 		}
-		if(name == InterfaceName.GetIMSign) {
-			uri = bundle.getString("getSig.uri");
-		}
+		
 		if(name == InterfaceName.GetORGUserDetail) {
 			uri = bundle.getString("getORGUserDetail.uri");
 		}
@@ -51,9 +54,7 @@ public class ConfigFile {
 		if(name == InterfaceName.GetEngineeringItemHorizontal) {
 			uri = bundle.getString("getEngineeringItemHorizontal.uri");
 		}
-		if(name == InterfaceName.GetProcessDetail) {
-			uri = bundle.getString("getEngineeringProcess.uri");
-		}
+		
 		if(name == InterfaceName.GetSubEngineeringList) {
 			uri = bundle.getString("getEngineeringSubItem.uri");
 		}
@@ -65,9 +66,6 @@ public class ConfigFile {
 		}
 		if(name == InterfaceName.UpdatePassword) {
 			uri = bundle.getString("updatePwdApi.uri");
-		}
-		if(name == InterfaceName.GetSysUserDetailInfo) {
-			uri = bundle.getString("getUserInfo.uri");
 		}
 		if(name == InterfaceName.CommitFeedback) {
 			uri = bundle.getString("saveOpinion.uri");
@@ -81,15 +79,7 @@ public class ConfigFile {
 		if(name == InterfaceName.GetTaskFormList) {
 			uri = bundle.getString("getFormItems.uri");
 		}
-		if(name == InterfaceName.GetAttendanceRules) {
-			uri = bundle.getString("getFacilitiesCode.uri");
-		}
-		if(name == InterfaceName.CommitClockInRecord) {
-			uri = bundle.getString("saveAttendanceRecordInfo.uri");
-		}
-		if(name == InterfaceName.GetMonthClockInStatistics) {
-			uri = bundle.getString("getAttendanceRecordStatistics.uri");
-		}
+		
 		if(name == InterfaceName.GetTaskTable) {
 			uri = bundle.getString("getBussinesTable.uri");
 		}
@@ -105,15 +95,7 @@ public class ConfigFile {
 		if(name == InterfaceName.GetTaskDetail) {
 			uri = bundle.getString("stepForDetails.uri");
 		}
-		if(name == InterfaceName.GetMessageNotice) {
-			uri = bundle.getString("noticeItems.uri");
-		}
-		if(name == InterfaceName.GetMessageNoticeNew) {
-			uri = bundle.getString("getNoticeMessageList.uri");
-		}
-		if(name == InterfaceName.BatchDealWithMsg) {
-			uri = bundle.getString("batchDealWithMsg.uri");
-		}
+		
 		if(name == InterfaceName.GetAllDevice) {
 			uri = bundle.getString("getMechanicalList.uri");
 		}
@@ -126,12 +108,7 @@ public class ConfigFile {
 		if(name == InterfaceName.UpdateDeviceWorkStatus) {
 			uri = bundle.getString("toggleMechanical.uri");
 		}
-		if(name == InterfaceName.UpdateMessageNoticeStatus) {
-			uri = bundle.getString("readNotice.uri");
-		}
-		if(name == InterfaceName.DelMessageNotice) {
-			uri = bundle.getString("delNotice.uri");
-		}
+		
 		if(name == InterfaceName.GetRedoStep) {
 			uri = bundle.getString("obtainStepId.uri");
 		}
@@ -168,33 +145,7 @@ public class ConfigFile {
 		if(name == InterfaceName.GetAllocListNew) {
 			uri = bundle.getString("getPlanManageTask.uri");
 		}
-		if(name == InterfaceName.GetTechProcess) {
-			uri = bundle.getString("getProcessList.uri");
-		}
-		if(name == InterfaceName.GetFenEngineeringData) {
-			uri = bundle.getString("getEngineeringItemInfo.uri");
-		}
-		if(name == InterfaceName.GetSignPeopleData) {
-			uri = bundle.getString("getOrgAllUserInfo.uri");
-		}
-		if(name == InterfaceName.GetContratorNick) {
-			uri = bundle.getString("getOrgName.uri");
-		}
-		if(name == InterfaceName.CommitDailyPlans) {
-			uri = bundle.getString("savePlanProcess.uri");
-		}
-		if(name == InterfaceName.GetArrangedMonthPlan) {
-			uri = bundle.getString("getDayPlanProcessList.uri");
-		}
-		if(name == InterfaceName.RevokeDailyPlan) {
-			uri = bundle.getString("doRevoke.uri");
-		}
-		if(name == InterfaceName.GetTechOrSafeCom) {
-			uri = bundle.getString("getTechnologySecurityDisclosure.uri");
-		}
-		if(name == InterfaceName.GetTechOrSafeDetail) {
-			uri = bundle.getString("getAppTechnologySecurityDisclosureInfo.uri");
-		}
+		
 		if(name == InterfaceName.ModiPouringSequenceAll) {
 			uri = bundle.getString("applyFormSortForAll.uri");
 		}
@@ -467,6 +418,225 @@ public class ConfigFile {
 		}
 		if(name == InterfaceName.TunnelWallRockListMaterialInfo) {
 			uri = bundle.getString("listMaterialInfo.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockAddOrUpdateWallRockLevelChange) {
+			uri = bundle.getString("addOrUpdateWallRockLevelChange.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockQueryWallRockInfoByProcessOdd) {
+			uri = bundle.getString("queryWallRoackInfoByProcessOdd.uri");
+		}
+		if(name == InterfaceName.TunnelReviewWallRockLevel) {
+			uri = bundle.getString("reviewWallRockLevel.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockcancelMaterialProcess) {
+			uri = bundle.getString("cancelMaterialProcess.uri");
+		}
+		if(name == InterfaceName.TunnelEffectGetEffectRecordList) {
+			uri = bundle.getString("getEffectRecordList.uri");
+		}
+		if(name == InterfaceName.TunnelEffectGetTechnicianList) {
+			uri = bundle.getString("getTechnicianList.uri");
+		}
+		if(name == InterfaceName.TunnelCancelEffectTechnicianList) {
+			uri = bundle.getString("cancelEffectRecordProcess.uri");
+		}
+		if(name == InterfaceName.TunnelCancelEffectAddPageInitData) {
+			uri = bundle.getString("getAddPageInitData.uri");
+		}
+		if(name == InterfaceName.TunnelEffectGetProcessDetail) {
+			uri = bundle.getString("getProcessDetail.uri");
+		}
+		if(name == InterfaceName.TunnelEffectGetEffectRecordDetail) {
+			uri = bundle.getString("getEffectRecordDetail.uri");
+		}
+		if(name == InterfaceName.TunnelEffectCheck) {
+			uri = bundle.getString("reviewEffectRecord.uri");
+		}
+		if(name == InterfaceName.TunnelEffectExportDataToPath) {
+			uri = bundle.getString("exportDataToPath.uri");
+		}
+		if(name == InterfaceName.StatisticListProjectSeperate) {
+			uri = bundle.getString("listProjectSeperate.uri");
+		}
+		if(name == InterfaceName.StatisticGetProjectLocationSummaryInfo) {
+			uri = bundle.getString("getProjectLocationSummaryInfo.uri");
+		}
+		if(name == InterfaceName.StatisticGetSubcontractorSeperateList) {
+			uri = bundle.getString("getSubcontractorSeperateList.uri");
+		}
+		if(name == InterfaceName.StatisticGetSubcontractorLocationSummary) {
+			uri = bundle.getString("getSubcontractorLocationSummary.uri");
+		}
+		if(name == InterfaceName.StatisticGetEngineeringMaterialSummary) {
+			uri = bundle.getString("getEngineeringMaterialSummary.uri");
+		}
+		if(name == InterfaceName.StatisticGetMaterialConsumeDetail) {
+			uri = bundle.getString("getMaterialConsumeDetail.uri");
+		}
+		if(name == InterfaceName.StatisticGetEngineeringMaterialDetail) {
+			uri = bundle.getString("getEngineeringMaterialDetail.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetBaseInfo) {
+			uri = bundle.getString("getSlagHoleBaseInfo.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetMaterialList) {
+			uri = bundle.getString("getSlagHoleMaterialList.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetDispatchVehicleList) {
+			uri = bundle.getString("getDispatchVehicleList.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleSaveDispatch) {
+			uri = bundle.getString("saveDispatch.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetDispatchList) {
+			uri = bundle.getString("getDispatchList.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetDispatchDetail) {
+			uri = bundle.getString("getDispatchDetail.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetReceivingVehicleList) {
+			uri = bundle.getString("getReceivingVehicleList.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetReceivingList) {
+			uri = bundle.getString("getReceivingList.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetReceivingDetail) {
+			uri = bundle.getString("getReceivingDetail.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleGetWeighingOrderDetail) {
+			uri = bundle.getString("getWeighingOrderDetail.uri");
+		}
+		if(name == InterfaceName.TunnelWallRockpreview) {
+			uri = bundle.getString("preview.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleUpdateWeighingList) {
+			uri = bundle.getString("updateWeighingList.uri");
+		}
+		if(name == InterfaceName.TunnelSlagHoleSaveReceiving) {
+			uri = bundle.getString("saveReceiving.uri");
+		}
+		if(name == InterfaceName.GetEarthworkTask) {
+			uri = bundle.getString("getEarthworkTask.uri");
+		}
+		if(name == InterfaceName.GetOnlineMarkList) {
+			uri = bundle.getString("getOnlineMarkList.uri");
+		}
+		if(name == InterfaceName.GetMarkDetailForSlide) {
+			uri = bundle.getString("getMarkDetailForSlide.uri");
+		}
+		if(name == InterfaceName.GetDeviceByDeviceType) {
+			uri = bundle.getString("getDeviceByDeviceType.uri");
+		}
+		if(name == InterfaceName.GetEarthworkBorrowArea) {
+			uri = bundle.getString("getEarthworkBorrowArea.uri");
+		}
+		if(name == InterfaceName.InsertEarthworkTaskToOwner) {
+			uri = bundle.getString("insertEarthworkTaskToOwner.uri");
+		}
+		if(name == InterfaceName.UpdateEarthworkOwnerById) {
+			uri = bundle.getString("updateEarthworkOwnerById.uri");
+		}
+		if(name == InterfaceName.GetTodayStatistic) {
+			uri = bundle.getString("getTodayStatistic.uri");
+		}
+		if(name == InterfaceName.SaveDeviceWorkingInfo) {
+			uri = bundle.getString("saveDeviceWorkingInfo.uri");
+		}
+		if(name == InterfaceName.GetTemporaryTaskType) {
+			uri = bundle.getString("getTemporaryTaskType.uri");
+		}
+		if(name == InterfaceName.InsertTemporaryTask) {
+			uri = bundle.getString("insertTemporaryTask.uri");
+		}
+		if(name == InterfaceName.GetSPTaskList) {
+			uri = bundle.getString("getConstTaskList.uri");
+		}
+		if(name == InterfaceName.GetSplitEngineering) {
+			uri = bundle.getString("getSplitTask.uri");
+		}
+		if(name == InterfaceName.CheckPlanExecState) {
+			uri = bundle.getString("checkPlanExecState.uri");
+		}
+		if(name == InterfaceName.GetEngineeringItemDesignData) {
+			uri = bundle.getString("getEngineeringItemDesignData.uri");
+		}
+		if(name == InterfaceName.GetEngineeringItemDesignLength) {
+			uri = bundle.getString("getEngineeringItemDesignLength.uri");
+		}
+		if(name == InterfaceName.EditSplitTask) {
+			uri = bundle.getString("editSplitTask.uri");
+		}
+		if(name == InterfaceName.DelSplitTask) {
+			uri = bundle.getString("delSplitTask.uri");
+		}
+		if(name == InterfaceName.GetSplitDetail) {
+			uri = bundle.getString("getSplitDetail.uri");
+		}
+		if(name == InterfaceName.GetTaskAndOrderList) {
+			uri = bundle.getString("getTaskAndOrderList.uri");
+		}
+		if(name == InterfaceName.ArrivedExcavateArea) {
+			uri = bundle.getString("arrivedExcavateArea.uri");
+		}
+		if(name == InterfaceName.EnterWjj) {
+			uri = bundle.getString("enterWjj.uri");
+		}
+		if(name == InterfaceName.SaveFillOrder) {
+			uri = bundle.getString("saveFillOrder.uri");
+		}
+		if(name == InterfaceName.DoneFillOrder) {
+			uri = bundle.getString("doneFillOrder.uri");
+		}
+		if(name == InterfaceName.GetTodayWorkOrder) {
+			uri = bundle.getString("getTodayWorkOrder.uri");
+		}
+		if(name == InterfaceName.GetStatisticWorkOrder) {
+			uri = bundle.getString("getStatisticWorkOrder.uri");
+		}
+		if(name == InterfaceName.GetStatisticMonthWorkOrder) {
+			uri = bundle.getString("getStatisticMonthWorkOrder.uri");
+		}
+		if(name == InterfaceName.GetFillOrderDetail) {
+			uri = bundle.getString("getFillOrderDetail.uri");
+		}
+		if(name == InterfaceName.GetStatisticMonthLineWorkOrder) {
+			uri = bundle.getString("getStatisticMonthLineWorkOrder.uri");
+		}
+		if(name == InterfaceName.GetFillTaskDetail) {
+			uri = bundle.getString("getFillTaskDetail.uri");
+		}
+		if(name == InterfaceName.GetSplitEngineering) {
+			uri = bundle.getString("getSplitEngineering.uri");
+		}
+		if(name == InterfaceName.GetPlanCategoryCode) {
+			uri = bundle.getString("getPlanCategoryCode.uri");
+		}
+		if(name == InterfaceName.GetPlanSearchTypeCode) {
+			uri = bundle.getString("getPlanSearchTypeCode.uri");
+		}
+		if(name == InterfaceName.GetSearchElement) {
+			uri = bundle.getString("getSearchElement.uri");
+		}
+		if(name == InterfaceName.GetEngineeringCategory) {
+			uri = bundle.getString("getEngineeringCategory.uri");
+		}
+		if(name == InterfaceName.GetEngineeringLevel) {
+			uri = bundle.getString("getEngineeringLevel.uri");
+		}
+		if(name == InterfaceName.GetWorkAreaCode) {
+			uri = bundle.getString("getWorkAreaCode.uri");
+		}
+		if(name == InterfaceName.GetEngineeringTypeProcess) {
+			uri = bundle.getString("getEngineeringTypeProcess.uri");
+		}
+		if(name == InterfaceName.GetEngineeringType) {
+			uri = bundle.getString("getEngineeringType.uri");
+		}
+		if(name == InterfaceName.FollowUp) {
+			uri = bundle.getString("followUp.uri");
+		}
+		if(name == InterfaceName.Schedule) {
+			uri = bundle.getString("schedule.uri");
 		}
 		
 		testUrl = address + uri;

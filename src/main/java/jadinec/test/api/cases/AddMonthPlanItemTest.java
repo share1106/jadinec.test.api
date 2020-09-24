@@ -14,6 +14,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import jadinec.test.api.config.TestConfig;
+import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -77,9 +78,9 @@ public class AddMonthPlanItemTest {
 		param1.put("content", listResult);
 		
 
-		post.setHeader("Content-Type", "application/json;charset=UTF-8");
-		post.setHeader("access_token", "5d12f2bf-1538-4f08-b883-58aab1dc86c1");
-		post.setHeader("client", "android");
+		post.setHeader("Content-Type", ConfigFile.Content_Type);
+		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("client", ConfigFile.client);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
