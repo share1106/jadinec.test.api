@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetAllotDetailsTest {
 
 	// 分配任务详情
-	@Test(enabled=false)
+	@Test
 	public void getAllotDetailsTest() throws IOException {
 
 		// 发送请求

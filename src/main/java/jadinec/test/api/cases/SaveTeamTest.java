@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class SaveTeamTest {
 
 	// 班组添加
-	@Test(enabled=false)
+	@Test
 	public void saveTeamTest() throws IOException {
 
 		// 发送请求
@@ -45,11 +45,12 @@ public class SaveTeamTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 		
-		int[] param = {366,367};
+		int[] param = {336,231};
 						
-		param2.put("deptName", "班组test2");
+		param2.put("deptName", "班组test13");
 		param2.put("member", param);
-		param2.put("leader", 12);
+		param2.put("leader", 231);
+		param2.put("proDeptId", "1411");
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");

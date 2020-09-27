@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class GetDispatchListTest {
 
 	// 保存洞渣加工出厂信息
-	@Test(enabled=false)
+	@Test
 	public void saveDispatchTest() throws IOException {
 
 		// 发送请求

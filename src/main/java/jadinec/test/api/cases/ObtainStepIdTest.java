@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ObtainStepIdTest {
 
 	// 获得步骤id和步骤名字
-	@Test(enabled=false)
+	@Test
 	public void obtainStepIdTest() throws IOException {
 
 		// 发送请求

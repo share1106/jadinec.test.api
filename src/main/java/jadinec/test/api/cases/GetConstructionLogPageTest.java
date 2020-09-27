@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetConstructionLogPageTest {
 
 	// 获取施工日志列表
-	@Test(enabled=false)
+	@Test
 	public void getConstructionLogPageTest() throws IOException {
 
 		// 发送请求

@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class UpdateOrChangeMonthPlanItemTest {
 
 	// 修改或变更月计划项
-	@Test(enabled=false)
+	@Test
 	public void updateOrChangeMonthPlanItemTest() throws IOException {
 
 		// 发送请求

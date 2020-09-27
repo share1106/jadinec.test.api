@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ChangeTaskReadTest {
 
 	// 查询部门组织及人员信息
-		@Test(enabled=false)
+		@Test
 		public void changeTaskReadTest() throws IOException {
 
 			// 发送请求

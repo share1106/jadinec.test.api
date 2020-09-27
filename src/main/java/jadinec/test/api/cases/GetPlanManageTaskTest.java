@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetPlanManageTaskTest {
 
 	// 查询分配任务
-	@Test(enabled=false)
+	@Test
 	public void getPlanManageTaskTest() throws IOException {
 
 		// 发送请求

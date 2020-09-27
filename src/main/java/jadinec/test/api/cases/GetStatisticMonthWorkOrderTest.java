@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetStatisticMonthWorkOrderTest {
 
 	// 按月统计运输工单
-	@Test(enabled=false)
+	@Test
 	public void getStatisticMonthWorkOrderTest() throws IOException {
 
 		// 发送请求

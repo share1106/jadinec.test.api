@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class LaunchTemporaryMoneyTest {
 
 	// 发起流程
-	@Test(enabled=false)
+	@Test
 	public void launchTemporaryMoneyTest() throws IOException {
 
 		// 发送请求

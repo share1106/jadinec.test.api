@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetWorkMonthPlanItemInfoTest {
 
 	// 获取月工作计划分项信息
-	@Test(enabled=false)
+	@Test
 	public void getWorkMonthPlanItemInfoTest() throws IOException {
 
 		// 发送请求

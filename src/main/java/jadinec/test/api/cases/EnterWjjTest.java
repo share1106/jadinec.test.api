@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class EnterWjjTest {
 
 	// 确认挖掘机
-	@Test(enabled=false)
+	@Test
 	public void enterWjjTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMapTextMarkTest {
 
 	// 获取范围内标注
-	@Test(enabled=false)
+	@Test
 	public void getMapTextMarkTest() throws IOException {
 
 		// 发送请求

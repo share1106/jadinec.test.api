@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ArrivedExcavateAreaTest {
 
 	// 运渣车到达挖方区
-	@Test(enabled=false)
+	@Test
 	public void arrivedExcavateAreaTest() throws IOException {
 
 		// 发送请求

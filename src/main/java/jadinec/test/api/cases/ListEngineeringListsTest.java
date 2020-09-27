@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ListEngineeringListsTest {
 
 	// 获取当前部门的隧道分项工程列表
-	@Test(enabled=false)
+	@Test
 	public void listEngineeringListsTest() throws IOException {
 
 		// 发送请求

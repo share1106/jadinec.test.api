@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSlagHoleMaterialListTest {
 
 	// 查询洞渣加工进出厂物料列表
-	@Test(enabled=false)
+	@Test
 	public void getSlagHoleMaterialListTest() throws IOException {
 
 		// 发送请求

@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class GetDetailTest {
 
 	// 查询工时方案详情
-	@Test(enabled=false)
+	@Test
 	public void getDetailTest() throws IOException {
 
 		// 发送请求

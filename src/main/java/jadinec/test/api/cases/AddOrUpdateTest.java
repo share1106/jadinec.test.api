@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class AddOrUpdateTest {
 
 	// 新增或者修改工时方案
-	@Test(enabled=false)
+	@Test
 	public void addOrUpdateTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class AddTunnelConstTaskTest {
 
 	// 添加分单任务
-	@Test(enabled=false)
+	@Test
 	public void addTunnelConstTaskTest() throws IOException {
 
 		// 发送请求

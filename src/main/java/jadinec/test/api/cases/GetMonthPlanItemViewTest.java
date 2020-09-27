@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMonthPlanItemViewTest {
 
 	// 查询计划项信息
-	@Test(enabled=false)
+	@Test
 	public void getMonthPlanItemViewTest() throws IOException {
 
 		// 发送请求

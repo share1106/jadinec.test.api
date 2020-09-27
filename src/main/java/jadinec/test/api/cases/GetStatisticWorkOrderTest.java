@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetStatisticWorkOrderTest {
 
 	// 我的工作-统计
-	@Test(enabled=false)
+	@Test
 	public void getStatisticWorkOrderTest() throws IOException {
 
 		// 发送请求

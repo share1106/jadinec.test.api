@@ -37,12 +37,12 @@
 				<method>
 					<include name="getORGUserDetailTest" />
 				</method>
-			</class>GetTaskItemsTest
+			</class>
 			<class name="jadinec.test.api.cases.GetTaskItemsTest">
 				<method>
 					<include name="getTaskItemsTest" />
 				</method>
-			</class>OkForCloseStepTest
+			</class>
 			<class name="jadinec.test.api.cases.OkForCloseStepTest">
 				<method>
 					<include name="okForCloseStepTest" />
@@ -1027,6 +1027,168 @@
 					<include name="scheduleTest" />
 				</method>
 			</class>
+			<class name="jadinec.test.api.cases.WebConcretePouringInformTest">
+				<method>
+					<include name="webConcretePouringInformTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ObtainProdNameListTest">
+				<method>
+					<include name="obtainProdNameListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetManageSlideTest">
+				<method>
+					<include name="getManageSlideTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMergeOrderListTest">
+				<method>
+					<include name="getMergeOrderListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.CreateMergeSerialTest">
+				<method>
+					<include name="createMergeSerialTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProgressTest">
+				<method>
+					<include name="getProgressTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMergeOrderDetailTest">
+				<method>
+					<include name="getMergeOrderDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.OutputTheSummaryTest">
+				<method>
+					<include name="outputTheSummaryTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.LogoutTest">
+				<method>
+					<include name="logoutTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetVisualProTest">
+				<method>
+					<include name="getVisualProTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ToggleProCodeTest">
+				<method>
+					<include name="toggleProCodeTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgListTest">
+				<method>
+					<include name="getOrgListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddContractTest">
+				<method>
+					<include name="addContractTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetPageListTest">
+				<method>
+					<include name="getPageListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContractTotalTest">
+				<method>
+					<include name="getContractTotalTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContractInfoTest">
+				<method>
+					<include name="getContractInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContViewListTest">
+				<method>
+					<include name="getContViewListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProcessInfoTest">
+				<method>
+					<include name="getProcessInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContEngineeringCountTest">
+				<method>
+					<include name="getContEngineeringCountTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContTeamgCountTest">
+				<method>
+					<include name="getContTeamgCountTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProProcessListTest">
+				<method>
+					<include name="getProProcessListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContProcessListTest">
+				<method>
+					<include name="getContProcessListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContAddListTest">
+				<method>
+					<include name="getContAddListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddAwaitCommitContItemTest">
+				<method>
+					<include name="addAwaitCommitContItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddAllAwaitCommitContItemTest">
+				<method>
+					<include name="addAllAwaitCommitContItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddAllContItemTest">
+				<method>
+					<include name="addAllContItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.EditContractTest">
+				<method>
+					<include name="editContractTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DeleteContItemTest">
+				<method>
+					<include name="deleteContItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContTeamRangeListTest">
+				<method>
+					<include name="getContTeamRangeListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddContTeamItemTest">
+				<method>
+					<include name="addContTeamItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DeleteContTeamItemTest">
+				<method>
+					<include name="deleteContTeamItemTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DeleteContractorContractTest">
+				<method>
+					<include name="deleteContractorContractTest" />
+				</method>
+			</class>
+			
+						
 			
 		</classes>
 	</test>

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetOtherMechanicalTypeCodeTest {
 
 	// 查询其他设备代码编号
-	@Test(enabled=false)
+	@Test
 	public void getOtherMechanicalTypeCodeTest() throws IOException {
 
 		// 发送请求

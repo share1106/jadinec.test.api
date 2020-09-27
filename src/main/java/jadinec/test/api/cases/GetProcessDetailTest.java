@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetProcessDetailTest {
 
 	// 查询工序详情
-	@Test(enabled=false)
+	@Test
 	public void getProcessDetailTest() throws IOException {
 
 		// 发送请求

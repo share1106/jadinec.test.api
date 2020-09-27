@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class UpdateImgTest {
 
 	// 修改头像或身份证图片
-	@Test(enabled=false)
+	@Test
 	public void updateImgTest() throws IOException {
 
 		// 发送请求

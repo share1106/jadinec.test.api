@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class UpdateWeighingListTest {
 
 	// 更新称重单数量
-	@Test(enabled=false)
+	@Test
 	public void updateWeighingListTest() throws IOException {
 
 		// 发送请求

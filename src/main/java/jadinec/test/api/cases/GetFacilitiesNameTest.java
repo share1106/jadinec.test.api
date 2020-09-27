@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetFacilitiesNameTest {
 
 	// 获取用户搜索结果
-	@Test(enabled=false)
+	@Test
 	public void getFacilitiesNameTest() throws IOException {
 
 		// 发送请求

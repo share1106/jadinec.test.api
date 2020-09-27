@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ProdTransCollectTest {
 
 	// 生产运输汇总
-	@Test(enabled=false)
+	@Test
 	public void prodTransCollectTest() throws IOException {
 
 		// 发送请求

@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class ApplyFormSortForAllTest {
 
 	// 浇筑申请单排序(全部)
-	@Test(enabled=false)
+	@Test
 	public void applyFormSortForAllTest() throws IOException {
 
 		// 发送请求

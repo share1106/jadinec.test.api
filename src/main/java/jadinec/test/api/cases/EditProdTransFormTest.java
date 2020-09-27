@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class EditProdTransFormTest {
 
 	// 编辑生产运输单
-	@Test(enabled=false)
+	@Test
 	public void editProdTransFormTest() throws IOException {
 
 		// 发送请求

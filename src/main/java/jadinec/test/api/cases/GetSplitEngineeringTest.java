@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSplitEngineeringTest {
 
 	// 分单任务
-	@Test(enabled=false)
+	@Test
 	public void getSplitEngineeringTest() throws IOException {
 
 		// 发送请求

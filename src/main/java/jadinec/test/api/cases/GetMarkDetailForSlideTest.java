@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMarkDetailForSlideTest {
 
 	// 在线人员设备详情查看
-	@Test(enabled=false)
+	@Test
 	public void getMarkDetailForSlideTest() throws IOException {
 
 		// 发送请求

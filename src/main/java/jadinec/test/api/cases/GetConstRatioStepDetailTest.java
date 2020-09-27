@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetConstRatioStepDetailTest {
 
 	// 流程图查看施工配合比详情
-	@Test(enabled=false)
+	@Test
 	public void getConstRatioStepDetailTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class CancelEffectRecordProcessTest {
 
 	// 撤销流程
-	@Test(enabled=false)
+	@Test
 	public void cancelEffectRecordProcessTest() throws IOException {
 
 		// 发送请求

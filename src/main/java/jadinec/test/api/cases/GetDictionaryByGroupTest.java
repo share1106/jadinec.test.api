@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetDictionaryByGroupTest {
 
 	// 根据条件获取字典列表
-	@Test(enabled=false)
+	@Test
 	public void getDictionaryByGroupTest() throws IOException {
 
 		// 发送请求

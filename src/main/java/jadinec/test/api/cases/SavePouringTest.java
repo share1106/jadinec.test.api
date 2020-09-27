@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class SavePouringTest {
 
 	// 保存申请浇筑单方量
-	@Test(enabled=false)
+	@Test
 	public void savePouringTest() throws IOException {
 
 		// 发送请求

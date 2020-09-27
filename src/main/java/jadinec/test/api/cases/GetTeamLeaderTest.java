@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTeamLeaderTest {
 
 	// 班组 班长列表
-	@Test(enabled=false)
+	@Test
 	public void getTeamLeaderTest() throws IOException {
 
 		// 发送请求

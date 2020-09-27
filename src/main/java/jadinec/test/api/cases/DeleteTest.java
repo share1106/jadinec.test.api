@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class DeleteTest {
 
 	// 删除标准工时
-	@Test(enabled=false)
+	@Test
 	public void deleteTest() throws IOException {
 
 		// 发送请求

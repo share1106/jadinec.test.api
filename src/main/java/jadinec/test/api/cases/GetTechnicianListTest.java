@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTechnicianListTest {
 
 	// 查询工区下所有技术员列表
-	@Test(enabled=false)
+	@Test
 	public void getTechnicianListTest() throws IOException {
 
 		// 发送请求

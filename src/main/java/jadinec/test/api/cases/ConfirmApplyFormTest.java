@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ConfirmApplyFormTest {
 
 	// 确认和驳回
-	@Test(enabled=false)
+	@Test
 	public void confirmApplyFormTest() throws IOException {
 
 		// 发送请求

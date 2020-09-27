@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class ExportDataToPathTest {
 
 	// 查看预览
-	@Test(enabled=false)
+	@Test
 	public void exportDataToPathTest() throws IOException {
 
 		// 发送请求

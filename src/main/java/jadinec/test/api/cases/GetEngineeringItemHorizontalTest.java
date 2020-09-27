@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringItemHorizontalTest {
 
 	// 根据分部编码查询横断面
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringItemHorizontalTest() throws IOException {
 
 		// 发送请求

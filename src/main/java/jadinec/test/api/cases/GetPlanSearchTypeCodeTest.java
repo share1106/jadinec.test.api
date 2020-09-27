@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetPlanSearchTypeCodeTest {
 
 	// 分项工程类型代码
-	@Test(enabled=false)
+	@Test
 	public void getPlanSearchTypeCodeTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class SaveFillOrderTest {
 
 	// 运渣车立即出发及到达填方区
-	@Test(enabled=false)
+	@Test
 	public void saveFillOrderTest() throws IOException {
 
 		// 发送请求

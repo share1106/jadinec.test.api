@@ -23,7 +23,7 @@ import net.sf.json.JSONObject;
 public class OkForCloseStepTest {
 
 	// 步骤任务提交
-	@Test(enabled=false)
+	@Test
 	public void okForCloseStepTest() throws IOException {
 
 		// 发送请求

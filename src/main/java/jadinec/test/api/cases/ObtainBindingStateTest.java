@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ObtainBindingStateTest {
 
 	// 上次绑定设备车辆
-	@Test(enabled=false)
+	@Test
 	public void obtainBindingStateTest() throws IOException {
 
 		// 发送请求

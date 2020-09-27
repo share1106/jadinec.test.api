@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class DelSplitTaskTest {
 
 	// 删除分单任务
-	@Test(enabled=false)
+	@Test
 	public void delSplitTaskTest() throws IOException {
 
 		// 发送请求

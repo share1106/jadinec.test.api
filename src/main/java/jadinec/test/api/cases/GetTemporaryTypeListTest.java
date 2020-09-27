@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTemporaryTypeListTest {
 
 	// 查询临时费用类型列表
-	@Test(enabled=false)
+	@Test
 	public void getTemporaryTypeListTest() throws IOException {
 
 		// 发送请求

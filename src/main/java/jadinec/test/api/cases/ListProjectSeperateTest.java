@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class ListProjectSeperateTest {
 
 	// 查询分单列表详情
-	@Test(enabled=false)
+	@Test
 	public void listProjectSeperateTest() throws IOException {
 
 		// 发送请求

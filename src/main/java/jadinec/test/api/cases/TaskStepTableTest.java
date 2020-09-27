@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class TaskStepTableTest {
 
 	// 查询任务补填表格
-	@Test(enabled=false)
+	@Test
 	public void taskStepTableTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class SendSmsUpdatePhoneNumVerificationCodeTest {
 
 	// 发送修改手机号短信验证码
-	@Test(enabled=false)
+	@Test
 	public void sendSmsUpdatePhoneNumVerificationCodeTest() throws IOException {
 
 		// 发送请求

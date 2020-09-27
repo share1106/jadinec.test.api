@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTaskAndOrderListTest {
 
 	// 获取任务列表及工单列表
-	@Test(enabled=false)
+	@Test
 	public void getTaskAndOrderListTest() throws IOException {
 
 		// 发送请求

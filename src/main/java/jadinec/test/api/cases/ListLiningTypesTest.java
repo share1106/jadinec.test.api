@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ListLiningTypesTest {
 
 	// 根据围岩级别查询对应的衬砌类型
-	@Test(enabled=false)
+	@Test
 	public void listLiningTypesTest() throws IOException {
 
 		// 发送请求

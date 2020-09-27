@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetAllotProcessBarTest {
 
 	// 分配任务工序
-	@Test(enabled=false)
+	@Test
 	public void getAllotProcessBarTest() throws IOException {
 
 		// 发送请求

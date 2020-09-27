@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ToggleMechanicalTest {
 
 	// 启动或关闭绑定设备工作状态
-	@Test(enabled=false)
+	@Test
 	public void toggleMechanicalTest() throws IOException {
 
 		// 发送请求

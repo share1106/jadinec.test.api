@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetConcreteApplyListTest {
 
 	// 浇筑令排序列表
-	@Test(enabled=false)
+	@Test
 	public void getConcreteApplyListTest() throws IOException {
 
 		// 发送请求

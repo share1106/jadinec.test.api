@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 
 public class GetUserInfoDetailAllTest {
 
-	// 查人员信息(三级)
+	// 查人员信息(三级)-功能已停止服务
 	@Test(enabled=false)
 	public void getUserInfoDetailAllTest() throws IOException {
 
@@ -44,7 +44,7 @@ public class GetUserInfoDetailAllTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 		
-		param2.put("userCode", "174");
+		param2.put("userCode", "160");
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");

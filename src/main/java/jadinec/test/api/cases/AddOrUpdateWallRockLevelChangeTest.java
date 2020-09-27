@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class AddOrUpdateWallRockLevelChangeTest {
 
 	// 新增围岩级别变更
-	@Test(enabled=false)
+	@Test
 	public void addOrUpdateWallRockLevelChangeTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class CheckPlanExecStateTest {
 
 	// 检查计划执行状态
-	@Test(enabled=false)
+	@Test
 	public void checkPlanExecStateTest() throws IOException {
 
 		// 发送请求

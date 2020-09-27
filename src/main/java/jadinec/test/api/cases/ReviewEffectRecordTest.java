@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ReviewEffectRecordTest {
 
 	// 审批
-	@Test(enabled=false)
+	@Test
 	public void reviewEffectRecordTest() throws IOException {
 
 		// 发送请求

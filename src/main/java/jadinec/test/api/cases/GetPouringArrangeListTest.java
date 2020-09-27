@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetPouringArrangeListTest {
 
 	// 查询浇筑单安排列表
-	@Test(enabled=false)
+	@Test
 	public void getPouringArrangeListTest() throws IOException {
 
 		// 发送请求

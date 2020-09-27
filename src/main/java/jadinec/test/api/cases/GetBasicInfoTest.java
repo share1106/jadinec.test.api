@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetBasicInfoTest {
 
 	// 查询围岩变更基本信息
-	@Test(enabled=false)
+	@Test
 	public void getBasicInfoTest() throws IOException {
 
 		// 发送请求

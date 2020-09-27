@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetProdTaskTest {
 
 	// 查询操作手任务
-	@Test(enabled=false)
+	@Test
 	public void getProdTaskTest() throws IOException {
 
 		// 发送请求

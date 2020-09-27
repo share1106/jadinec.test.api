@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class UpdateEarthworkOwnerByIdTest {
 
 	// 修改已分配任务状态
-	@Test(enabled=false)
+	@Test
 	public void updateEarthworkOwnerByIdTest() throws IOException {
 
 		// 发送请求

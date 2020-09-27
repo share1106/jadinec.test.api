@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTodayWorkOrderTest {
 
 	// 我的工作-今日工作量
-	@Test(enabled=false)
+	@Test
 	public void getTodayWorkOrderTest() throws IOException {
 
 		// 发送请求

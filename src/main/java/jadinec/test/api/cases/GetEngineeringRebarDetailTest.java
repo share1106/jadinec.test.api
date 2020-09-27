@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringRebarDetailTest {
 
 	// 钢筋混凝土明细
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringRebarDetailTest() throws IOException {
 
 		// 发送请求

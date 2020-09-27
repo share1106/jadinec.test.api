@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class GetItemStateListTest {
 
 	// 获取分项施工状态
-	@Test(enabled=false)
+	@Test
 	public void getItemStateListTest() throws IOException {
 
 		// 发送请求

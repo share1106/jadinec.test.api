@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTemporaryMoneyListTest {
 
 	// 查询临时费用申请列表
-	@Test(enabled=false)
+	@Test
 	public void getTemporaryMoneyListTest() throws IOException {
 
 		// 发送请求

@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class QueryEngineeringTypeToCodeListTest {
 
 	// 联动查询分项类别
-	@Test(enabled=false)
+	@Test
 	public void queryEngineeringTypeToCodeListTest() throws IOException {
 
 		// 发送请求

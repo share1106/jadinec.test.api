@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class DealWithNoticeTest {
 
 	// 消息通知处理上报
-	@Test(enabled=false)
+	@Test
 	public void dealWithNoticeTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSearchElementTest {
 
 	// 当期计划查询元素
-	@Test(enabled=false)
+	@Test
 	public void getSearchElementTest() throws IOException {
 
 		// 发送请求

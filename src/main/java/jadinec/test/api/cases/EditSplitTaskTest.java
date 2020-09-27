@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class EditSplitTaskTest {
 
 	// 编辑分单任务
-	@Test(enabled=false)
+	@Test
 	public void editSplitTaskTest() throws IOException {
 
 		// 发送请求

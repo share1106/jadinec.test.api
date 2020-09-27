@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSlagHoleBaseInfoTest {
 
 	// 查询洞渣加工进出厂基本信息
-	@Test(enabled=false)
+	@Test
 	public void getSlagHoleBaseInfoTest() throws IOException {
 
 		// 发送请求

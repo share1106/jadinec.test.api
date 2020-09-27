@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTransDetailsTest {
 
 	// 运输详情
-	@Test(enabled=false)
+	@Test
 	public void getTransDetailsTest() throws IOException {
 
 		// 发送请求

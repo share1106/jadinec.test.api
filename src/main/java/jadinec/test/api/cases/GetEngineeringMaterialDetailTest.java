@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringMaterialDetailTest {
 
 	// 查询物料分单个工程明细
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringMaterialDetailTest() throws IOException {
 
 		// 发送请求

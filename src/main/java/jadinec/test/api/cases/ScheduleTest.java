@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ScheduleTest {
 
 	// 施工进度列表
-	@Test(enabled=false)
+	@Test
 	public void scheduleTest() throws IOException {
 
 		// 发送请求

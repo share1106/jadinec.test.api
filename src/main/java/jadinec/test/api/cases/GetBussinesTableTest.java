@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetBussinesTableTest {
 
 	// 查询业务表格
-	@Test(enabled=false)
+	@Test
 	public void getBussinesTableTest() throws IOException {
 
 		// 发送请求

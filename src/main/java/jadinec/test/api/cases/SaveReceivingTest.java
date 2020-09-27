@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class SaveReceivingTest {
 
 	// 保存洞渣加工物料进厂信息
-	@Test(enabled=false)
+	@Test
 	public void saveReceivingTest() throws IOException {
 
 		// 发送请求

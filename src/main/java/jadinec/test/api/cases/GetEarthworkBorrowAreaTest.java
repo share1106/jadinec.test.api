@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEarthworkBorrowAreaTest {
 
 	// 获取挖方区
-	@Test(enabled=false)
+	@Test
 	public void getEarthworkBorrowAreaTest() throws IOException {
 
 		// 发送请求

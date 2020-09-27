@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetORGUserDetailTest {
 
 	// 用户详细资料
-	@Test(enabled=false)
+	@Test
 	public void getORGUserDetailTest() throws IOException {
 
 		// 发送请求

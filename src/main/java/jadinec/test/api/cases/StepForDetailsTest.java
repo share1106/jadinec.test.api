@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class StepForDetailsTest {
 
 	// PC端4级页面根据步骤 查看任务信息
-	@Test(enabled=false)
+	@Test
 	public void stepForDetailsTest() throws IOException {
 
 		// 发送请求

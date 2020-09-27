@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class DelProdTransFormTest {
 
 	// 删除已安排未生产工单
-	@Test(enabled=false)
+	@Test
 	public void delProdTransFormTest() throws IOException {
 
 		// 发送请求

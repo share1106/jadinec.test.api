@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringTypeProcessTest {
 
 	// 工程类型工序
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringTypeProcessTest() throws IOException {
 
 		// 发送请求

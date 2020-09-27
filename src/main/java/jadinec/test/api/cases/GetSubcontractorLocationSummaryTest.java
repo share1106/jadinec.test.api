@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSubcontractorLocationSummaryTest {
 
 	// 查询分包商分单部位汇总信息
-	@Test(enabled=false)
+	@Test
 	public void getSubcontractorLocationSummaryTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetApplyFormItemTest {
 
 	// 查询浇筑申请单列表
-	@Test(enabled=false)
+	@Test
 	public void getApplyFormItemTest() throws IOException {
 
 		// 发送请求

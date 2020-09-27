@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetDispatchVehicleListTest {
 
 	// 查询洞渣加工出厂车辆列表
-	@Test(enabled=false)
+	@Test
 	public void getDispatchVehicleListTest() throws IOException {
 
 		// 发送请求

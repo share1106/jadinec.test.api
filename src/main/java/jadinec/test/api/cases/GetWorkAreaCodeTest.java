@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetWorkAreaCodeTest {
 
 	// 工区代码
-	@Test(enabled=false)
+	@Test
 	public void getWorkAreaCodeTest() throws IOException {
 
 		// 发送请求

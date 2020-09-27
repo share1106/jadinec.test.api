@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEffectRecordDetailTest {
 
 	// 查询功效记录详情
-	@Test(enabled=false)
+	@Test
 	public void getEffectRecordDetailTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetConstTaskListTest {
 
 	// 隧道施工任务列表
-	@Test(enabled=false)
+	@Test
 	public void getConstTaskListTest() throws IOException {
 
 		// 发送请求

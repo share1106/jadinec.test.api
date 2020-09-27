@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ReviewWallRockLevelTest {
 
 	// 围岩变更审核
-	@Test(enabled=false)
+	@Test
 	public void reviewWallRockLevelTest() throws IOException {
 
 		// 发送请求

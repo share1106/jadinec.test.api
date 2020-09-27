@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class InsertEarthworkTaskToOwnerTest {
 
 	// 分配任务
-	@Test(enabled=false)
+	@Test
 	public void insertEarthworkTaskToOwnerTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringTypeListTest {
 
 	// 查询工程类型集合
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringTypeListTest() throws IOException {
 
 		// 发送请求

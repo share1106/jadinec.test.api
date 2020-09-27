@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetFreeCarTest {
 
 	// 查询空闲车辆
-	@Test(enabled=false)
+	@Test
 	public void getFreeCarTest() throws IOException {
 
 		// 发送请求

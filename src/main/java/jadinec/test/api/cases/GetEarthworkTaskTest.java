@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEarthworkTaskTest {
 
 	// 获取任务
-	@Test(enabled=false)
+	@Test
 	public void getEarthworkTaskTest() throws IOException {
 
 		// 发送请求

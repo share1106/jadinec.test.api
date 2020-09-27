@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSplitTaskTest {
 
 	// 查询分单任务
-	@Test(enabled=false)
+	@Test
 	public void getSplitTaskTest() throws IOException {
 
 		// 发送请求

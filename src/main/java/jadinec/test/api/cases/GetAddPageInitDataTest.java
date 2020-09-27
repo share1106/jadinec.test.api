@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetAddPageInitDataTest {
 
 	// 添加页初始化数据
-	@Test(enabled=false)
+	@Test
 	public void getAddPageInitDataTest() throws IOException {
 
 		// 发送请求

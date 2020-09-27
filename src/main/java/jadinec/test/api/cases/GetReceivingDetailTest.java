@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetReceivingDetailTest {
 
 	// 查询洞渣加工物料进厂详情
-	@Test(enabled=false)
+	@Test
 	public void getReceivingDetailTest() throws IOException {
 
 		// 发送请求

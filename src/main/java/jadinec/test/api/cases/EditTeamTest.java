@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class EditTeamTest {
 
 	// 编辑班组
-	@Test(enabled=false)
+	@Test
 	public void editTeamTest() throws IOException {
 
 		// 发送请求

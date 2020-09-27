@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMaterialConsumeDetailTest {
 
 	// 查询物料纬度物料明细
-	@Test(enabled=false)
+	@Test
 	public void getMaterialConsumeDetailTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetOptPersionListTest {
 
 	// 工作月计划 选择计划实施人
-	@Test(enabled=false)
+	@Test
 	public void getOptPersionListTest() throws IOException {
 
 		// 发送请求

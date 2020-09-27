@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTemporaryTaskTypeTest {
 
 	// 临时任务类型
-	@Test(enabled=false)
+	@Test
 	public void getTemporaryTaskTypeTest() throws IOException {
 
 		// 发送请求

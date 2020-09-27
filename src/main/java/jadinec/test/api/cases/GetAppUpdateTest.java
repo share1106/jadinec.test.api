@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetAppUpdateTest {
 
 	// app版本更新
-	@Test(enabled=false)
+	@Test
 	public void getAppUpdateTest() throws IOException {
 
 		// 发送请求

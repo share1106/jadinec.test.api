@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetFormItemsTest {
 
 	// 查询表单元素配置
-	@Test(enabled=false)
+	@Test
 	public void updateImgTest() throws IOException {
 
 		// 发送请求

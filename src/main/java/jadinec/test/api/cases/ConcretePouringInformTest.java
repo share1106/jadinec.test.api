@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ConcretePouringInformTest {
 
 	// 混凝土浇筑详情
-	@Test(enabled=false)
+	@Test
 	public void concretePouringInformTest() throws IOException {
 
 		// 发送请求

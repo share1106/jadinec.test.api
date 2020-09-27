@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class BindMechanicalTest {
 
 	// 绑定设备
-	@Test(enabled=false)
+	@Test
 	public void bindMechanicalTest() throws IOException {
 
 		// 发送请求

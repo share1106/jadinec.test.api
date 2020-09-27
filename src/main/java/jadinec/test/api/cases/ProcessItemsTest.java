@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ProcessItemsTest {
 
 	// 查询工序列表
-	@Test(enabled=false)
+	@Test
 	public void processItemsTest() throws IOException {
 
 		// 发送请求

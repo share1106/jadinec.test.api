@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTodayStatisticTest {
 
 	// 今日统计
-	@Test(enabled=false)
+	@Test
 	public void getTodayStatisticTest() throws IOException {
 
 		// 发送请求

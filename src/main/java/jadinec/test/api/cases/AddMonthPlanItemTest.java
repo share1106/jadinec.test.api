@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class AddMonthPlanItemTest {
 
 	// 添加月计划项
-	@Test(enabled=false)
+	@Test
 	public void addMonthPlanItemTest() throws IOException {
 
 		// 发送请求

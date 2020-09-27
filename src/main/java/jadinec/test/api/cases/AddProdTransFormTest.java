@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class AddProdTransFormTest {
 
 	// 添加生产运输单（控制室操作手）
-	@Test(enabled=false)
+	@Test
 	public void addProdTransFormTest() throws IOException {
 
 		// 发送请求

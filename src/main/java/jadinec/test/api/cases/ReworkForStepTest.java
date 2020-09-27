@@ -22,7 +22,7 @@ import net.sf.json.JSONObject;
 public class ReworkForStepTest {
 
 	// 返工
-	@Test(enabled=false)
+	@Test
 	public void reworkForStepTest() throws IOException {
 
 		// 发送请求

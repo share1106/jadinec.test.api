@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringPlaneTest {
 
 	//lbs平面几何信息
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringPlaneTest() throws IOException {
 
 		// 发送请求

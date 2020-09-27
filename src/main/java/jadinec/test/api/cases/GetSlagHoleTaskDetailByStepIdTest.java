@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSlagHoleTaskDetailByStepIdTest {
 
 	// 队长隧道施工任务详情(stepId)
-	@Test(enabled=false)
+	@Test
 	public void getSlagHoleTaskDetailTest() throws IOException {
 
 		// 发送请求

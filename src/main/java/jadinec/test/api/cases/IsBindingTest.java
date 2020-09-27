@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class IsBindingTest {
 
 	// 是否绑定
-	@Test(enabled=false)
+	@Test
 	public void IsBindingStateTest() throws IOException {
 
 		// 发送请求

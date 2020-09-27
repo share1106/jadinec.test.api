@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSubcontractorSeperateListTest {
 
 	// 查询分包商当前时间节点分单列表
-	@Test(enabled=false)
+	@Test
 	public void getSubcontractorSeperateListTest() throws IOException {
 
 		// 发送请求

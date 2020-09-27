@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetDeviceByDeviceTypeTest {
 
 	// 类型获取设备
-	@Test(enabled=false)
+	@Test
 	public void getDeviceByDeviceTypeTest() throws IOException {
 
 		// 发送请求

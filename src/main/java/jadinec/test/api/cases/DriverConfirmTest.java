@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class DriverConfirmTest {
 
 	// 司机工单处理
-	@Test(enabled=false)
+	@Test
 	public void driverConfirmTest() throws IOException {
 
 		// 发送请求

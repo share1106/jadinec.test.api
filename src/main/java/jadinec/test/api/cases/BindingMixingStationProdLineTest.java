@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class BindingMixingStationProdLineTest {
 
 	// 绑定生产线
-	@Test(enabled=false)
+	@Test
 	public void bindingMixingStationProdLineTest() throws IOException {
 
 		// 发送请求

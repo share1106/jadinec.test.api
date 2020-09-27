@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class RefreshTokenTest {
 
 	// 令牌（token）刷新
-	@Test(dependsOnGroups= {"verificationCodeLoginSuccess"},enabled=false)
+	@Test(enabled=false)
 	public void refreshTokenTest() throws IOException {
 
 		// 发送请求

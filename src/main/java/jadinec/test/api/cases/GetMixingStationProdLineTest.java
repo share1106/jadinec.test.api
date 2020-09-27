@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMixingStationProdLineTest {
 
 	// 获取生产线
-	@Test(enabled=false)
+	@Test
 	public void getMixingStationProdLineTest() throws IOException {
 
 		// 发送请求

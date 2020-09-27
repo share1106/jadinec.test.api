@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class CancelMaterialProcessTest {
 
 	// 围岩变更流程撤销
-	@Test(enabled=false)
+	@Test
 	public void cancelMaterialProcessTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ToggleRoleTest {
 
 	// 切换角色或账号
-	@Test(enabled=false)
+	@Test
 	public void toggleRoleTest() throws IOException {
 
 		// 发送请求

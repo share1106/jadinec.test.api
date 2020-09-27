@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetPlansTest {
 
 	// 查询计划
-	@Test(enabled=false)
+	@Test
 	public void getPlansTest() throws IOException {
 
 		// 发送请求

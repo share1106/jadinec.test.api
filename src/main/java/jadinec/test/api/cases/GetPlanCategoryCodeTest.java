@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetPlanCategoryCodeTest {
 
 	// 工程类别代码(月计划)
-	@Test(enabled=false)
+	@Test
 	public void getPlanCategoryCodeTest() throws IOException {
 
 		// 发送请求

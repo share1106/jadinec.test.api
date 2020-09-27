@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetUserInfoDetailEveryDayWorkUserInfoTest {
 
 	// 人员信息二级
-	@Test(enabled=false)
+	@Test
 	public void getUserInfoDetailEveryDayWorkUserInfoTest() throws IOException {
 
 		// 发送请求

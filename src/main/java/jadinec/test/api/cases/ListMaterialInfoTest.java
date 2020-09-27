@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ListMaterialInfoTest {
 
 	// 根据衬砌类型查询对应的物料信息
-	@Test(enabled=false)
+	@Test
 	public void listMaterialInfoTest() throws IOException {
 
 		// 发送请求

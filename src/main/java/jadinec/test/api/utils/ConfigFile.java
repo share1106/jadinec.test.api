@@ -638,6 +638,99 @@ public class ConfigFile {
 		if(name == InterfaceName.Schedule) {
 			uri = bundle.getString("schedule.uri");
 		}
+		if(name == InterfaceName.WebConcretePouringInform) {
+			uri = bundle.getString("webConcretePouringInform.uri");
+		}
+		if(name == InterfaceName.ObtainProdNameList) {
+			uri = bundle.getString("obtainProdNameList.uri");
+		}
+		if(name == InterfaceName.GetManageSlide) {
+			uri = bundle.getString("getManageSlide.uri");
+		}
+		if(name == InterfaceName.GetMergeOrderList) {
+			uri = bundle.getString("getMergeOrderList.uri");
+		}
+		if(name == InterfaceName.CreateMergeSerial) {
+			uri = bundle.getString("createMergeSerial.uri");
+		}
+		if(name == InterfaceName.GetProgress) {
+			uri = bundle.getString("getProgress.uri");
+		}
+		if(name == InterfaceName.GetMergeOrderDetail) {
+			uri = bundle.getString("getMergeOrderDetail.uri");
+		}
+		if(name == InterfaceName.OutputTheSummary) {
+			uri = bundle.getString("outputTheSummary.uri");
+		}
+		if(name == InterfaceName.Logout) {
+			uri = bundle.getString("logout.uri");
+		}
+		if(name == InterfaceName.ToggleProCode) {
+			uri = bundle.getString("toggleProCode.uri");
+		}
+		if(name == InterfaceName.GetOrgList) {
+			uri = bundle.getString("getOrgList.uri");
+		}
+		if(name == InterfaceName.AddContract) {
+			uri = bundle.getString("addContract.uri");
+		}
+		if(name == InterfaceName.GetPageList) {
+			uri = bundle.getString("getPageList.uri");
+		}
+		if(name == InterfaceName.GetContractTotal) {
+			uri = bundle.getString("getContractTotal.uri");
+		}
+		if(name == InterfaceName.GetContractInfo) {
+			uri = bundle.getString("getContractInfo.uri");
+		}
+		if(name == InterfaceName.GetContViewList) {
+			uri = bundle.getString("getContViewList.uri");
+		}
+		if(name == InterfaceName.GetProcessInfo) {
+			uri = bundle.getString("getProcessInfo.uri");
+		}
+		if(name == InterfaceName.GetContEngineeringCount) {
+			uri = bundle.getString("getContEngineeringCount.uri");
+		}
+		if(name == InterfaceName.GetContTeamgCount) {
+			uri = bundle.getString("getContTeamgCount.uri");
+		}
+		if(name == InterfaceName.GetProProcessList) {
+			uri = bundle.getString("getProProcessList.uri");
+		}
+		if(name == InterfaceName.GetContProcessList) {
+			uri = bundle.getString("getContProcessList.uri");
+		}
+		if(name == InterfaceName.GetContAddList) {
+			uri = bundle.getString("getContAddList.uri");
+		}
+		if(name == InterfaceName.AddAwaitCommitContItem) {
+			uri = bundle.getString("addAwaitCommitContItem.uri");
+		}
+		if(name == InterfaceName.AddAllAwaitCommitContItem) {
+			uri = bundle.getString("addAllAwaitCommitContItem.uri");
+		}
+		if(name == InterfaceName.AddAllContItem) {
+			uri = bundle.getString("addAllContItem.uri");
+		}
+		if(name == InterfaceName.EditContract) {
+			uri = bundle.getString("editContract.uri");
+		}
+		if(name == InterfaceName.DeleteContItem) {
+			uri = bundle.getString("deleteContItem.uri");
+		}
+		if(name == InterfaceName.GetContTeamRangeList) {
+			uri = bundle.getString("getContTeamRangeList.uri");
+		}
+		if(name == InterfaceName.AddContTeamItem) {
+			uri = bundle.getString("addContTeamItem.uri");
+		}
+		if(name == InterfaceName.DeleteContTeamItem) {
+			uri = bundle.getString("deleteContTeamItem.uri");
+		}
+		if(name == InterfaceName.DeleteContractorContract) {
+			uri = bundle.getString("deleteContractorContract.uri");
+		}
 		
 		testUrl = address + uri;
 		return testUrl;

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ObtainStepItemTest {
 
 	// 查询工序下所有步骤(包含返工)
-	@Test(enabled=false)
+	@Test
 	public void obtainStepItemTest() throws IOException {
 
 		// 发送请求

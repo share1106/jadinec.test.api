@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 
 public class GetBaseInfoTest {
 	// 查询洞渣加工进出厂基本信息
-	@Test(enabled=false)
+	@Test
 	public void getBaseInfoTest() throws IOException {
 
 		// 发送请求

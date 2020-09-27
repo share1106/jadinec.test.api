@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ApplyFormSortForOneTest {
 
 	// 浇筑申请单排序(单个)
-	@Test(enabled=false)
+	@Test
 	public void applyFormSortForOneTest() throws IOException {
 
 		// 发送请求

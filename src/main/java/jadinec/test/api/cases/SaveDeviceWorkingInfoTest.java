@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class SaveDeviceWorkingInfoTest {
 
 	// 保存特种设备工作记录
-	@Test(enabled=false)
+	@Test
 	public void saveDeviceWorkingInfoTest() throws IOException {
 
 		// 发送请求

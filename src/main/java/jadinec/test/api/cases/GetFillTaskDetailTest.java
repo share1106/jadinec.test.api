@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetFillTaskDetailTest {
 
 	// 获取任务详情
-	@Test(enabled=false)
+	@Test
 	public void getFillTaskDetailTest() throws IOException {
 
 		// 发送请求

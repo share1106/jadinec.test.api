@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringCodeListTest {
 
 	// 工作月计划添加分项数据列表
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringCodeListTest() throws IOException {
 
 		// 发送请求

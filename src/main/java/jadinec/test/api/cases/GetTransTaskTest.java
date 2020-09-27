@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTransTaskTest {
 
 	// 查询罐车司机运输任务
-	@Test(enabled=false)
+	@Test
 	public void getTransTaskTest() throws IOException {
 
 		// 发送请求

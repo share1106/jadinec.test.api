@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetListTest {
 
 	// 查询工时方案列表
-	@Test(enabled=false)
+	@Test
 	public void getListTest() throws IOException {
 
 		// 发送请求

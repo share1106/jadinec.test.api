@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringDesignDetailsTest {
 
 	// 分项工程部位信息
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringDesignDetailsTest() throws IOException {
 
 		// 发送请求

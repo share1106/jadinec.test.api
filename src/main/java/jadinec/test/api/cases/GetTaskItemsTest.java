@@ -20,51 +20,51 @@ import net.sf.json.JSONObject;
 public class GetTaskItemsTest {
 
 	// 查询我的任务
-		@Test(enabled=false)
-		public void getTaskItemsTest() throws IOException {
+	@Test
+	public void getTaskItemsTest() throws IOException {
 
-			// 发送请求
-			JSONArray result = getJsonResult();
-			System.out.println(result);
+		// 发送请求
+		JSONArray result = getJsonResult();
+		System.out.println(result);
 
-			String data = null;
+		String data = null;
 
-			for (int i = 0; i < result.size(); i++) {
-				JSONObject jsonObject = result.getJSONObject(i);
-				data = jsonObject.getString("success");
-			}
-
-			// 验证结果
-			Assert.assertEquals("true", data);
+		for (int i = 0; i < result.size(); i++) {
+			JSONObject jsonObject = result.getJSONObject(i);
+			data = jsonObject.getString("success");
 		}
 
-		private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-			HttpPost post = new HttpPost(TestConfig.getTaskItemsUrl);
-			System.out.println(TestConfig.getTaskItemsUrl);
-			JSONObject param1 = new JSONObject();
-			JSONObject param2 = new JSONObject();
-			
-			param2.put("taskBeginTime", "2020-03-14");
-			param2.put("taskEndTime", "2020-08-14");
-			param2.put("state", "1");
+		// 验证结果
+		Assert.assertEquals("true", data);
+	}
 
-			param1.put("client", "android");
-			param1.put("version", "1.0");
-			param1.put("content", param2);
+	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
+		HttpPost post = new HttpPost(TestConfig.getTaskItemsUrl);
+		System.out.println(TestConfig.getTaskItemsUrl);
+		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-			post.setHeader("Content-Type", ConfigFile.Content_Type);
-			post.setHeader("access_token", ConfigFile.access_token);
-			post.setHeader("client", ConfigFile.client);
-			
-			StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
-			post.setEntity(entity);
+		param2.put("taskBeginTime", "2020-03-14");
+		param2.put("taskEndTime", "2020-08-14");
+		param2.put("state", "1");
 
-			String result;
-			HttpResponse response = TestConfig.defaultHttpClient.execute(post);
-			result = EntityUtils.toString(response.getEntity(), "UTF-8");
-			// System.out.println(result);
-			List<String> list = Arrays.asList(result);
-			JSONArray array = JSONArray.fromObject(list);
-			return array;
-		}
+		param1.put("client", "android");
+		param1.put("version", "1.0");
+		param1.put("content", param2);
+
+		post.setHeader("Content-Type", ConfigFile.Content_Type);
+		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("client", ConfigFile.client);
+
+		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
+		post.setEntity(entity);
+
+		String result;
+		HttpResponse response = TestConfig.defaultHttpClient.execute(post);
+		result = EntityUtils.toString(response.getEntity(), "UTF-8");
+		// System.out.println(result);
+		List<String> list = Arrays.asList(result);
+		JSONArray array = JSONArray.fromObject(list);
+		return array;
+	}
 }

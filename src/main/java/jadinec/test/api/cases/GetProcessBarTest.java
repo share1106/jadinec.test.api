@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetProcessBarTest {
 
 	// 查询计划Bar
-	@Test(enabled=false)
+	@Test
 	public void getProcessBarTest() throws IOException {
 
 		// 发送请求

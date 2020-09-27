@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetProcessStepListTest {
 
 	// 查询工序步骤集合
-	@Test(enabled=false)
+	@Test
 	public void getProcessStepListTest() throws IOException {
 
 		// 发送请求

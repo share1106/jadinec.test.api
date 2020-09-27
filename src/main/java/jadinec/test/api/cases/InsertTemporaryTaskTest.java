@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class InsertTemporaryTaskTest {
 
 	// 新增临时任务
-	@Test(enabled=false)
+	@Test
 	public void insertTemporaryTaskTest() throws IOException {
 
 		// 发送请求

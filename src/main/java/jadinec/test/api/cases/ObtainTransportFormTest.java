@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ObtainTransportFormTest {
 
 	// 拌合站厂长查询确认工单
-	@Test(enabled=false)
+	@Test
 	public void obtainTransportFormTest() throws IOException {
 
 		// 发送请求

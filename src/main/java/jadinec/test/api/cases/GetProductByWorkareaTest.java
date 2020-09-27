@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetProductByWorkareaTest {
 
 	// 获取生产工区
-	@Test(enabled=false)
+	@Test
 	public void getProductByWorkareaTest() throws IOException {
 
 		// 发送请求

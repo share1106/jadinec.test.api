@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetWeighingOrderDetailTest {
 
 	// 查看称重单据详情
-	@Test(enabled=false)
+	@Test
 	public void getWeighingOrderDetailTest() throws IOException {
 
 		// 发送请求

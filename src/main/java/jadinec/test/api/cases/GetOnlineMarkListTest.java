@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetOnlineMarkListTest {
 
 	// 获取地图在线人员设备
-	@Test(enabled=false)
+	@Test
 	public void getOnlineMarkListTest() throws IOException {
 
 		// 发送请求

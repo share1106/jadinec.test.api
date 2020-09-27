@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringItemDesignLengthTest {
 
 	// 设计长度
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringItemDesignLengthTest() throws IOException {
 
 		// 发送请求
@@ -43,7 +43,7 @@ public class GetEngineeringItemDesignLengthTest {
 		System.out.println(TestConfig.getEngineeringItemDesignLengthUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("constTaskId", "63059696738766848");// 任务ID
+		param1.put("constTaskId", "64145146249351168");// 任务ID
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);

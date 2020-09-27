@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class GetMonthPlanRatioMonthTest {
 
 	// 获取分项计划时间内月份列表
-	@Test(enabled=false)
+	@Test
 	public void getMonthPlanRatioMonthTest() throws IOException {
 
 		// 发送请求

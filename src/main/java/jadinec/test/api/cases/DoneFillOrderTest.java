@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class DoneFillOrderTest {
 
 	// 运渣车完成运输工单
-	@Test(enabled=false)
+	@Test
 	public void doneFillOrderTest() throws IOException {
 
 		// 发送请求

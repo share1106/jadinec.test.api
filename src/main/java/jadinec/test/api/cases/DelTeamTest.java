@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 public class DelTeamTest {
 
 	// 班组删除
-	@Test(enabled=false)
+	@Test
 	public void delTeamTest() throws IOException {
 
 		// 发送请求

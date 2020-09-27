@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTeamListTest {
 
 	// 已有分组班组管理（队长）
-	@Test(enabled=false)
+	@Test
 	public void getTeamListTest() throws IOException {
 
 		// 发送请求

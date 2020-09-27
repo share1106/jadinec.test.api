@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class StartProdLineTest {
 
 	// 启用生产线
-	@Test(enabled=false)
+	@Test
 	public void startProdLineTest() throws IOException {
 
 		// 发送请求

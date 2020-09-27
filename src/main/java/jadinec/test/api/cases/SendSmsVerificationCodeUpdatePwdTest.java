@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class SendSmsVerificationCodeUpdatePwdTest {
 
 	// 发送修改密码短信验
-	@Test(enabled=false)
+	@Test
 	public void sendSmsVerificationCodeUpdatePwdTest() throws IOException {
 
 		// 发送请求

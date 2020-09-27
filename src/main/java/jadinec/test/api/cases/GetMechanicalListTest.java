@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMechanicalListTest {
 
 	// 机械设备列表
-	@Test(enabled=false)
+	@Test
 	public void getMechanicalListTest() throws IOException {
 
 		// 发送请求

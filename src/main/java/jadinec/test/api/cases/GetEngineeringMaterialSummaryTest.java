@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringMaterialSummaryTest {
 
 	// 查询物料工程纬度项目汇总信息
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringMaterialSummaryTest() throws IOException {
 
 		// 发送请求

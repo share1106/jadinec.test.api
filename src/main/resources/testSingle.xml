@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="甲丁智慧建造云平台">
+	<test name="APP单个接口测试">
+		<classes>
+			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
+			</class>
+			<class name="jadinec.test.api.cases.GetUserInfoDetailTest">
+				<method>
+					<include name="getUserInfoDetailTest" />
+				</method>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- 配置监听器 -->
+	<listeners>
+		<listener
+			class-name="jadinec.test.api.config.ExtentTestNGIReporterListener" />
+	</listeners>
+	
+</suite>

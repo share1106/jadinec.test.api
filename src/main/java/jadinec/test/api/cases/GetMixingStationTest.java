@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMixingStationTest {
 
 	// 查询拌合站
-	@Test(enabled=false)
+	@Test
 	public void getMixingStationTest() throws IOException {
 
 		// 发送请求

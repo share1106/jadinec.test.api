@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringItemListTest {
 
 	// 查询技术员管理分部分项列表
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringItemListTest() throws IOException {
 
 		// 发送请求

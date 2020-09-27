@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ListMaterialDetailTest {
 
 	// 查询物料明细
-	@Test(enabled=false)
+	@Test
 	public void listMaterialDetailTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetLedgerListTest {
 
 	// 查询细目列表
-	@Test(enabled=false)
+	@Test
 	public void getLedgerListTest() throws IOException {
 
 		// 发送请求

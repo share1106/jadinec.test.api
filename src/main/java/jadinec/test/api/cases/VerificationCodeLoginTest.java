@@ -230,6 +230,38 @@ public class VerificationCodeLoginTest {
 		TestConfig.getEngineeringTypeUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringType);
 		TestConfig.followUpUrl = ConfigFile.getUrl(InterfaceName.FollowUp);
 		TestConfig.scheduleUrl = ConfigFile.getUrl(InterfaceName.Schedule);
+		TestConfig.webConcretePouringInformUrl = ConfigFile.getUrl(InterfaceName.WebConcretePouringInform);
+		TestConfig.obtainProdNameListUrl = ConfigFile.getUrl(InterfaceName.ObtainProdNameList);
+		TestConfig.getManageSlideUrl = ConfigFile.getUrl(InterfaceName.GetManageSlide);
+		TestConfig.getMergeOrderListUrl = ConfigFile.getUrl(InterfaceName.GetMergeOrderList);
+		TestConfig.createMergeSerialUrl = ConfigFile.getUrl(InterfaceName.CreateMergeSerial);
+		TestConfig.getProgressUrl = ConfigFile.getUrl(InterfaceName.GetProgress);
+		TestConfig.getMergeOrderDetailUrl = ConfigFile.getUrl(InterfaceName.GetMergeOrderDetail);
+		TestConfig.outputTheSummaryUrl = ConfigFile.getUrl(InterfaceName.OutputTheSummary);
+		TestConfig.logoutUrl = ConfigFile.getUrl(InterfaceName.Logout);
+		TestConfig.getVisualProUrl = ConfigFile.getUrl(InterfaceName.GetVisualPro);
+		TestConfig.toggleProCodeUrl = ConfigFile.getUrl(InterfaceName.ToggleProCode);
+		TestConfig.getOrgListUrl = ConfigFile.getUrl(InterfaceName.GetOrgList);
+		TestConfig.addContractUrl = ConfigFile.getUrl(InterfaceName.AddContract);
+		TestConfig.getPageListUrl = ConfigFile.getUrl(InterfaceName.GetPageList);
+		TestConfig.getContractTotalUrl = ConfigFile.getUrl(InterfaceName.GetContractTotal);
+		TestConfig.getContractInfoUrl = ConfigFile.getUrl(InterfaceName.GetContractInfo);
+		TestConfig.getContViewListUrl = ConfigFile.getUrl(InterfaceName.GetContViewList);
+		TestConfig.getProcessInfoUrl = ConfigFile.getUrl(InterfaceName.GetProcessInfo);
+		TestConfig.getContEngineeringCountUrl = ConfigFile.getUrl(InterfaceName.GetContEngineeringCount);
+		TestConfig.getContTeamgCountUrl = ConfigFile.getUrl(InterfaceName.GetContTeamgCount);
+		TestConfig.getProProcessListUrl = ConfigFile.getUrl(InterfaceName.GetProProcessList);
+		TestConfig.getContProcessListUrl = ConfigFile.getUrl(InterfaceName.GetContProcessList);
+		TestConfig.getContAddListUrl = ConfigFile.getUrl(InterfaceName.GetContAddList);
+		TestConfig.addAwaitCommitContItemUrl = ConfigFile.getUrl(InterfaceName.AddAwaitCommitContItem);
+		TestConfig.addAllAwaitCommitContItemUrl = ConfigFile.getUrl(InterfaceName.AddAllAwaitCommitContItem);
+		TestConfig.addAllContItemUrl = ConfigFile.getUrl(InterfaceName.AddAllContItem);
+		TestConfig.editContractUrl = ConfigFile.getUrl(InterfaceName.EditContract);
+		TestConfig.deleteContItemUrl = ConfigFile.getUrl(InterfaceName.DeleteContItem);
+		TestConfig.getContTeamRangeListUrl = ConfigFile.getUrl(InterfaceName.GetContTeamRangeList);
+		TestConfig.addContTeamItemUrl = ConfigFile.getUrl(InterfaceName.AddContTeamItem);
+		TestConfig.deleteContTeamItemUrl = ConfigFile.getUrl(InterfaceName.DeleteContTeamItem);
+		TestConfig.deleteContractorContractUrl = ConfigFile.getUrl(InterfaceName.DeleteContractorContract);
 		
 		TestConfig.defaultHttpClient = new DefaultHttpClient();
 	}
@@ -271,9 +303,9 @@ public class VerificationCodeLoginTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 				
-		param2.put("permsSystem", "1728");
+		param2.put("permsSystem", "1049");
 		param2.put("phoneNum", "17700000000");
-		param2.put("phoneCode", "1722");
+		param2.put("phoneCode", "1049");
 		param2.put("deviceId", "35861430-6531-A809-FFFF-FFFFEB4C6F18");
 						
 		param1.put("client", "android");

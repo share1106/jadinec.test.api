@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class PreviewTest {
 
 	// 围岩变更参数表预览
-	@Test(enabled=false)
+	@Test
 	public void previewTest() throws IOException {
 
 		// 发送请求

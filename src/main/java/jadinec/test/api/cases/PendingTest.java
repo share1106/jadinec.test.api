@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class PendingTest {
 
 	// 获取管理任务小红点数量
-	@Test(enabled=false)
+	@Test
 	public void pendingTest() throws IOException {
 
 		// 发送请求

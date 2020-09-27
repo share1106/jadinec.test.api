@@ -25,7 +25,7 @@ import net.sf.json.JSONObject;
 public class GetTokenTest {
 
 	//令牌获取
-	@Test(dependsOnGroups = { "verificationCodeLoginSuccess" },enabled=false)
+	@Test(enabled=false)
 	public void getTokenTest() throws IOException {
 		
 		// 发送请求

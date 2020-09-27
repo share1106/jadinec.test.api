@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringSubItemTest {
 
 	// 分项工程列表数据
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringProcessTest() throws IOException {
 
 		// 发送请求

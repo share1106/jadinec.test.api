@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class QueryWallRoackInfoByProcessOddTest {
 
 	// 查询围岩变更详情
-	@Test(enabled=false)
+	@Test
 	public void queryWallRoackInfoByProcessOddTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetTransDriverPointTest {
 
 	// 运输司机行动轨迹
-	@Test(enabled=false)
+	@Test
 	public void getTransDriverPointTest() throws IOException {
 
 		// 发送请求

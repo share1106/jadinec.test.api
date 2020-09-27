@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetProjectLocationSummaryInfoTest {
 
 	// 获取部位汇总信息
-	@Test(enabled=false)
+	@Test
 	public void getProjectLocationSummaryInfoTest() throws IOException {
 
 		// 发送请求

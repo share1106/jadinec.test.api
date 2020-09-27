@@ -19,8 +19,8 @@ import net.sf.json.JSONObject;
 
 public class SendPouringTokenTest {
 
-	// 提交浇筑令（浇筑申请单）
-	@Test(enabled=false)
+	// 提交浇筑令(浇筑申请单)
+	@Test
 	public void sendPouringTokenTest() throws IOException {
 
 		// 发送请求

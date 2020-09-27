@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetSpecifiedUserStatisticInfoTest {
 
 	// 获取指定用户信息(日)
-	@Test(enabled=false)
+	@Test
 	public void getSpecifiedUserStatisticInfoTest() throws IOException {
 
 		// 发送请求

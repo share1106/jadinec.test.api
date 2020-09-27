@@ -20,44 +20,44 @@ import net.sf.json.JSONObject;
 public class GetEngineeringItemDesignDataTest {
 
 	// 查询设计数据
-		@Test(enabled=false)
-		public void getEngineeringItemDesignDataTest() throws IOException {
+	@Test
+	public void getEngineeringItemDesignDataTest() throws IOException {
 
-			// 发送请求
-			JSONArray result = getJsonResult();
-			System.out.println(result);
+		// 发送请求
+		JSONArray result = getJsonResult();
+		System.out.println(result);
 
-			String data = null;
+		String data = null;
 
-			for (int i = 0; i < result.size(); i++) {
-				JSONObject jsonObject = result.getJSONObject(i);
-				data = jsonObject.getString("success");
-			}
-
-			// 验证结果
-			Assert.assertEquals("true", data);
+		for (int i = 0; i < result.size(); i++) {
+			JSONObject jsonObject = result.getJSONObject(i);
+			data = jsonObject.getString("success");
 		}
 
-		private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-			HttpPost post = new HttpPost(TestConfig.getEngineeringItemDesignDataUrl);
-			System.out.println(TestConfig.getEngineeringItemDesignDataUrl);
-			JSONObject param1 = new JSONObject();
+		// 验证结果
+		Assert.assertEquals("true", data);
+	}
 
-			param1.put("id", "63059696738766848");// 任务ID
-			
-			post.setHeader("Content-Type", ConfigFile.Content_Type);
-			post.setHeader("access_token", ConfigFile.access_token);
-			post.setHeader("client", ConfigFile.client);
+	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
+		HttpPost post = new HttpPost(TestConfig.getEngineeringItemDesignDataUrl);
+		System.out.println(TestConfig.getEngineeringItemDesignDataUrl);
+		JSONObject param1 = new JSONObject();
 
-			StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
-			post.setEntity(entity);
+		param1.put("id", "64145146249351168");// 任务ID
 
-			String result;
-			HttpResponse response = TestConfig.defaultHttpClient.execute(post);
-			result = EntityUtils.toString(response.getEntity(), "UTF-8");
-			// System.out.println(result);
-			List<String> list = Arrays.asList(result);
-			JSONArray array = JSONArray.fromObject(list);
-			return array;
-		}
+		post.setHeader("Content-Type", ConfigFile.Content_Type);
+		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("client", ConfigFile.client);
+
+		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
+		post.setEntity(entity);
+
+		String result;
+		HttpResponse response = TestConfig.defaultHttpClient.execute(post);
+		result = EntityUtils.toString(response.getEntity(), "UTF-8");
+		// System.out.println(result);
+		List<String> list = Arrays.asList(result);
+		JSONArray array = JSONArray.fromObject(list);
+		return array;
+	}
 }

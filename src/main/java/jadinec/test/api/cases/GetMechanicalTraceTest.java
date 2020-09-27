@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetMechanicalTraceTest {
 
 	// 车辆运输状态
-	@Test(enabled=false)
+	@Test
 	public void getMechanicalTraceTest() throws IOException {
 
 		// 发送请求

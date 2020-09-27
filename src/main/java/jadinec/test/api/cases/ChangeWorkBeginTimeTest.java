@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ChangeWorkBeginTimeTest {
 
 	// 修改浇筑单开工时间
-	@Test(enabled=false)
+	@Test
 	public void changeWorkBeginTimeTest() throws IOException {
 
 		// 发送请求

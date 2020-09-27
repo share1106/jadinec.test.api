@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetConstRateDetailsTest {
 
 	// 施工配合比详情提交页
-	@Test(enabled=false)
+	@Test
 	public void getConstRateDetailsTest() throws IOException {
 
 		// 发送请求

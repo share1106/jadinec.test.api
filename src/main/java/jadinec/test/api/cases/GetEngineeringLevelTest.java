@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEngineeringLevelTest {
 
 	// 分项筛选
-	@Test(enabled=false)
+	@Test
 	public void getEngineeringLevelTest() throws IOException {
 
 		// 发送请求

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetConstRateTaskTest {
 
 	// 施工配合比列表
-	@Test(enabled=false)
+	@Test
 	public void getConstRateTaskTest() throws IOException {
 
 		// 发送请求

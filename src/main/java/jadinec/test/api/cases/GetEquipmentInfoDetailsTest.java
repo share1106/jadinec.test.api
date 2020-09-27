@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetEquipmentInfoDetailsTest {
 
 	// 设备二级
-	@Test(enabled=false)
+	@Test
 	public void getEquipmentInfoDetailsTest() throws IOException {
 
 		// 发送请求
