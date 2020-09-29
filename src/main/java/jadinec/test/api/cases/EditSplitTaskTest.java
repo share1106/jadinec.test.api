@@ -43,11 +43,11 @@ public class EditSplitTaskTest {
 		System.out.println(TestConfig.editSplitTaskUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("id", "63742969668308993");
-		param1.put("constTaskId", "63085738710929408");// 任务ID
-		param1.put("beginStump", 123432.0);// 开始桩号
-		param1.put("endStump", 123435.0);// 结束桩号
-		param1.put("length", 3);// 完成长度
+		param1.put("id", "65261097346797569");
+		param1.put("constTaskId", "64765371374243840");// 任务ID
+		param1.put("beginStump", 124419.75);// 开始桩号
+		param1.put("endStump", 124421.75);// 结束桩号
+		param1.put("length", 2);// 完成长度
 		param1.put("jobType", 0);// 0-从小到大；1-从大到小
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

@@ -12,6 +12,8 @@ public class ConfigFile {
 	public static String Content_Type = bundle.getString("Content-Type");
 	public static String client = bundle.getString("client");
 	public static String version = bundle.getString("version");
+	public static String clientPC = bundle.getString("clientPC");
+	public static String access_token_pc = bundle.getString("access_token_pc");
 	
 	
 	public static String getUrl(InterfaceName name) {
@@ -730,6 +732,132 @@ public class ConfigFile {
 		}
 		if(name == InterfaceName.DeleteContractorContract) {
 			uri = bundle.getString("deleteContractorContract.uri");
+		}
+		if(name == InterfaceName.DeleteContItemByCondition) {
+			uri = bundle.getString("deleteContItemByCondition.uri");
+		}
+		if(name == InterfaceName.AddContTeamItemByCondition) {
+			uri = bundle.getString("addContTeamItemByCondition.uri");
+		}
+		if(name == InterfaceName.ObtainTeamList) {
+			uri = bundle.getString("obtainTeamList.uri");
+		}
+		if(name == InterfaceName.GetTaskType) {
+			uri = bundle.getString("getTaskType.uri");
+		}
+		if(name == InterfaceName.GetTaskAlterItems) {
+			uri = bundle.getString("getTaskAlterItems.uri");
+		}
+		if(name == InterfaceName.GetHandOverRecord) {
+			uri = bundle.getString("getHandOverRecord.uri");
+		}
+		if(name == InterfaceName.GetRecordDetails) {
+			uri = bundle.getString("getRecordDetails.uri");
+		}
+		if(name == InterfaceName.Search) {
+			uri = bundle.getString("search.uri");
+		}
+		if(name == InterfaceName.GetMergeElements) {
+			uri = bundle.getString("getMergeElements.uri");
+		}
+		if(name == InterfaceName.FaceMatch) {
+			uri = bundle.getString("faceMatch.uri");
+		}
+		if(name == InterfaceName.GetfaceSimilarScore) {
+			uri = bundle.getString("getfaceSimilarScore.uri");
+		}
+		if(name == InterfaceName.GetUserInfoByfaceSimilar) {
+			uri = bundle.getString("getUserInfoByfaceSimilar.uri");
+		}
+		if(name == InterfaceName.GetConstRatioDetail) {
+			uri = bundle.getString("getConstRatioDetail.uri");
+		}
+		if(name == InterfaceName.GetProductProportion) {
+			uri = bundle.getString("getProductProportion.uri");
+		}
+		if(name == InterfaceName.Data) {
+			uri = bundle.getString("data.uri");
+		}
+		if(name == InterfaceName.GetStatisticsGroupWorkArea) {
+			uri = bundle.getString("getStatisticsGroupWorkArea.uri");
+		}
+		if(name == InterfaceName.GetAllUnitProjectByWorkAreaCode) {
+			uri = bundle.getString("getAllUnitProjectByWorkAreaCode.uri");
+		}
+		if(name == InterfaceName.AddTunnelConstTask) {
+			uri = bundle.getString("addTunnelConstTask.uri");
+		}
+		if(name == InterfaceName.GetEngineeringTypeNum) {
+			uri = bundle.getString("getEngineeringTypeNum.uri");
+		}
+		if(name == InterfaceName.GetProductByWorkAreas) {
+			uri = bundle.getString("getProductByWorkAreas.uri");
+		}
+		if(name == InterfaceName.GetProductEngineeringQuantitiesLedger) {
+			uri = bundle.getString("getProductEngineeringQuantitiesLedger.uri");
+		}
+		if(name == InterfaceName.GetContractorProductByDayOrMonthOrHistory) {
+			uri = bundle.getString("getContractorProductByDayOrMonthOrHistory.uri");
+		}
+		if(name == InterfaceName.GetUnitEngineeringAndDept) {
+			uri = bundle.getString("getUnitEngineeringAndDept.uri");
+		}
+		if(name == InterfaceName.GetEngineeringItemLists) {
+			uri = bundle.getString("getEngineeringItemLists.uri");
+		}
+		if(name == InterfaceName.GetEngineeringItemDetail) {
+			uri = bundle.getString("getEngineeringItemDetail.uri");
+		}
+		if(name == InterfaceName.GetStatisticPersonnelInfo) {
+			uri = bundle.getString("getStatisticPersonnelInfo.uri");
+		}
+		if(name == InterfaceName.GetStatisticUserOnlineByDeptId) {
+			uri = bundle.getString("getStatisticUserOnlineByDeptId.uri");
+		}
+		if(name == InterfaceName.GetStatisticDevice) {
+			uri = bundle.getString("getStatisticDevice.uri");
+		}
+		if(name == InterfaceName.GetOutputValueProgress) {
+			uri = bundle.getString("getOutputValueProgress.uri");
+		}
+		if(name == InterfaceName.ListOutputValueProgress) {
+			uri = bundle.getString("listOutputValueProgress.uri");
+		}
+		if(name == InterfaceName.GetProPoint) {
+			uri = bundle.getString("getProPoint.uri");
+		}
+		if(name == InterfaceName.GetChildCompany) {
+			uri = bundle.getString("getChildCompany.uri");
+		}
+		if(name == InterfaceName.GetFeatureValue) {
+			uri = bundle.getString("getFeatureValue.uri");
+		}
+		if(name == InterfaceName.EnterSiteFeatureCompare) {
+			uri = bundle.getString("enterSiteFeatureCompare.uri");
+		}
+		if(name == InterfaceName.GetPsnTabWhistleTable) {
+			uri = bundle.getString("getPsnTabWhistleTable.uri");
+		}
+		if(name == InterfaceName.GetGeneralSingleList) {
+			uri = bundle.getString("getGeneralSingleList.uri");
+		}
+		if(name == InterfaceName.GetSingleOrder) {
+			uri = bundle.getString("getSingleOrder.uri");
+		}
+		if(name == InterfaceName.GetSplitAccording) {
+			uri = bundle.getString("getSplitAccording.uri");
+		}
+		if(name == InterfaceName.AddSplitAccording) {
+			uri = bundle.getString("addSplitAccording.uri");
+		}
+		if(name == InterfaceName.DelSplitOrder) {
+			uri = bundle.getString("delSplitOrder.uri");
+		}
+		if(name == InterfaceName.GetEngineeringPoi) {
+			uri = bundle.getString("getEngineeringPoi.uri");
+		}
+		if(name == InterfaceName.GetWorkAreaList) {
+			uri = bundle.getString("getWorkAreaList.uri");
 		}
 		
 		testUrl = address + uri;

@@ -43,8 +43,8 @@ public class DelSplitTaskTest {
 		System.out.println(TestConfig.delSplitTaskUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("id", "63742334113812481");
-		param1.put("constTaskId", "63085738710929408");// 任务ID
+		param1.put("id", "65261097346797569");
+		param1.put("constTaskId", "64765371374243840");// 任务ID
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);

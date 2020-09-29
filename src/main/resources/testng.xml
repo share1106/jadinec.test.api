@@ -1187,8 +1187,197 @@
 					<include name="deleteContractorContractTest" />
 				</method>
 			</class>
+			<class name="jadinec.test.api.cases.DeleteContItemByConditionTest">
+				<method>
+					<include name="deleteContItemByConditionTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ObtainTeamListTest">
+				<method>
+					<include name="obtainTeamListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTaskTypeTest">
+				<method>
+					<include name="getTaskTypeTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTaskAlterItemsTest">
+				<method>
+					<include name="getTaskAlterItemsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetTogetherDeptUserTest">
+				<method>
+					<include name="getTogetherDeptUserTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetHandOverRecordTest">
+				<method>
+					<include name="getHandOverRecordTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetRecordDetailsTest">
+				<method>
+					<include name="getRecordDetailsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.SearchTest">
+				<method>
+					<include name="searchTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetMergeElementsTest">
+				<method>
+					<include name="getMergeElementsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.FaceMatchTest">
+				<method>
+					<include name="faceMatchTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetfaceSimilarScoreTest">
+				<method>
+					<include name="getfaceSimilarScoreTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetConstRatioDetailTest">
+				<method>
+					<include name="getConstRatioDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProductProportionTest">
+				<method>
+					<include name="getProductProportionTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DataTest">
+				<method>
+					<include name="dataTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetStatisticsGroupWorkAreaTest">
+				<method>
+					<include name="getStatisticsGroupWorkAreaTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetAllUnitProjectByWorkAreaCodeTest">
+				<method>
+					<include name="getAllUnitProjectByWorkAreaCodeTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringTypeNumTest">
+				<method>
+					<include name="getEngineeringTypeNumTest" />
+				</method>
+			</class>	
+			<class name="jadinec.test.api.cases.GetProductByWorkAreasTest">
+				<method>
+					<include name="getProductByWorkAreasTest" />
+				</method>
+			</class>	
+			<class name="jadinec.test.api.cases.GetProductEngineeringQuantitiesLedgerTest">
+				<method>
+					<include name="getProductEngineeringQuantitiesLedgerTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetContractorProductByDayOrMonthOrHistoryTest">
+				<method>
+					<include name="getContractorProductByDayOrMonthOrHistoryTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetUnitEngineeringAndDeptTest">
+				<method>
+					<include name="getUnitEngineeringAndDeptTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringItemListsTest">
+				<method>
+					<include name="getEngineeringItemListsTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringItemDetailTest">
+				<method>
+					<include name="getEngineeringItemDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetStatisticPersonnelInfoTest">
+				<method>
+					<include name="getStatisticPersonnelInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetStatisticUserOnlineByDeptIdTest">
+				<method>
+					<include name="getStatisticUserOnlineByDeptIdTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetStatisticDeviceTest">
+				<method>
+					<include name="getStatisticDeviceTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetOutputValueProgressTest">
+				<method>
+					<include name="getOutputValueProgressTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ListOutputValueProgressTest">
+				<method>
+					<include name="listOutputValueProgressTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetProPointTest">
+				<method>
+					<include name="getProPointTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetChildCompanyTest">
+				<method>
+					<include name="getChildCompanyTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetFeatureValueTest">
+				<method>
+					<include name="getFeatureValueTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.EnterSiteFeatureCompareTest">
+				<method>
+					<include name="enterSiteFeatureCompareTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetPsnTabWhistleTableTest">
+				<method>
+					<include name="getPsnTabWhistleTableTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetGeneralSingleListTest">
+				<method>
+					<include name="getGeneralSingleListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSingleOrderTest">
+				<method>
+					<include name="getSingleOrderTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSplitAccordingTest">
+				<method>
+					<include name="getSplitAccordingTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringPoiTest">
+				<method>
+					<include name="getEngineeringPoiTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetWorkAreaListTest">
+				<method>
+					<include name="getWorkAreaListTest" />
+				</method>
+			</class>
 			
-						
 			
 		</classes>
 	</test>

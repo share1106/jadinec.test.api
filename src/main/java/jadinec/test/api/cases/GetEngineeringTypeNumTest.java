@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class GetEngineeringTypeNumTest {
 
-	// 分单任务详情
+	// 查询分项类型数量
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void getEngineeringTypeNumTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,12 +39,17 @@ public class GetSplitDetailTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.getEngineeringTypeNumUrl);
+		System.out.println(TestConfig.getEngineeringTypeNumUrl);
 		JSONObject param1 = new JSONObject();
-
-		param1.put("id", "65261097346797569");
 		
+		param1.put("workAreaCodes", "GQ0028");// 工区编码
+		param1.put("type", "history");// history-开累；month-月；day-日
+		param1.put("date", "");//2020-02;2020-02-02
+		param1.put("proCode", "7");// 项目编号
+		param1.put("accountId", 1143); // 用户ID
+		param1.put("categoryCode", 2);// 分项工程类型，桥梁为2
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

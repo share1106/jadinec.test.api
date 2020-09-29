@@ -17,34 +17,44 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class SearchTest {
 
-	// 分单任务详情
+	// 大屏搜素
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void searchTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data1 = jsonObject.getString("success");
 		}
 
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("true", data1);
+
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.searchUrl);
+		System.out.println(TestConfig.searchUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "65261097346797569");
+		int[] paramInt = {1,2};
 		
+		param2.put("key", "河北");// 搜素词
+		param2.put("proCode", "5");// 项目编号
+		param2.put("execState", paramInt);// 施工状态 0-未计划 1-待安排 2-待开工 3-施工中 4-已完成
+
+		param1.put("client", ConfigFile.client);
+		param1.put("version", ConfigFile.version);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

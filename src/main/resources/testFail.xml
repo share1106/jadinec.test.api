@@ -208,6 +208,31 @@
 					<include name="deleteContTeamItemTest" />
 				</method>
 			</class>
+			<class name="jadinec.test.api.cases.AddContTeamItemByConditionTest">
+				<method>
+					<include name="addContTeamItemByConditionTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DeleteContTeamItemByConditionTest">
+				<method>
+					<include name="deleteContTeamItemByConditionTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetUserInfoByfaceSimilarTest">
+				<method>
+					<include name="getUserInfoByfaceSimilarTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddSplitAccordingTest">
+				<method>
+					<include name="addSplitAccordingTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DelSplitOrderTest">
+				<method>
+					<include name="delSplitOrderTest" />
+				</method>
+			</class>
 			
 		</classes>
 	</test>

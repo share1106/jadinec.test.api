@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class GetContractorProductByDayOrMonthOrHistoryTest {
 
-	// 分单任务详情
+	// 获取分包商二级页面
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void getContractorProductByDayOrMonthOrHistoryTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,12 +39,19 @@ public class GetSplitDetailTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.getContractorProductByDayOrMonthOrHistoryUrl);
+		System.out.println(TestConfig.getContractorProductByDayOrMonthOrHistoryUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "65261097346797569");
-		
+		param2.put("type", "history");// history-查询开累产值，month-查询月产值，day-查询当日产值
+		param2.put("date", "");// type为month的时候date格式【2019-10】；ype为day的时候date格式【2019-10-10】
+		param2.put("proCode", "5");// 项目编码
+
+		param1.put("client", ConfigFile.Content_Type);
+		param1.put("version", ConfigFile.version);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

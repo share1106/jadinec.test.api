@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class GetPsnTabWhistleTableTest {
 
-	// 分单任务详情
+	// 一人一表 组装表格数据并返回
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void getPsnTabWhistleTableTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,12 +39,19 @@ public class GetSplitDetailTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.getPsnTabWhistleTableUrl);
+		System.out.println(TestConfig.getPsnTabWhistleTableUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "65261097346797569");
-		
+		param2.put("tableCode", "YW7301‪");
+		param2.put("key", "‪uuid");
+		param2.put("value", "‪425d3beed21547e1a6a78957f82131a1");
+
+		param1.put("client", ConfigFile.Content_Type);
+		param1.put("version", ConfigFile.version);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

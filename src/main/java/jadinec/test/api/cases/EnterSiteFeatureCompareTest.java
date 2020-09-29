@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class EnterSiteFeatureCompareTest {
 
-	// 分单任务详情
+	// 人员进场人脸特征值比较
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void enterSiteFeatureCompareTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,12 +39,18 @@ public class GetSplitDetailTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.enterSiteFeatureCompareUrl);
+		System.out.println(TestConfig.enterSiteFeatureCompareUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "65261097346797569");
-		
+		param2.put("feature", "‪"); // 特征值1
+		param2.put("img", "‪9bd2e1b3f0604e52b02bb8018bebb0de");//人脸图片地址（待比较的特征值2）
+
+		param1.put("client", ConfigFile.Content_Type);
+		param1.put("version", ConfigFile.version);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

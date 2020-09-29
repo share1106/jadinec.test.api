@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class GetProPointTest {
 
-	// 分单任务详情
+	// 项目中心点
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void getProPointTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,12 +39,17 @@ public class GetSplitDetailTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.getProPointUrl);
+		System.out.println(TestConfig.getProPointUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "65261097346797569");
+		param2.put("deptId", 12); // 部门ID
 		
+		param1.put("client", ConfigFile.Content_Type);
+		param1.put("version", ConfigFile.version);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

@@ -43,7 +43,7 @@ public class CheckPlanExecStateTest {
 		System.out.println(TestConfig.checkPlanExecStateUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("id", 1);// 任务ID
+		param1.put("id", "64765371374243840");// 任务ID
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);

@@ -17,33 +17,35 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class GetTaskTypeTest {
 
-	// 分单任务详情
+	// 获取承包所有施工队
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void getTaskTypeTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data1 = jsonObject.getString("success");
 		}
 
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("true", data1);
+
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.getTaskTypeUrl);
+		System.out.println(TestConfig.getTaskTypeUrl);
 		JSONObject param1 = new JSONObject();
-
-		param1.put("id", "65261097346797569");
+		
+		param1.put("client", ConfigFile.client);
+		param1.put("version", ConfigFile.version);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);

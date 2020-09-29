@@ -43,10 +43,10 @@ public class AddTunnelConstTaskTest {
 		System.out.println(TestConfig.addTunnelConstTaskUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("constTaskId", "63085738710929408");//任务ID
-		param1.put("beginStump", 123429.0);//开始桩号
-		param1.put("endStump", 123434.0);//结束桩号
-		param1.put("length", 2);//完成长度
+		param1.put("constTaskId", "64765371374243840");//任务ID
+		param1.put("beginStump", 124419.75);//开始桩号
+		param1.put("endStump", 124420.75);//结束桩号
+		param1.put("length", 1);//完成长度
 		param1.put("jobType", 0);//0-从小到大；1-从大到小
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

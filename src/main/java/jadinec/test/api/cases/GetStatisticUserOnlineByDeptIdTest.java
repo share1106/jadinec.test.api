@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetSplitDetailTest {
+public class GetStatisticUserOnlineByDeptIdTest {
 
-	// 分单任务详情
+	// 根据部门编号获取部门人员信息
 	@Test
-	public void getSplitDetailTest() throws IOException {
+	public void getStatisticUserOnlineByDeptIdTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,12 +39,19 @@ public class GetSplitDetailTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getSplitDetailUrl);
-		System.out.println(TestConfig.getSplitDetailUrl);
+		HttpPost post = new HttpPost(TestConfig.getStatisticUserOnlineByDeptIdUrl);
+		System.out.println(TestConfig.getStatisticUserOnlineByDeptIdUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "65261097346797569");
-		
+		param2.put("type", 2);// 请求类型: 1-管理人员；2-产业人员
+		param2.put("proCode", "7"); // 项目编号
+		param2.put("deptId", 452);//部门ID
+
+		param1.put("client", ConfigFile.Content_Type);
+		param1.put("version", ConfigFile.version);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);

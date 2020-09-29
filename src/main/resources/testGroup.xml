@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="甲丁智慧建造云平台">
+	<test name="APP单个接口测试">
+		<classes>
+			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
+			</class>
+			<class name="jadinec.test.api.cases.GetConstTaskListTest">
+				<method>
+					<include name="getConstTaskListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.CheckPlanExecStateTest">
+				<method>
+					<include name="checkPlanExecStateTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringItemDesignDataTest">
+				<method>
+					<include name="getEngineeringItemDesignDataTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetEngineeringItemDesignLengthTest">
+				<method>
+					<include name="getEngineeringItemDesignLengthTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddTunnelConstTaskTest">
+				<method>
+					<include name="addTunnelConstTaskTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.EditSplitTaskTest">
+				<method>
+					<include name="editSplitTaskTest" />
+				</method>
+				
+			</class>
+			<class name="jadinec.test.api.cases.GetSplitDetailTest">
+				<method>
+					<include name="getSplitDetailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSplitTaskTest">
+				<method>
+					<include name="getSplitTaskTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DelSplitTaskTest">
+				<method>
+					<include name="delSplitTaskTest" />
+				</method>
+			</class>
+			
+		</classes>
+	</test>
+	
+	<!-- 配置监听器 -->
+	<listeners>
+		<listener
+			class-name="jadinec.test.api.config.ExtentTestNGIReporterListener" />
+	</listeners>
+	
+</suite>
