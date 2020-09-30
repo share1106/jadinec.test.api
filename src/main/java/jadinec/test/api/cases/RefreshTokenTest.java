@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class RefreshTokenTest {
 
 	// 令牌（token）刷新
-	@Test(enabled=false)
+	@Test(dependsOnGroups= {"verificationCodeLoginSuccess"})
 	public void refreshTokenTest() throws IOException {
 
 		// 发送请求
@@ -51,7 +51,7 @@ public class RefreshTokenTest {
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("access_token", VerificationCodeLoginTest.token);
 		post.setHeader("client", ConfigFile.client);
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

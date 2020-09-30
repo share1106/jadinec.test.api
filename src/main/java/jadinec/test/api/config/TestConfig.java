@@ -283,6 +283,17 @@ public class TestConfig {
 	public static String delSplitOrderUrl;
 	public static String getEngineeringPoiUrl;
 	public static String getWorkAreaListUrl;
+	public static String getSubsidiaryFacilitiesTypeInfoPageListUrl;
+	public static String getAllLineShapeUrl;
+	public static String getAllGeometryUrl;
+	public static String addSubsidiaryFacilitiesTypeInfoUrl;
+	public static String getSubsidiaryFacilitiesTypeInfoUrl;
+	public static String updateSubsidiaryFacilitiesTypeInfoUrl;
+	public static String delSubsidiaryFacilitiesTypeInfoUrl;
+	public static String getExportEmailUrl;
+	public static String addExportEmailUrl;
+	public static String exportSubsidiaryFacilitiesTypeInfoUrl;
+	
 		
 	public static DefaultHttpClient defaultHttpClient;
 	public static CookieStore cookieStore;

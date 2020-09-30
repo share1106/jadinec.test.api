@@ -3,12 +3,13 @@
 	<test name="单个接口测试">
 		<classes>
 			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
+								
 			</class>
 			<class
-				name="jadinec.test.api.cases.GetWorkAreaListTest">
+				name="jadinec.test.api.cases.ExportSubsidiaryFacilitiesTypeInfoTest">
 				<method>
 					<include
-						name="getWorkAreaListTest" />
+						name="exportSubsidiaryFacilitiesTypeInfoTest" />
 				</method>
 			</class>
 		</classes>

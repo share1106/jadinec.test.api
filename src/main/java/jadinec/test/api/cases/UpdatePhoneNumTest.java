@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class UpdatePhoneNumTest {
 
 	// 修改手机号码
-	@Test(enabled=false)
+	@Test(dependsOnGroups= {"verificationCodeLoginSuccess"})
 	public void updatePhoneNumTest() throws IOException {
 
 		// 发送请求
@@ -44,15 +44,15 @@ public class UpdatePhoneNumTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("phoneNum", "19888788366");
-		param2.put("verificationCode", "1132");
+		param2.put("phoneNum", "18611599121");
+		param2.put("verificationCode", VerificationCodeLoginTest.getCurrentTime());
 
 		param1.put("client", "android");
 		param1.put("version", "1.0");
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("access_token", VerificationCodeLoginTest.token);
 		post.setHeader("client", ConfigFile.client);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

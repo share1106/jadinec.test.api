@@ -51,13 +51,13 @@ public class AddContTeamItemByConditionTest {
 		param2.put("deptFunc", 4);
 		param2.put("engineeringList", paramStr);
 
-		param1.put("client", ConfigFile.clientPC);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", "913724ca-7dd8-4574-896d-f8781fc76e17");
-		post.setHeader("client", ConfigFile.clientPC);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

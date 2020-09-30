@@ -12,12 +12,15 @@ public class ConfigFile {
 	public static String Content_Type = bundle.getString("Content-Type");
 	public static String client = bundle.getString("client");
 	public static String version = bundle.getString("version");
-	public static String clientPC = bundle.getString("clientPC");
+	public static String client_pc = bundle.getString("client_pc");
 	public static String access_token_pc = bundle.getString("access_token_pc");
 	
 	
 	public static String getUrl(InterfaceName name) {
-		String address = bundle.getString("test.url");
+		//APP测试地址
+		//String address = bundle.getString("test.url");
+		//运营后台测试地址
+		String address = bundle.getString("testpc.url");
 		String uri = "";
 		// 最终测试地址
 		String testUrl;
@@ -858,6 +861,36 @@ public class ConfigFile {
 		}
 		if(name == InterfaceName.GetWorkAreaList) {
 			uri = bundle.getString("getWorkAreaList.uri");
+		}
+		if(name == InterfaceName.GetSubsidiaryFacilitiesTypeInfoPageList) {
+			uri = bundle.getString("getSubsidiaryFacilitiesTypeInfoPageList.uri");
+		}
+		if(name == InterfaceName.GetAllLineShape) {
+			uri = bundle.getString("getAllLineShape.uri");
+		}
+		if(name == InterfaceName.GetAllGeometry) {
+			uri = bundle.getString("getAllGeometry.uri");
+		}
+		if(name == InterfaceName.AddSubsidiaryFacilitiesTypeInfo) {
+			uri = bundle.getString("addSubsidiaryFacilitiesTypeInfo.uri");
+		}
+		if(name == InterfaceName.GetSubsidiaryFacilitiesTypeInfo) {
+			uri = bundle.getString("getSubsidiaryFacilitiesTypeInfo.uri");
+		}
+		if(name == InterfaceName.UpdateSubsidiaryFacilitiesTypeInfo) {
+			uri = bundle.getString("updateSubsidiaryFacilitiesTypeInfo.uri");
+		}
+		if(name == InterfaceName.DelSubsidiaryFacilitiesTypeInfo) {
+			uri = bundle.getString("delSubsidiaryFacilitiesTypeInfo.uri");
+		}
+		if(name == InterfaceName.GetExportEmail) {
+			uri = bundle.getString("getExportEmail.uri");
+		}
+		if(name == InterfaceName.AddExportEmail) {
+			uri = bundle.getString("addExportEmail.uri");
+		}
+		if(name == InterfaceName.ExportSubsidiaryFacilitiesTypeInfo) {
+			uri = bundle.getString("exportSubsidiaryFacilitiesTypeInfo.uri");
 		}
 		
 		testUrl = address + uri;

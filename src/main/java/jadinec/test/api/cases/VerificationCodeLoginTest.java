@@ -1,7 +1,9 @@
 package jadinec.test.api.cases;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
@@ -24,6 +26,7 @@ public class VerificationCodeLoginTest {
 
 	public static String token = null;
 	public static String refreshToken = null;
+	
 	@BeforeTest
 	public void beforeTest() {
 		TestConfig.getTokenUrl = ConfigFile.getUrl(InterfaceName.GetToken);
@@ -305,6 +308,16 @@ public class VerificationCodeLoginTest {
 		TestConfig.delSplitOrderUrl = ConfigFile.getUrl(InterfaceName.DelSplitOrder);
 		TestConfig.getEngineeringPoiUrl = ConfigFile.getUrl(InterfaceName.GetEngineeringPoi);
 		TestConfig.getWorkAreaListUrl = ConfigFile.getUrl(InterfaceName.GetWorkAreaList);
+		TestConfig.getSubsidiaryFacilitiesTypeInfoPageListUrl = ConfigFile.getUrl(InterfaceName.GetSubsidiaryFacilitiesTypeInfoPageList);
+		TestConfig.getAllLineShapeUrl = ConfigFile.getUrl(InterfaceName.GetAllLineShape);
+		TestConfig.getAllGeometryUrl = ConfigFile.getUrl(InterfaceName.GetAllGeometry);
+		TestConfig.addSubsidiaryFacilitiesTypeInfoUrl = ConfigFile.getUrl(InterfaceName.AddSubsidiaryFacilitiesTypeInfo);
+		TestConfig.getSubsidiaryFacilitiesTypeInfoUrl = ConfigFile.getUrl(InterfaceName.GetSubsidiaryFacilitiesTypeInfo);
+		TestConfig.updateSubsidiaryFacilitiesTypeInfoUrl = ConfigFile.getUrl(InterfaceName.UpdateSubsidiaryFacilitiesTypeInfo);
+		TestConfig.delSubsidiaryFacilitiesTypeInfoUrl = ConfigFile.getUrl(InterfaceName.DelSubsidiaryFacilitiesTypeInfo);
+		TestConfig.getExportEmailUrl = ConfigFile.getUrl(InterfaceName.GetExportEmail);
+		TestConfig.addExportEmailUrl = ConfigFile.getUrl(InterfaceName.AddExportEmail);
+		TestConfig.exportSubsidiaryFacilitiesTypeInfoUrl = ConfigFile.getUrl(InterfaceName.ExportSubsidiaryFacilitiesTypeInfo);
 		
 		TestConfig.defaultHttpClient = new DefaultHttpClient();
 	}
@@ -347,13 +360,15 @@ public class VerificationCodeLoginTest {
 		JSONObject param2 = new JSONObject();
 				
 		param2.put("permsSystem", "1049");
-		param2.put("phoneNum", "17700000000");
-		param2.put("phoneCode", "1049");
+		param2.put("phoneNum", "10800000008");
+		param2.put("phoneCode", getCurrentTime());
 		param2.put("deviceId", "35861430-6531-A809-FFFF-FFFFEB4C6F18");
-						
-		param1.put("client", "android");
+		
+		System.out.println(getCurrentTime());
+		
+		param1.put("client", ConfigFile.client);
 		param1.put("content", param2);
-		param1.put("version", "1.0");
+		param1.put("version", ConfigFile.version);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		//post.setHeader("access_token", "");
@@ -369,5 +384,14 @@ public class VerificationCodeLoginTest {
 		List<String> list = Arrays.asList(result);
 		JSONArray array = JSONArray.fromObject(list);
 		return array;
+	}
+	
+	//获取当前系统时间的小时和分钟
+	public static String getCurrentTime() {
+
+		Date d = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
+		String result = sdf.format(d);
+		return result;
 	}
 }

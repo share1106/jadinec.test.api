@@ -4,50 +4,55 @@
 		<classes>
 			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
 			</class>
-			<class name="jadinec.test.api.cases.GetConstTaskListTest">
+			<!-- 运营后台接口 -->
+			<class name="jadinec.test.api.cases.GetSubsidiaryFacilitiesTypeInfoPageListTest">
 				<method>
-					<include name="getConstTaskListTest" />
+					<include name="getSubsidiaryFacilitiesTypeInfoPageListTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.CheckPlanExecStateTest">
+			<class name="jadinec.test.api.cases.GetAllLineShapeTest">
 				<method>
-					<include name="checkPlanExecStateTest" />
+					<include name="getAllLineShapeTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.GetEngineeringItemDesignDataTest">
+			<class name="jadinec.test.api.cases.GetAllGeometryTest">
 				<method>
-					<include name="getEngineeringItemDesignDataTest" />
+					<include name="getAllGeometryTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.GetEngineeringItemDesignLengthTest">
+			<class name="jadinec.test.api.cases.AddSubsidiaryFacilitiesTypeInfoTest">
 				<method>
-					<include name="getEngineeringItemDesignLengthTest" />
+					<include name="addSubsidiaryFacilitiesTypeInfoTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.AddTunnelConstTaskTest">
+			<class name="jadinec.test.api.cases.GetSubsidiaryFacilitiesTypeInfoTest">
 				<method>
-					<include name="addTunnelConstTaskTest" />
+					<include name="getSubsidiaryFacilitiesTypeInfoTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.EditSplitTaskTest">
+			<class name="jadinec.test.api.cases.UpdateSubsidiaryFacilitiesTypeInfoTest">
 				<method>
-					<include name="editSplitTaskTest" />
-				</method>
-				
-			</class>
-			<class name="jadinec.test.api.cases.GetSplitDetailTest">
-				<method>
-					<include name="getSplitDetailTest" />
+					<include name="updateSubsidiaryFacilitiesTypeInfoTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.GetSplitTaskTest">
+			<class name="jadinec.test.api.cases.DelSubsidiaryFacilitiesTypeInfoTest">
 				<method>
-					<include name="getSplitTaskTest" />
+					<include name="delSubsidiaryFacilitiesTypeInfoTest" />
 				</method>
 			</class>
-			<class name="jadinec.test.api.cases.DelSplitTaskTest">
+			<class name="jadinec.test.api.cases.GetExportEmailTest">
 				<method>
-					<include name="delSplitTaskTest" />
+					<include name="getExportEmailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddExportEmailTest">
+				<method>
+					<include name="addExportEmailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ExportSubsidiaryFacilitiesTypeInfoTest">
+				<method>
+					<include name="exportSubsidiaryFacilitiesTypeInfoTest" />
 				</method>
 			</class>
 			

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class UpdatePwdApiTest {
 
 	// 修改密码
-		@Test(enabled=false)
+		@Test(dependsOnGroups= {"verificationCodeLoginSuccess"})
 		public void updatePwdApiTest() throws IOException {
 
 			// 发送请求
@@ -45,7 +45,7 @@ public class UpdatePwdApiTest {
 			JSONObject param2 = new JSONObject();
 
 			param2.put("pwd", "2019");
-			param2.put("verificationCode", "1015");
+			param2.put("verificationCode", VerificationCodeLoginTest.getCurrentTime());
 
 			param1.put("client", "android");
 			param1.put("version", "1.0");

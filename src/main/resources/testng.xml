@@ -1377,6 +1377,57 @@
 					<include name="getWorkAreaListTest" />
 				</method>
 			</class>
+			<!-- 运营后台接口 -->
+			<class name="jadinec.test.api.cases.GetSubsidiaryFacilitiesTypeInfoPageListTest">
+				<method>
+					<include name="getSubsidiaryFacilitiesTypeInfoPageListTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetAllLineShapeTest">
+				<method>
+					<include name="getAllLineShapeTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetAllGeometryTest">
+				<method>
+					<include name="getAllGeometryTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddSubsidiaryFacilitiesTypeInfoTest">
+				<method>
+					<include name="addSubsidiaryFacilitiesTypeInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetSubsidiaryFacilitiesTypeInfoTest">
+				<method>
+					<include name="getSubsidiaryFacilitiesTypeInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateSubsidiaryFacilitiesTypeInfoTest">
+				<method>
+					<include name="updateSubsidiaryFacilitiesTypeInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.DelSubsidiaryFacilitiesTypeInfoTest">
+				<method>
+					<include name="delSubsidiaryFacilitiesTypeInfoTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.GetExportEmailTest">
+				<method>
+					<include name="getExportEmailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.AddExportEmailTest">
+				<method>
+					<include name="addExportEmailTest" />
+				</method>
+			</class>
+			<class name="jadinec.test.api.cases.ExportSubsidiaryFacilitiesTypeInfoTest">
+				<method>
+					<include name="exportSubsidiaryFacilitiesTypeInfoTest" />
+				</method>
+			</class>
 			
 			
 		</classes>
