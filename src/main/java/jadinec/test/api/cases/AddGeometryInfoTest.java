@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class AddGeometryInfoTest {
 
-	// 获取所有线条形状
+	// 添加几何信息
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void addGeometryInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,10 +39,24 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.addGeometryInfoUrl);
+		System.out.println(TestConfig.addGeometryInfoUrl);
 		JSONObject param1 = new JSONObject();
-		
+
+		param1.put("engineeringTypeCode", "FX02");// 工程类型编号
+		param1.put("lineColor", "#000");// 线条颜色
+		param1.put("completeLineColor", "#000");// 完成线条颜色
+		param1.put("lineWidth", 5);// 线条宽度
+		param1.put("lineShape", "solid");// 线条形状
+		param1.put("lineTransparency", 0.25);// 线透明度
+		param1.put("fillColor", "#000");// 填充颜色
+		param1.put("completeFillColor", "#000");// 完成填充色
+		param1.put("transparency", 0.5);// 透明度
+		param1.put("remarks", "备注");// 备注
+		param1.put("geometry", "4");// 几何形状
+		param1.put("drawLevel", 1);
+		param1.put("isClick", 0);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class UpdateVerticalSectionInfoTest {
 
-	// 获取所有线条形状
+	// 运营平台-纵断面-修改
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void updateVerticalSectionInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,10 +39,23 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.updateVerticalSectionInfoUrl);
+		System.out.println(TestConfig.updateVerticalSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
-		
+
+		param1.put("id", "69869765157588992");
+		param1.put("engineeringTypeCode", "FX115");
+		param1.put("lineColor", "#627EC9");
+		param1.put("completeLineColor", "#7699E7");
+		param1.put("lineWidth", "1");
+		param1.put("lineShape", "solid");
+		param1.put("lineTransparency", "0.5");
+		param1.put("fillColor", "#DFE4F4");
+		param1.put("completeFillColor", "#7699E7");
+		param1.put("transparency", "1");
+		param1.put("remarks", "备注2");
+		param1.put("geometry", "4");
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

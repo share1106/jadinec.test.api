@@ -6,10 +6,10 @@
 								
 			</class>
 			<class
-				name="jadinec.test.api.cases.ExportSubsidiaryFacilitiesTypeInfoTest">
+				name="jadinec.test.api.cases.GetIdentificationLineTypeInfoListTest">
 				<method>
 					<include
-						name="exportSubsidiaryFacilitiesTypeInfoTest" />
+						name="getIdentificationLineTypeInfoListTest" />
 				</method>
 			</class>
 		</classes>

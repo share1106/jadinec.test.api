@@ -892,6 +892,102 @@ public class ConfigFile {
 		if(name == InterfaceName.ExportSubsidiaryFacilitiesTypeInfo) {
 			uri = bundle.getString("exportSubsidiaryFacilitiesTypeInfo.uri");
 		}
+		if(name == InterfaceName.GetCrossSectionInfoPageList) {
+			uri = bundle.getString("getCrossSectionInfoPageList.uri");
+		}
+		if(name == InterfaceName.GetCrossSectionInfo) {
+			uri = bundle.getString("getCrossSectionInfo.uri");
+		}
+		if(name == InterfaceName.AddCrossSectionInfo) {
+			uri = bundle.getString("addCrossSectionInfo.uri");
+		}
+		if(name == InterfaceName.UpdateCrossSectionInfo) {
+			uri = bundle.getString("updateCrossSectionInfo.uri");
+		}
+		if(name == InterfaceName.DelCrossSectionInfo) {
+			uri = bundle.getString("delCrossSectionInfo.uri");
+		}
+		if(name == InterfaceName.ImportCrossSectionInfo) {
+			uri = bundle.getString("importCrossSectionInfo.uri");
+		}
+		if(name == InterfaceName.ExportCrossSectionInfo) {
+			uri = bundle.getString("exportCrossSectionInfo.uri");
+		}
+		if(name == InterfaceName.GetCrossSectionInfoList) {
+			uri = bundle.getString("getCrossSectionInfoList.uri");
+		}
+		if(name == InterfaceName.GetVerticalSectionInfoPageList) {
+			uri = bundle.getString("getVerticalSectionInfoPageList.uri");
+		}
+		if(name == InterfaceName.GetVerticalSectionInfo) {
+			uri = bundle.getString("getVerticalSectionInfo.uri");
+		}
+		if(name == InterfaceName.AddVerticalSectionInfo) {
+			uri = bundle.getString("addVerticalSectionInfo.uri");
+		}
+		if(name == InterfaceName.UpdateVerticalSectionInfo) {
+			uri = bundle.getString("updateVerticalSectionInfo.uri");
+		}
+		if(name == InterfaceName.DelVerticalSectionInfo) {
+			uri = bundle.getString("delVerticalSectionInfo.uri");
+		}
+		if(name == InterfaceName.ImportVerticalSectionInfo) {
+			uri = bundle.getString("importVerticalSectionInfo.uri");
+		}
+		if(name == InterfaceName.ExportVerticalSectionInfo) {
+			uri = bundle.getString("exportVerticalSectionInfo.uri");
+		}
+		if(name == InterfaceName.GetVerticalSectionInfoList) {
+			uri = bundle.getString("getVerticalSectionInfoList.uri");
+		}
+		if(name == InterfaceName.GetGeometryInfoPageList) {
+			uri = bundle.getString("getGeometryInfoPageList.uri");
+		}
+		if(name == InterfaceName.GetGeometryInfo) {
+			uri = bundle.getString("getGeometryInfo.uri");
+		}
+		if(name == InterfaceName.AddGeometryInfo) {
+			uri = bundle.getString("addGeometryInfo.uri");
+		}
+		if(name == InterfaceName.UpdateGeometryInfo) {
+			uri = bundle.getString("updateGeometryInfo.uri");
+		}
+		if(name == InterfaceName.DelGeometryInfo) {
+			uri = bundle.getString("delGeometryInfo.uri");
+		}
+		if(name == InterfaceName.ImportGeometryInfo) {
+			uri = bundle.getString("importGeometryInfo.uri");
+		}
+		if(name == InterfaceName.ExportGeometryInfo) {
+			uri = bundle.getString("exportGeometryInfo.uri");
+		}
+		if(name == InterfaceName.GetGeometryInfoList) {
+			uri = bundle.getString("getGeometryInfoList.uri");
+		}
+		if(name == InterfaceName.GetIdentificationLineTypeInfoPageList) {
+			uri = bundle.getString("getIdentificationLineTypeInfoPageList.uri");
+		}
+		if(name == InterfaceName.GetIdentificationLineTypeInfo) {
+			uri = bundle.getString("getIdentificationLineTypeInfo.uri");
+		}
+		if(name == InterfaceName.AddIdentificationLineTypeInfo) {
+			uri = bundle.getString("addIdentificationLineTypeInfo.uri");
+		}
+		if(name == InterfaceName.UpdateIdentificationLineTypeInfo) {
+			uri = bundle.getString("updateIdentificationLineTypeInfo.uri");
+		}
+		if(name == InterfaceName.DelIdentificationLineTypeInfo) {
+			uri = bundle.getString("delIdentificationLineTypeInfo.uri");
+		}
+		if(name == InterfaceName.ImportIdentificationLineTypeInfo) {
+			uri = bundle.getString("importIdentificationLineTypeInfo.uri");
+		}
+		if(name == InterfaceName.ExportIdentificationLineTypeInfo) {
+			uri = bundle.getString("exportIdentificationLineTypeInfo.uri");
+		}
+		if(name == InterfaceName.GetIdentificationLineTypeInfoList) {
+			uri = bundle.getString("getIdentificationLineTypeInfoList.uri");
+		}
 		
 		testUrl = address + uri;
 		return testUrl;

@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class UpdateIdentificationLineTypeInfoTest {
 
-	// 获取所有线条形状
+	// 修改
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void updateIdentificationLineTypeInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,10 +39,20 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.updateIdentificationLineTypeInfoUrl);
+		System.out.println(TestConfig.updateIdentificationLineTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
-		
+
+		param1.put("id", "69955357182660608");
+		param1.put("typeName", "test2");// 标识线类型名称
+		param1.put("lineColor", "#FF19EE");// 线条颜色
+		param1.put("lineWidth", 5);// 线条宽度
+		param1.put("lineShape", "solid");// 线条形状
+
+		param1.put("transparency", 0.5);// 透明度
+		param1.put("remarks", "备注");// 备注
+		param1.put("drawLevel", 1);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

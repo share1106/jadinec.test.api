@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class ImportCrossSectionInfoTest {
 
-	// 获取所有线条形状
-	@Test
-	public void getAllLineShapeTest() throws IOException {
+	// 运营平台-横断面-导入
+	@Test(enabled=false)
+	public void importCrossSectionInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,13 +39,19 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.importCrossSectionInfoUrl);
+		System.out.println(TestConfig.importCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
 		
-		post.setHeader("Content-Type", ConfigFile.Content_Type);
+		param1.put("filename", "C:/Users/ganggang/Desktop/10.12/工程几何信息管理表.xlsx");
+		//param1.put("name", "file");
+		param1.put("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+		param1.put("Content-Disposition", "form-data");
+		param1.put("Content-Transfer-Encoding", "binary");
+		
+		//post.setHeader("Content-Type", "multipart/form-data");
 		post.setHeader("access_token", ConfigFile.access_token_pc);
-		post.setHeader("client", ConfigFile.client_pc);
+		//post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

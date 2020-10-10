@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class DelCrossSectionInfoTest {
 
-	// 获取所有线条形状
+	// 运营平台-lbs基础配置-添加横断面
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void delCrossSectionInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,9 +39,12 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.delCrossSectionInfoUrl);
+		System.out.println(TestConfig.delCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
+
+		String[] paramStr = {"69507875311063040"};
+		param1.put("ids", paramStr);// 横断面id数组
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

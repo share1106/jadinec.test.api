@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class DelGeometryInfoTest {
 
-	// 获取所有线条形状
+	// 删除几何信息
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void delGeometryInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,10 +39,13 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.delGeometryInfoUrl);
+		System.out.println(TestConfig.delGeometryInfoUrl);
 		JSONObject param1 = new JSONObject();
-		
+
+		String[] paramId = { "69913032742014976" };
+		param1.put("ids", paramId);// 几何信息id
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

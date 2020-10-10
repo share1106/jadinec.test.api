@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class GetGeometryInfoListTest {
 
-	// 获取所有线条形状
+	// 运营平台-lbs基础配置-获取几何信息
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void getGeometryInfoListTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,10 +39,10 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.getGeometryInfoListUrl);
+		System.out.println(TestConfig.getGeometryInfoListUrl);
 		JSONObject param1 = new JSONObject();
-		
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

@@ -17,11 +17,11 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class GetIdentificationLineTypeInfoPageListTest {
 
-	// 获取所有线条形状
+	// 分页列表
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void getIdentificationLineTypeInfoPageListTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -39,10 +39,15 @@ public class GetAllLineShapeTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.getIdentificationLineTypeInfoPageListUrl);
+		System.out.println(TestConfig.getIdentificationLineTypeInfoPageListUrl);
 		JSONObject param1 = new JSONObject();
-		
+
+		param1.put("lineShape", "");// 关键字
+		param1.put("keyWords", "");// 查询条件
+		param1.put("pageNum", 1);// 当前页 默认1
+		param1.put("pageSize", 10);// 页大小 默认10
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

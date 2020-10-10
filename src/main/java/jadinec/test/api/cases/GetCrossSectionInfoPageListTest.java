@@ -17,32 +17,51 @@ import jadinec.test.api.utils.ConfigFile;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-public class GetAllLineShapeTest {
+public class GetCrossSectionInfoPageListTest {
 
-	// 获取所有线条形状
+	public static String id ;
+	//运营平台-lbs基础配置-横断面分页列表
 	@Test
-	public void getAllLineShapeTest() throws IOException {
+	public void getCrossSectionInfoPageListTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
+		String data2 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data1 = jsonObject.getString("success");
+			data2 = jsonObject.getString("data");
+		}
+		//System.out.println(data2);
+		List<String> list1 = Arrays.asList(data2);
+		JSONArray array = JSONArray.fromObject(list1);
+		String data = null;
+		for (int j = 0; j < array.size(); j++) {
+			JSONObject jsonObject = array.getJSONObject(j);
+			data = jsonObject.getString("list");
+			
 		}
 
+		
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("true", data1);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.getAllLineShapeUrl);
-		System.out.println(TestConfig.getAllLineShapeUrl);
+		HttpPost post = new HttpPost(TestConfig.getCrossSectionInfoPageListUrl);
+		System.out.println(TestConfig.getCrossSectionInfoPageListUrl);
 		JSONObject param1 = new JSONObject();
-		
+
+		param1.put("lineShape", "");//线条形状
+		param1.put("geometry", "");//几何形状
+		param1.put("keyWords", "");//查询条件
+		param1.put("pageNum", 1);//当前页 默认1
+		param1.put("pageSize", 10);//页大小 默认10
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

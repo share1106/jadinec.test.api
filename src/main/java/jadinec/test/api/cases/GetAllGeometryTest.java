@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 
 public class GetAllGeometryTest {
 
-	//
+	//获取所有几何形状
 	@Test
 	public void getAllGeometryTest() throws IOException {
 
