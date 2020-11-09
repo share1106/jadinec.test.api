@@ -43,7 +43,8 @@ public class DelGeometryInfoTest {
 		System.out.println(TestConfig.delGeometryInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		String[] paramId = { "69913032742014976" };
+		String id = GetGeometryInfoPageListTest.stringId;
+		String[] paramId = { id };
 		param1.put("ids", paramId);// 几何信息id
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

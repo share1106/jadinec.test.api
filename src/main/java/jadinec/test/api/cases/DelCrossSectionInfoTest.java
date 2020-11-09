@@ -43,7 +43,8 @@ public class DelCrossSectionInfoTest {
 		System.out.println(TestConfig.delCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		String[] paramStr = {"69507875311063040"};
+		String id = GetCrossSectionInfoPageListTest.stringId;
+		String[] paramStr = {id};
 		param1.put("ids", paramStr);// 横断面id数组
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

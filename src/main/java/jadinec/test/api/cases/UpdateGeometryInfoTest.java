@@ -43,20 +43,21 @@ public class UpdateGeometryInfoTest {
 		System.out.println(TestConfig.updateGeometryInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("id", "69913032742014976");//几何信息id
-		param1.put("engineeringTypeCode", "FX02");// 工程类型编号
-		param1.put("lineColor", "#7699E7");// 线条颜色
-		param1.put("completeLineColor", "#7699E7");// 完成线条颜色
-		param1.put("lineWidth", 5);// 线条宽度
+		param1.put("id", GetGeometryInfoPageListTest.stringId);//几何信息id
+		param1.put("engineeringTypeCode", "FX235");// 工程类型编号
+		param1.put("lineColor", "#dc1b1b");// 线条颜色
+		param1.put("completeLineColor", "#22e215");// 完成线条颜色
+		param1.put("lineWidth", 3);// 线条宽度
 		param1.put("lineShape", "solid");// 线条形状
-		param1.put("lineTransparency", 0.25);// 线透明度
-		param1.put("fillColor", "#000");// 填充颜色
-		param1.put("completeFillColor", "#000");// 完成填充色
-		param1.put("transparency", 0.5);// 透明度
-		param1.put("remarks", "备注");// 备注
+		param1.put("lineTransparency", 1);// 线透明度
+		param1.put("fillColor", "#000000");// 填充颜色
+		param1.put("completeFillColor", "#000000");// 完成填充色
+		param1.put("transparency", 0);// 透明度
+		param1.put("remarks", "测试几何信息备注");// 备注
 		param1.put("geometry", "4");// 几何形状
-		param1.put("drawLevel", 1);
+		param1.put("drawLevel", 2);
 		param1.put("isClick", 0);
+		param1.put("completeFillTransparency", 0);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

@@ -14,17 +14,18 @@ import org.testng.annotations.Test;
 
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
+import jadinec.test.api.utils.DataProviderMethod;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 public class AddIdentificationLineTypeInfoTest {
 
 	// 添加几何信息
-	@Test
-	public void addIdentificationLineTypeInfoTest() throws IOException {
+	@Test(dataProvider="noNameMethod",dataProviderClass=DataProviderMethod.class)
+	public void addIdentificationLineTypeInfoTest(String typeName,String typeCode) throws IOException {
 
 		// 发送请求
-		JSONArray result = getJsonResult();
+		JSONArray result = getJsonResult(typeName,typeCode);
 		System.out.println(result);
 
 		String data = null;
@@ -38,18 +39,17 @@ public class AddIdentificationLineTypeInfoTest {
 		Assert.assertEquals("true", data);
 	}
 
-	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
+	private JSONArray getJsonResult(String typeName,String typeCode) throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.addIdentificationLineTypeInfoUrl);
 		System.out.println(TestConfig.addIdentificationLineTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("typeName", "test1");// 标识线类型名称
-		param1.put("lineColor", "#FF19EE");// 线条颜色
-		param1.put("lineWidth", 5);// 线条宽度
-		param1.put("lineShape", "solid");// 线条形状
-		
-		param1.put("transparency", 0.5);// 透明度
-		param1.put("remarks", "备注");// 备注
+		param1.put("typeName", typeName);// 标识线类型名称
+		param1.put("typeCode", typeCode);
+		param1.put("lineWidth", 2);
+		param1.put("lineColor", "#ec0cbb");
+		param1.put("lineShape", "solid");
+		param1.put("remarks", "测试标识线类型备注");
 		param1.put("drawLevel", 1);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

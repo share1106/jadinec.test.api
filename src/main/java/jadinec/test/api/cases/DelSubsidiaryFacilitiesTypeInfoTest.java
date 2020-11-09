@@ -19,7 +19,7 @@ import net.sf.json.JSONObject;
 
 public class DelSubsidiaryFacilitiesTypeInfoTest {
 
-	//
+	//删除附属设施类型成功
 	@Test
 	public void delSubsidiaryFacilitiesTypeInfoTest() throws IOException {
 
@@ -37,13 +37,34 @@ public class DelSubsidiaryFacilitiesTypeInfoTest {
 		// 验证结果
 		Assert.assertEquals("true", data);
 	}
+	
+	//删除附属设施类型失败(参数不存在)
+		@Test
+		public void delSubsidiaryFacilitiesTypeInfoFail1Test() throws IOException {
 
+			// 发送请求
+			JSONArray result = getJsonResult1();
+			System.out.println(result);
+
+			String data = null;
+
+			for (int i = 0; i < result.size(); i++) {
+				JSONObject jsonObject = result.getJSONObject(i);
+				data = jsonObject.getString("msg");
+			}
+
+			// 验证结果
+			Assert.assertEquals("参数不存在", data);
+		}
+
+	//删除附属类型成功
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
 		System.out.println(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		String[] paramStr = {"66283932081065984"};
+		String id = GetSubsidiaryFacilitiesTypeInfoPageListTest.stringId;
+		String[] paramStr = {id};
 		param1.put("ids", paramStr);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
@@ -61,4 +82,30 @@ public class DelSubsidiaryFacilitiesTypeInfoTest {
 		JSONArray array = JSONArray.fromObject(list);
 		return array;
 	}
+	
+	//删除附属类型失败(参数不存在)
+		private JSONArray getJsonResult1() throws ClientProtocolException, IOException {
+			HttpPost post = new HttpPost(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
+			System.out.println(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
+			JSONObject param1 = new JSONObject();
+
+			String id = "88888888";
+			String[] paramStr = {id};
+			param1.put("ids", paramStr);
+			
+			post.setHeader("Content-Type", ConfigFile.Content_Type);
+			post.setHeader("access_token", ConfigFile.access_token_pc);
+			post.setHeader("client", ConfigFile.client_pc);
+
+			StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
+			post.setEntity(entity);
+
+			String result;
+			HttpResponse response = TestConfig.defaultHttpClient.execute(post);
+			result = EntityUtils.toString(response.getEntity(), "UTF-8");
+			// System.out.println(result);
+			List<String> list = Arrays.asList(result);
+			JSONArray array = JSONArray.fromObject(list);
+			return array;
+		}
 }

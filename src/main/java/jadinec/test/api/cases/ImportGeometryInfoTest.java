@@ -4,13 +4,18 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.util.EntityUtils;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
@@ -19,8 +24,11 @@ import net.sf.json.JSONObject;
 
 public class ImportGeometryInfoTest {
 
+	private static RestTemplate restTemplate;
+	private static FileSystemResource fileSystemResource;
+	private static String filePath;
 	// 运营平台-几何信息-导入
-	@Test(enabled=false)
+	@Test
 	public void importGeometryInfoTest() throws IOException {
 
 		// 发送请求
@@ -39,23 +47,31 @@ public class ImportGeometryInfoTest {
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.importGeometryInfoUrl);
+			
+		restTemplate = new RestTemplate();
+		filePath = "src/main/resources/工程几何信息管理表.xlsx";
+		fileSystemResource = new FileSystemResource(filePath);
+		System.out.println(fileSystemResource.getURL());
+		if(!fileSystemResource.exists()) {
+			System.out.println("文件不存在");
+		}
+		
+		MediaType type = MediaType.parseMediaType("multipart/form-data");
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(type);
+		headers.add("access_token", ConfigFile.access_token_pc);
+				
+		MultiValueMap<String,Object> form = new LinkedMultiValueMap<String,Object>();
+		
+		form.add("file", fileSystemResource);
+		form.add("filename", "工程几何信息管理表.xlsx");
+		form.add("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+				
+		HttpEntity<MultiValueMap<String,Object>> files = new HttpEntity<>(form,headers);
+		ResponseEntity<String> responseEntity = restTemplate.postForEntity(TestConfig.importGeometryInfoUrl, files,String.class);
 		System.out.println(TestConfig.importGeometryInfoUrl);
-		JSONObject param1 = new JSONObject();
-
-		String[] paramId = { "69869765157588992" };
-		param1.put("ids", paramId);// 纵断面id
-
-		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
-		post.setHeader("client", ConfigFile.client_pc);
-
-		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
-		post.setEntity(entity);
-
 		String result;
-		HttpResponse response = TestConfig.defaultHttpClient.execute(post);
-		result = EntityUtils.toString(response.getEntity(), "UTF-8");
+		result = responseEntity.getBody();
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
 		JSONArray array = JSONArray.fromObject(list);

@@ -12,14 +12,15 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 public class GetCrossSectionInfoPageListTest {
 
-	public static String id ;
+	public static String stringId ;
 	//运营平台-lbs基础配置-横断面分页列表
 	@Test
 	public void getCrossSectionInfoPageListTest() throws IOException {
@@ -37,14 +38,26 @@ public class GetCrossSectionInfoPageListTest {
 			data2 = jsonObject.getString("data");
 		}
 		//System.out.println(data2);
+
 		List<String> list1 = Arrays.asList(data2);
-		JSONArray array = JSONArray.fromObject(list1);
-		String data = null;
-		for (int j = 0; j < array.size(); j++) {
-			JSONObject jsonObject = array.getJSONObject(j);
-			data = jsonObject.getString("list");
-			
-		}
+		JSONArray result1 = JSONArray.parseArray(list1.toString());
+		//System.out.println(result1);
+		
+		
+		String data3 = null;
+		for (int j = 0; j < result1.size(); j++) {
+			JSONObject jsonObject = result1.getJSONObject(j);
+			data3 = jsonObject.getString("list");
+			}
+		//System.out.println(data3);
+		
+		JSONArray ja = JSONArray.parseArray(data3);
+		//System.out.println(ja);
+		JSONObject jsonObj = null;
+				
+		jsonObj = (JSONObject) JSONObject.parse(ja.get(0).toString());
+		stringId =jsonObj.get("id").toString();
+		System.out.println(stringId);
 
 		
 		// 验证结果
@@ -74,7 +87,7 @@ public class GetCrossSectionInfoPageListTest {
 		result = EntityUtils.toString(response.getEntity(), "UTF-8");
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
-		JSONArray array = JSONArray.fromObject(list);
+		JSONArray array = JSONArray.parseArray(list.toString());
 		return array;
 	}
 }

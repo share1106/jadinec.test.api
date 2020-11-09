@@ -43,7 +43,8 @@ public class DelVerticalSectionInfoTest {
 		System.out.println(TestConfig.delVerticalSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		String[] paramId = {"69869765157588992"};
+		String id = GetVerticalSectionInfoPageListTest.stringId;
+		String[] paramId = {id};
 		param1.put("ids", paramId);//纵断面id
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

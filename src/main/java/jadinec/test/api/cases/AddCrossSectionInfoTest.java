@@ -43,17 +43,19 @@ public class AddCrossSectionInfoTest {
 		System.out.println(TestConfig.addCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("engineeringTypeCode", "FX115");// 工程类型编号
-		param1.put("lineColor", "#000");// 线条颜色
-		param1.put("completeLineColor", "#000");// 完成线条颜色
-		param1.put("lineWidth", 5);// 线条宽度
-		param1.put("lineShape", "solid");// 线条形状
-		param1.put("lineTransparency", 0.25);// 线透明度
-		param1.put("fillColor", "#000");// 填充颜色
-		param1.put("completeFillColor", "#000");// 完成填充色
-		param1.put("transparency", 0.5);// 透明度
-		param1.put("remarks", "备注");// 备注
-		param1.put("geometry", "4");// 几何形状
+		param1.put("engineeringTypeCode", "FX235");
+		param1.put("completeFillColor", "#000000");
+		param1.put("completeFillTransparency", 0);
+		param1.put("completeLineColor", "#09e63d");
+		param1.put("fillColor", "#000000");
+		param1.put("geometry", "4");
+		param1.put("lineColor", "#ea0f0f");
+		param1.put("lineShape", "solid");
+		param1.put("lineTransparency", "");
+		param1.put("lineWidth", 2);
+		param1.put("remarks", "测试横断面信息备注");
+		param1.put("transparency", 0);
+		param1.put("completeFillTransparency", 0);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

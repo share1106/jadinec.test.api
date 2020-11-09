@@ -43,14 +43,13 @@ public class UpdateIdentificationLineTypeInfoTest {
 		System.out.println(TestConfig.updateIdentificationLineTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("id", "69955357182660608");
-		param1.put("typeName", "test2");// 标识线类型名称
-		param1.put("lineColor", "#FF19EE");// 线条颜色
-		param1.put("lineWidth", 5);// 线条宽度
-		param1.put("lineShape", "solid");// 线条形状
-
-		param1.put("transparency", 0.5);// 透明度
-		param1.put("remarks", "备注");// 备注
+		param1.put("id", GetIdentificationLineTypeInfoPageListTest.stringId);
+		param1.put("typeName", "test");// 标识线类型名称
+		param1.put("typeCode", "5");// 线条颜色
+		param1.put("lineWidth", 2);// 线条宽度
+		param1.put("lineColor", "#ec0cbb");// 线条形状
+		param1.put("lineShape", "solid");// 透明度
+		param1.put("remarks", "测试标识线类型备注");// 备注
 		param1.put("drawLevel", 1);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

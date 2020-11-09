@@ -43,17 +43,18 @@ public class AddVerticalSectionInfoTest {
 		System.out.println(TestConfig.addVerticalSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		param1.put("engineeringTypeCode", "FX115");
+		param1.put("engineeringTypeCode", "FX12");
 		param1.put("lineColor", "#627EC9");
 		param1.put("completeLineColor", "#7699E7");
-		param1.put("lineWidth", "3");
-		param1.put("lineShape", "solid");
+		param1.put("lineWidth", 3);
+		param1.put("lineShape", "dashed");
 		param1.put("lineTransparency", "0.5");
-		param1.put("fillColor", "#DFE4F4");
-		param1.put("completeFillColor", "#7699E7");
-		param1.put("transparency", "1");
-		param1.put("remarks", "备注1");
+		param1.put("fillColor", "#000000");
+		param1.put("completeFillColor", "#000000");
+		param1.put("transparency", 0);
+		param1.put("remarks", "测试纵断面信息备注");
 		param1.put("geometry", "4");
+		param1.put("completeFillTransparency", 0);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

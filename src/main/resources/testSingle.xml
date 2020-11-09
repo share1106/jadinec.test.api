@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="甲丁智慧建造云平台">
 	<test name="单个接口测试">
+
 		<classes>
 			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
-								
+
+			</class>
+
+			<class
+				name="jadinec.test.api.cases.BaseExportTest">
+				<methods>
+					<include name="baseExportTest" />
+				</methods>
 			</class>
 			<class
-				name="jadinec.test.api.cases.GetIdentificationLineTypeInfoListTest">
-				<method>
-					<include
-						name="getIdentificationLineTypeInfoListTest" />
-				</method>
+				name="jadinec.test.api.cases.GetLedgerPageListTest">
+				<methods>
+					<include name="getLedgerPageListTest" />
+				</methods>
 			</class>
+			
+
 		</classes>
 	</test>
 

@@ -5,223 +5,124 @@
 			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
 			</class>
 			<!-- 运营后台接口 -->
-			<!-- 获取所有线条形状 -->
-			<class name="jadinec.test.api.cases.GetAllLineShapeTest">
-				<method>
-					<include name="getAllLineShapeTest" />
-				</method>
+			<!-- 清单编码 -->
+			<class name="jadinec.test.api.cases.GetBillCodeListTest">
+				<methods>
+					<include name="getBillCodeListTest" />
+				</methods>
 			</class>
-			<!-- 获取所有几何形状 -->
-			<class name="jadinec.test.api.cases.GetAllGeometryTest">
-				<method>
-					<include name="getAllGeometryTest" />
-				</method>
+			<class name="jadinec.test.api.cases.AddOrUpdateBillCodeTest">
+				<methods>
+					<include name="addOrUpdateBillCodeTest" />
+				</methods>
 			</class>
-			<!-- 横断面分页列表 -->
-			<class name="jadinec.test.api.cases.GetCrossSectionInfoPageListTest">
-				<method>
-					<include name="getCrossSectionInfoPageListTest" />
-				</method>
+			<class name="jadinec.test.api.cases.DelBillCodeByIdsTest">
+				<methods>
+					<include name="delBillCodeByIdsTest" />
+				</methods>
 			</class>
-			<!-- 获取单个横断面 -->
-			<class name="jadinec.test.api.cases.GetCrossSectionInfoTest">
-				<method>
-					<include name="getCrossSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.ExportBillCodeTest">
+				<methods>
+					<include name="exportBillCodeTest" />
+				</methods>
 			</class>
-			<!-- 增加横断面 -->
-			<class name="jadinec.test.api.cases.AddCrossSectionInfoTest">
-				<method>
-					<include name="addCrossSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.ImportBillCodeTest">
+				<methods>
+					<include name="importBillCodeTest" />
+				</methods>
 			</class>
-			<!-- 修改横断面 -->
-			<class name="jadinec.test.api.cases.UpdateCrossSectionInfoTest">
-				<method>
-					<include name="updateCrossSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.GetSearchBillCodeListTest">
+				<methods>
+					<include name="getSearchBillCodeListTest" />
+				</methods>
 			</class>
-			<!-- 删除横断面 -->
-			<class name="jadinec.test.api.cases.DelCrossSectionInfoTest">
-				<method>
-					<include name="delCrossSectionInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.ImportCrossSectionInfoTest">
-				<method>
-					<include name="importCrossSectionInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.ExportCrossSectionInfoTest">
-				<method>
-					<include name="exportCrossSectionInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.AddSubsidiaryFacilitiesTypeInfoTest">
-				<method>
-					<include name="addSubsidiaryFacilitiesTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.GetSubsidiaryFacilitiesTypeInfoTest">
-				<method>
-					<include name="getSubsidiaryFacilitiesTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.UpdateSubsidiaryFacilitiesTypeInfoTest">
-				<method>
-					<include name="updateSubsidiaryFacilitiesTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.DelSubsidiaryFacilitiesTypeInfoTest">
-				<method>
-					<include name="delSubsidiaryFacilitiesTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.GetExportEmailTest">
-				<method>
-					<include name="getExportEmailTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.AddExportEmailTest">
-				<method>
-					<include name="addExportEmailTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.ExportSubsidiaryFacilitiesTypeInfoTest">
-				<method>
-					<include name="exportSubsidiaryFacilitiesTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.GetSubsidiaryFacilitiesTypeInfoPageListTest">
-				<method>
-					<include name="getSubsidiaryFacilitiesTypeInfoPageListTest" />
-				</method>
+			<class name="jadinec.test.api.cases.GetBillCodecheckTest">
+				<methods>
+					<include name="getBillCodecheckTest" />
+				</methods>
 			</class>
 			
-			<!-- 纵断面 -->
-			<class name="jadinec.test.api.cases.GetVerticalSectionInfoPageListTest">
-				<method>
-					<include name="getVerticalSectionInfoPageListTest" />
-				</method>
+			<!-- 单位管理 -->
+			<class name="jadinec.test.api.cases.GetUnitPageListTest">
+				<methods>
+					<include name="getUnitPageListTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.GetVerticalSectionInfoTest">
-				<method>
-					<include name="getVerticalSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.AddUnitTest">
+				<methods>
+					<include name="addUnitTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.AddVerticalSectionInfoTest">
-				<method>
-					<include name="addVerticalSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.UpdateUnitTest">
+				<methods>
+					<include name="updateUnitTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.UpdateVerticalSectionInfoTest">
-				<method>
-					<include name="updateVerticalSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.DelUnitTest">
+				<methods>
+					<include name="delUnitTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.DelVerticalSectionInfoTest">
-				<method>
-					<include name="delVerticalSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.ExportUnitTest">
+				<methods>
+					<include name="exportUnitTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.ImportVerticalSectionInfoTest">
-				<method>
-					<include name="importVerticalSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.ImportUnitTest">
+				<methods>
+					<include name="importUnitTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.ExportVerticalSectionInfoTest">
-				<method>
-					<include name="exportVerticalSectionInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.GetUnitListTest">
+				<methods>
+					<include name="getUnitListTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.GetVerticalSectionInfoListTest">
-				<method>
-					<include name="getVerticalSectionInfoListTest" />
-				</method>
+			
+			<!-- 项目工程量清单 -->
+			
+			<class name="jadinec.test.api.cases.GetQuantitiesBillPageListTest">
+				<methods>
+					<include name="getQuantitiesBillPageListTest" />
+				</methods>
 			</class>
-			<!-- 几何信息 -->
-			<class name="jadinec.test.api.cases.GetGeometryInfoPageListTest">
-				<method>
-					<include name="getGeometryInfoPageListTest" />
-				</method>
+			<!-- 细目种类 -->
+			<class name="jadinec.test.api.cases.GetEngineeringLedgerTypeListTest">
+				<methods>
+					<include name="getEngineeringLedgerTypeListTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.GetGeometryInfoTest">
-				<method>
-					<include name="getGeometryInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.AddEngineeringLedgerTypeTest">
+				<methods>
+					<include name="addEngineeringLedgerTypeTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.AddGeometryInfoTest">
-				<method>
-					<include name="addGeometryInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.UpdateEngineeringLedgerTypeTest">
+				<methods>
+					<include name="updateEngineeringLedgerTypeTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.UpdateGeometryInfoTest">
-				<method>
-					<include name="updateGeometryInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.DelEngineeringLedgerTypeTest">
+				<methods>
+					<include name="delEngineeringLedgerTypeTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.DelGeometryInfoTest">
-				<method>
-					<include name="delGeometryInfoTest" />
-				</method>
+			
+			<class name="jadinec.test.api.cases.ExportEngineeringLedgerTypeTest">
+				<methods>
+					<include name="exportEngineeringLedgerTypeTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.ImportGeometryInfoTest">
-				<method>
-					<include name="importGeometryInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.ImportEngineeringLedgerTypeTest">
+				<methods>
+					<include name="importEngineeringLedgerTypeTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.ExportGeometryInfoTest">
-				<method>
-					<include name="exportGeometryInfoTest" />
-				</method>
+			<class name="jadinec.test.api.cases.GetSearchLedgerTypeTest">
+				<methods>
+					<include name="getSearchLedgerTypeTest" />
+				</methods>
 			</class>
-			<class name="jadinec.test.api.cases.GetGeometryInfoListTest">
-				<method>
-					<include name="getGeometryInfoListTest" />
-				</method>
-			</class>
-			<!-- 标识线 -->
-			<class name="jadinec.test.api.cases.GetIdentificationLineTypeInfoPageListTest">
-				<method>
-					<include name="getIdentificationLineTypeInfoPageListTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.GetIdentificationLineTypeInfoTest">
-				<method>
-					<include name="getIdentificationLineTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.AddIdentificationLineTypeInfoTest">
-				<method>
-					<include name="addIdentificationLineTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.UpdateIdentificationLineTypeInfoTest">
-				<method>
-					<include name="updateIdentificationLineTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.DelIdentificationLineTypeInfoTest">
-				<method>
-					<include name="delIdentificationLineTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.ImportIdentificationLineTypeInfoTest">
-				<method>
-					<include name="importIdentificationLineTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.ExportIdentificationLineTypeInfoTest">
-				<method>
-					<include name="exportIdentificationLineTypeInfoTest" />
-				</method>
-			</class>
-			<class name="jadinec.test.api.cases.GetIdentificationLineTypeInfoListTest">
-				<method>
-					<include name="getIdentificationLineTypeInfoListTest" />
-				</method>
-			</class>
-			<!-- 附属设施 -->
 			
 		</classes>
 	</test>

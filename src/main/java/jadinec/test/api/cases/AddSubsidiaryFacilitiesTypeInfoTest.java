@@ -19,39 +19,83 @@ import net.sf.json.JSONObject;
 
 public class AddSubsidiaryFacilitiesTypeInfoTest {
 
-	//
+	// 增加附属设施成功(正常增加)
 	@Test
 	public void addSubsidiaryFacilitiesTypeInfoTest() throws IOException {
 
 		// 发送请求
-		JSONArray result = getJsonResult();
+		JSONArray result = getJsonResult1();
 		System.out.println(result);
 
-		String data = null;
+		String msg = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			msg = jsonObject.getString("msg");
 		}
 
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("执行成功", msg);
 	}
 
-	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
+	// 增加附属设施失败(数据已存在)
+	@Test
+	public void addSubsidiaryFacilitiesTypeInfoFail1Test() throws IOException {
+
+		// 发送请求
+		JSONArray result = getJsonResult1();
+		System.out.println(result);
+
+		String msg = null;
+
+		for (int i = 0; i < result.size(); i++) {
+			JSONObject jsonObject = result.getJSONObject(i);
+			msg = jsonObject.getString("msg");
+		}
+
+		// 验证结果
+		Assert.assertEquals("设施类型编码已存在", msg);
+	}
+
+	// 增加附属设施失败(必填项为空)
+	@Test
+	public void addSubsidiaryFacilitiesTypeInfoFail2Test() throws IOException {
+
+		// 发送请求
+		JSONArray result = getJsonResult2();
+		System.out.println(result);
+
+		String msg = null;
+
+		for (int i = 0; i < result.size(); i++) {
+			JSONObject jsonObject = result.getJSONObject(i);
+			msg = jsonObject.getString("msg");
+		}
+
+		// 验证结果
+		Assert.assertEquals("设施类型编码不能空", msg);
+	}
+	
+	
+	/**
+	 * 	参数正确
+	 */
+	private JSONArray getJsonResult1() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.addSubsidiaryFacilitiesTypeInfoUrl);
 		System.out.println(TestConfig.addSubsidiaryFacilitiesTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
 
+		// int rand=(int)(Math.random()*10);
 		param1.put("typeName", "测试附属设置类型1");
-		param1.put("lineWidth", "1");
-		param1.put("lineColor", "#000000");
+		param1.put("typeCode", 13);
+		param1.put("lineWidth", "2");
+		param1.put("lineColor", "#bb1b1b");
 		param1.put("lineShape", "solid");
 		param1.put("fillColor", "#000000");
 		param1.put("geometry", "5");
-		param1.put("drawLevel", 3);
-		param1.put("lineTransparency", 1);
-		param1.put("transparency", 1);
+		param1.put("drawLevel", 2);
+		param1.put("lineTransparency", "");
+		param1.put("transparency", 0);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
@@ -68,4 +112,41 @@ public class AddSubsidiaryFacilitiesTypeInfoTest {
 		JSONArray array = JSONArray.fromObject(list);
 		return array;
 	}
+
+	/**
+	 * 	必填字段为空
+	 */
+	private JSONArray getJsonResult2() throws ClientProtocolException, IOException {
+		HttpPost post = new HttpPost(TestConfig.addSubsidiaryFacilitiesTypeInfoUrl);
+		System.out.println(TestConfig.addSubsidiaryFacilitiesTypeInfoUrl);
+		JSONObject param1 = new JSONObject();
+
+		// int rand=(int)(Math.random()*10);
+		param1.put("typeName", "测试附属设置类型2");
+		param1.put("typeCode", null);
+		param1.put("lineWidth", "2");
+		param1.put("lineColor", "#bb1b1b");
+		param1.put("lineShape", "solid");
+		param1.put("fillColor", "#000000");
+		param1.put("geometry", "5");
+		param1.put("drawLevel", 2);
+		param1.put("lineTransparency", "");
+		param1.put("transparency", 0);
+
+		post.setHeader("Content-Type", ConfigFile.Content_Type);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
+
+		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
+		post.setEntity(entity);
+
+		String result;
+		HttpResponse response = TestConfig.defaultHttpClient.execute(post);
+		result = EntityUtils.toString(response.getEntity(), "UTF-8");
+		// System.out.println(result);
+		List<String> list = Arrays.asList(result);
+		JSONArray array = JSONArray.fromObject(list);
+		return array;
+	}
+
 }

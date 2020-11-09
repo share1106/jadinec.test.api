@@ -43,7 +43,8 @@ public class DelIdentificationLineTypeInfoTest {
 		System.out.println(TestConfig.delIdentificationLineTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
 
-		String[] paramId = {"69955357182660608"};
+		String id = GetIdentificationLineTypeInfoPageListTest.stringId;
+		String[] paramId = {id};
 		param1.put("ids", paramId);//标识线类型id
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

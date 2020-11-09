@@ -988,6 +988,122 @@ public class ConfigFile {
 		if(name == InterfaceName.GetIdentificationLineTypeInfoList) {
 			uri = bundle.getString("getIdentificationLineTypeInfoList.uri");
 		}
+		if(name == InterfaceName.ImportSubsidiaryFacilitiesTypeInfo) {
+			uri = bundle.getString("importSubsidiaryFacilitiesTypeInfo.uri");
+		}
+		if(name == InterfaceName.GetSubsidiaryFacilitiesTypeInfoList) {
+			uri = bundle.getString("getSubsidiaryFacilitiesTypeInfoList.uri");
+		}
+		if(name == InterfaceName.GetNewEngineeringItemVerticalPoint) {
+			uri = bundle.getString("getNewEngineeringItemVerticalPoint.uri");
+		}
+		if(name == InterfaceName.GetNewEngineeringItemHorizontalInfo) {
+			uri = bundle.getString("getNewEngineeringItemHorizontalInfo.uri");
+		}
+		if(name == InterfaceName.GetNewEngineeringPlane) {
+			uri = bundle.getString("getNewEngineeringPlane.uri");
+		}
+		if(name == InterfaceName.GetEngineeringCenterPositionList) {
+			uri = bundle.getString("getEngineeringCenterPositionList.uri");
+		}
+		if(name == InterfaceName.GetEngCenterPositionList) {
+			uri = bundle.getString("getEngCenterPositionList.uri");
+		}
+		if(name == InterfaceName.GetNewEngineeringItemHorizontal) {
+			uri = bundle.getString("getNewEngineeringItemHorizontal.uri");
+		}
+		if(name == InterfaceName.GetFinishStateEngCodeList) {
+			uri = bundle.getString("getFinishStateEngCodeList.uri");
+		}
+		if(name == InterfaceName.GetBillCodeList) {
+			uri = bundle.getString("getBillCodeList.uri");
+		}
+		if(name == InterfaceName.AddOrUpdateBillCode) {
+			uri = bundle.getString("addOrUpdateBillCode.uri");
+		}
+		if(name == InterfaceName.DelBillCodeByIds) {
+			uri = bundle.getString("delBillCodeByIds.uri");
+		}
+		if(name == InterfaceName.ExportBillCode) {
+			uri = bundle.getString("exportBillCode.uri");
+		}
+		if(name == InterfaceName.ImportBillCode) {
+			uri = bundle.getString("importBillCode.uri");
+		}
+		if(name == InterfaceName.GetSearchBillCodeList) {
+			uri = bundle.getString("getSearchBillCodeList.uri");
+		}
+		if(name == InterfaceName.GetBillCodecheck) {
+			uri = bundle.getString("getBillCodecheck.uri");
+		}
+		if(name == InterfaceName.GetUnitPageList) {
+			uri = bundle.getString("getUnitPageList.uri");
+		}
+		if(name == InterfaceName.AddUnit) {
+			uri = bundle.getString("addUnit.uri");
+		}
+		if(name == InterfaceName.UpdateUnit) {
+			uri = bundle.getString("updateUnit.uri");
+		}
+		if(name == InterfaceName.DelUnit) {
+			uri = bundle.getString("delUnit.uri");
+		}
+		if(name == InterfaceName.ExportUnit) {
+			uri = bundle.getString("exportUnit.uri");
+		}
+		if(name == InterfaceName.ImportUnit) {
+			uri = bundle.getString("importUnit.uri");
+		}
+		if(name == InterfaceName.GetUnitList) {
+			uri = bundle.getString("getUnitList.uri");
+		}
+		if(name == InterfaceName.GetQuantitiesBillPageList) {
+			uri = bundle.getString("getQuantitiesBillPageList.uri");
+		}
+		if(name == InterfaceName.AddQuantitiesBill) {
+			uri = bundle.getString("addQuantitiesBill.uri");
+		}
+		if(name == InterfaceName.UpdateQuantitiesBill) {
+			uri = bundle.getString("updateQuantitiesBill.uri");
+		}
+		
+		if(name == InterfaceName.GetEngineeringLedgerTypeList) {
+			uri = bundle.getString("getEngineeringLedgerTypeList.uri");
+		}
+		if(name == InterfaceName.AddEngineeringLedgerType) {
+			uri = bundle.getString("addEngineeringLedgerType.uri");
+		}
+		if(name == InterfaceName.UpdateEngineeringLedgerType) {
+			uri = bundle.getString("updateEngineeringLedgerType.uri");
+		}
+		if(name == InterfaceName.DelEngineeringLedgerType) {
+			uri = bundle.getString("delEngineeringLedgerType.uri");
+		}
+		
+		if(name == InterfaceName.ExportEngineeringLedgerType) {
+			uri = bundle.getString("exportEngineeringLedgerType.uri");
+		}
+		if(name == InterfaceName.ImportEngineeringLedgerType) {
+			uri = bundle.getString("importEngineeringLedgerType.uri");
+		}
+		if(name == InterfaceName.GetSearchLedgerType) {
+			uri = bundle.getString("getSearchLedgerType.uri");
+		}
+		if(name == InterfaceName.DelQuantitiesBill) {
+			uri = bundle.getString("delQuantitiesBill.uri");
+		}
+		if(name == InterfaceName.GetQuantitiesBillList) {
+			uri = bundle.getString("getQuantitiesBillList.uri");
+		}
+		if(name == InterfaceName.BaseExport) {
+			uri = bundle.getString("baseExport.uri");
+		}
+		if(name == InterfaceName.GetLedgerPageList) {
+			uri = bundle.getString("getLedgerPageList.uri");
+		}
+		if(name == InterfaceName.AddLedger) {
+			uri = bundle.getString("addLedger.uri");
+		}
 		
 		testUrl = address + uri;
 		return testUrl;

@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetGeometryInfoListTest {
 
 	// 运营平台-lbs基础配置-获取几何信息
-	@Test
+	@Test(enabled=false)
 	public void getGeometryInfoListTest() throws IOException {
 
 		// 发送请求

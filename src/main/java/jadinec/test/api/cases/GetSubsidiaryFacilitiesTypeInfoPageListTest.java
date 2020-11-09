@@ -12,14 +12,17 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 public class GetSubsidiaryFacilitiesTypeInfoPageListTest {
 
-	// 
+	public static String stringId = null;
+		
+	// 分页列表
 	@Test
 	public void getSubsidiaryFacilitiesTypeInfoPageListTest() throws IOException {
 
@@ -27,16 +30,41 @@ public class GetSubsidiaryFacilitiesTypeInfoPageListTest {
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
+		String data2 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data1 = jsonObject.getString("success");
+			data2 = jsonObject.getString("data");
 		}
+		//System.out.println(data2);
 
+		List<String> list1 = Arrays.asList(data2);
+		JSONArray result1 = JSONArray.parseArray(list1.toString());
+		//System.out.println(result1);
+		
+		
+		String data3 = null;
+		for (int j = 0; j < result1.size(); j++) {
+			JSONObject jsonObject = result1.getJSONObject(j);
+			data3 = jsonObject.getString("list");
+			}
+		//System.out.println(data3);
+		
+		JSONArray ja = JSONArray.parseArray(data3);
+		//System.out.println(ja);
+		JSONObject jsonObj = null;
+				
+		jsonObj = (JSONObject) JSONObject.parse(ja.get(0).toString());
+		stringId =jsonObj.get("id").toString();
+			
+		System.out.println(stringId);
+				
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("true", data1);
 	}
+
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.getSubsidiaryFacilitiesTypeInfoPageListUrl);
@@ -61,7 +89,7 @@ public class GetSubsidiaryFacilitiesTypeInfoPageListTest {
 		result = EntityUtils.toString(response.getEntity(), "UTF-8");
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
-		JSONArray array = JSONArray.fromObject(list);
+		JSONArray array = JSONArray.parseArray(list.toString());
 		return array;
 	}
 }
