@@ -39,21 +39,20 @@ public class DelBillCodeByIdsTest {
 	}
 
 
-	// 删除附属类型成功
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.delBillCodeByIdsUrl);
 		System.out.println(TestConfig.delBillCodeByIdsUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		//String id = GetSubsidiaryFacilitiesTypeInfoPageListTest.stringId;
-		String[] paramStr = { "75717843353735168" };
+		String id = GetBillCodeListTest.stringId;
+		String[] paramStr = { id };
 		param2.put("ids", paramStr);
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
-		
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

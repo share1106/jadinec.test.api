@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class GetGeometryInfoTest {
 
 	// 运营平台-lbs基础配置-单个几何信息
-	@Test(enabled=false)
+	@Test
 	public void getGeometryInfoTest() throws IOException {
 
 		// 发送请求
@@ -42,8 +42,13 @@ public class GetGeometryInfoTest {
 		HttpPost post = new HttpPost(TestConfig.getGeometryInfoUrl);
 		System.out.println(TestConfig.getGeometryInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "1");// 几何信息id
+		param2.put("id", "1");// 几何信息id
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

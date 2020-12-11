@@ -28,17 +28,12 @@ public class UpdateQuantitiesBillTest {
 		System.out.println(result);
 
 		String data1 = null;
-		String data2 = null;
-
+		
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
 			data1 = jsonObject.getString("msg");
-			data2 = jsonObject.getString("data");
 		}
-		System.out.println(data2);
-		JSONArray jArray = new JSONArray();
-		jArray.add(data2);
-
+		
 		// 验证结果
 		Assert.assertEquals("执行成功", data1);
 	}
@@ -49,20 +44,20 @@ public class UpdateQuantitiesBillTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("id", "78272319910449152");
-		param2.put("sectionNumber", "400");// 章节号编号
-		param2.put("ledgerCode", "400-1-2-3");// 项目清单编号
-		param2.put("ledgerName", "钢筋");// 细目名称
-		param2.put("unit", "dw002");// 单位编号
-		param2.put("price", "5");// 清单单价
-		param2.put("contPrice", 10);// 原合同单价
-		param2.put("contQuantity", 1);// 原合同数量
-		param2.put("contAmount", 10);// 原合同金额
-		param2.put("remarks", "测试新增项目工程量清单3");
-		param2.put("proCode", "7");
+		param2.put("id", GetQuantitiesBillPageListTest.stringId);
+		param2.put("sectionNumber", "200");// 章节号编号
+		param2.put("ledgerCode", "202-1-a");// 项目清单编号
+		param2.put("ledgerName", "清理现场");// 细目名称
+		param2.put("unit", "DW008");//单位编号
+		param2.put("price", "10");//清单单价
+		param2.put("contPrice", 5);//原合同单价
+		param2.put("contQuantity", 2);//原合同数量
+		param2.put("contAmount", 10);//原合同金额
+		param2.put("remarks", "测试新增项目工程量清单");
+		param2.put("proCode", "2");
 		
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

@@ -42,15 +42,20 @@ public class UpdateIdentificationLineTypeInfoTest {
 		HttpPost post = new HttpPost(TestConfig.updateIdentificationLineTypeInfoUrl);
 		System.out.println(TestConfig.updateIdentificationLineTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", GetIdentificationLineTypeInfoPageListTest.stringId);
-		param1.put("typeName", "test");// 标识线类型名称
-		param1.put("typeCode", "5");// 线条颜色
-		param1.put("lineWidth", 2);// 线条宽度
-		param1.put("lineColor", "#ec0cbb");// 线条形状
-		param1.put("lineShape", "solid");// 透明度
-		param1.put("remarks", "测试标识线类型备注");// 备注
-		param1.put("drawLevel", 1);
+		param2.put("id", GetIdentificationLineTypeInfoPageListTest.stringId);
+		param2.put("typeName", "test");// 标识线类型名称
+		param2.put("typeCode", "888");// 线条颜色
+		param2.put("lineWidth", 2);// 线条宽度
+		param2.put("lineColor", "#ec0cbb");// 线条形状
+		param2.put("lineShape", "solid");// 透明度
+		param2.put("remarks", "测试标识线类型备注");// 备注
+		param2.put("drawLevel", 1);
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

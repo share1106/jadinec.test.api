@@ -38,19 +38,19 @@ public class DelUnitTest {
 		Assert.assertEquals("执行成功", data);
 	}
 
-	// 删除附属类型成功
+	
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.delUnitUrl);
 		System.out.println(TestConfig.delUnitUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		// String id = GetSubsidiaryFacilitiesTypeInfoPageListTest.stringId;
-		String[] paramStr = { "77207270198480896" };
+		String id = GetUnitPageListTest.stringId;
+		String[] paramStr = { id };
 		param2.put("ids", paramStr);
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

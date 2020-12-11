@@ -12,14 +12,17 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 public class GetMechanicalListTest {
 
-	// 机械设备列表
+	public static String stringId = null;
+	
+	// 获取设备列表
 	@Test
 	public void getMechanicalListTest() throws IOException {
 
@@ -27,15 +30,41 @@ public class GetMechanicalListTest {
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
+		String data2 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data1 = jsonObject.getString("msg");
+			data2 = jsonObject.getString("data");
+		}
+		// System.out.println(data2);
+
+		List<String> list1 = Arrays.asList(data2);
+		JSONArray result1 = JSONArray.parseArray(list1.toString());
+		// System.out.println(result1);
+
+		String data3 = null;
+		for (int j = 0; j < result1.size(); j++) {
+			JSONObject jsonObject = result1.getJSONObject(j);
+			data3 = jsonObject.getString("list");
+		}
+		// System.out.println(data3);
+
+		JSONArray ja = JSONArray.parseArray(data3);
+		// System.out.println(ja);
+		JSONObject jsonObj = null;
+
+		for (int k = 0; k < ja.size(); k++) {
+			jsonObj = (JSONObject) JSONObject.parse(ja.get(k).toString());
+			if (jsonObj.get("typeName").toString().contains("测试设备类型666")) {
+				stringId = jsonObj.get("id").toString();
+				System.out.println(stringId);
+			}
 		}
 
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("执行成功", data1);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
@@ -44,18 +73,17 @@ public class GetMechanicalListTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("typeCode", "TT");
-		param2.put("mechanicalClass", "1");
-		param2.put("state", "1");
-		param2.put("isFree", "1");
-
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param2.put("keyWords", "");
+		param2.put("pageNum", 1);
+		param2.put("pageSize", 10);
+		
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
@@ -65,7 +93,7 @@ public class GetMechanicalListTest {
 		result = EntityUtils.toString(response.getEntity(), "UTF-8");
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
-		JSONArray array = JSONArray.fromObject(list);
+		JSONArray array = JSONArray.parseArray(list.toString());
 		return array;
 	}
 }

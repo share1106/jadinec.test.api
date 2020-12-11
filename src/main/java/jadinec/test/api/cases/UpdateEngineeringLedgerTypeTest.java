@@ -44,13 +44,13 @@ public class UpdateEngineeringLedgerTypeTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("id", "78202474149842944");
-		param2.put("ledgerTypeName", "混凝土");// 细目种类
-		param2.put("ledgerTypeCode", "3");// 细目代码
+		param2.put("id", GetEngineeringLedgerTypeListTest.stringId);
+		param2.put("ledgerTypeName", "编辑细目种类1");// 细目种类
+		param2.put("ledgerTypeCode", "7777");// 细目代码
 		param2.put("remark", "测试增加细目种类备注1");// 备注
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

@@ -43,14 +43,19 @@ public class AddIdentificationLineTypeInfoTest {
 		HttpPost post = new HttpPost(TestConfig.addIdentificationLineTypeInfoUrl);
 		System.out.println(TestConfig.addIdentificationLineTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("typeName", typeName);// 标识线类型名称
-		param1.put("typeCode", typeCode);
-		param1.put("lineWidth", 2);
-		param1.put("lineColor", "#ec0cbb");
-		param1.put("lineShape", "solid");
-		param1.put("remarks", "测试标识线类型备注");
-		param1.put("drawLevel", 1);
+		param2.put("typeName", typeName);// 标识线类型名称
+		param2.put("typeCode", typeCode);
+		param2.put("lineWidth", 2);
+		param2.put("lineColor", "#ec0cbb");
+		param2.put("lineShape", "solid");
+		param2.put("remarks", "测试标识线类型备注");
+		param2.put("drawLevel", 1);
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

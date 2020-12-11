@@ -51,13 +51,13 @@ public class SearchTest {
 		param2.put("proCode", "5");// 项目编号
 		param2.put("execState", paramInt);// 施工状态 0-未计划 1-待安排 2-待开工 3-施工中 4-已完成
 
-		param1.put("client", ConfigFile.client);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

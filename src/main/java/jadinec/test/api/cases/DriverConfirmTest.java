@@ -47,13 +47,13 @@ public class DriverConfirmTest {
 		param2.put("oddNum", "9bd2e1b3f0604e52b02bb8018bebb0de"); // 工单编号
 		param2.put("state", "1"); // 0驳回；1同意
 
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

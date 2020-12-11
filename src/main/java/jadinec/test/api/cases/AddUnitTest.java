@@ -44,13 +44,13 @@ public class AddUnitTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("unitName", "根");// 单位名称
-		param2.put("unitCode", "1");// 单位编号
+		param2.put("unitName", "单位");// 单位名称
+		param2.put("unitCode", "8888");// 单位编号
 		param2.put("sort", 1);// 排序号
 		param2.put("remarks", "测试新增单位");// 备注
 		
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

@@ -12,14 +12,17 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 public class GetEngineeringCategoryListTest {
 
-	// 查询工程类别集合
+	public static String stringId;
+
+	// 分页查询工程类别列表
 	@Test
 	public void getEngineeringCategoryListTest() throws IOException {
 
@@ -27,28 +30,56 @@ public class GetEngineeringCategoryListTest {
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
+		String data2 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data1 = jsonObject.getString("success");
+			data2 = jsonObject.getString("data");
 		}
+		// System.out.println(data2);
+
+		List<String> list1 = Arrays.asList(data2);
+		JSONArray result1 = JSONArray.parseArray(list1.toString());
+		// System.out.println(result1);
+
+		String data3 = null;
+		for (int j = 0; j < result1.size(); j++) {
+			JSONObject jsonObject = result1.getJSONObject(j);
+			data3 = jsonObject.getString("rows");
+		}
+		// System.out.println(data3);
+
+		JSONArray ja = JSONArray.parseArray(data3);
+		// System.out.println(ja);
+		JSONObject jsonObj = null;
+
+		jsonObj = (JSONObject) JSONObject.parse(ja.get(0).toString());
+		stringId = jsonObj.get("id").toString();
+		System.out.println(stringId);
 
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("true", data1);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.getEngineeringCategoryListUrl);
 		System.out.println(TestConfig.getEngineeringCategoryListUrl);
 		JSONObject param1 = new JSONObject();
-		
-		param1.put("client", "android");
-		param1.put("version", "1.0");
-		
+		JSONObject param2 = new JSONObject();
+
+		param2.put("keyWords", "隧道");// 查询条件
+		param2.put("pageNum", 1);// 当前页 默认1
+		param2.put("pageSize", 10);// 页大小 默认10
+
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
@@ -58,7 +89,7 @@ public class GetEngineeringCategoryListTest {
 		result = EntityUtils.toString(response.getEntity(), "UTF-8");
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
-		JSONArray array = JSONArray.fromObject(list);
+		JSONArray array = JSONArray.parseArray(list.toString());
 		return array;
 	}
 }

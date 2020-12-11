@@ -6,21 +6,35 @@
 			<class name="jadinec.test.api.cases.VerificationCodeLoginTest">
 
 			</class>
-
+			
 			<class
-				name="jadinec.test.api.cases.BaseExportTest">
+				name="jadinec.test.api.cases.AddUnitTest">
 				<methods>
-					<include name="baseExportTest" />
+					<include name="addUnitTest" />
 				</methods>
 			</class>
+
 			<class
-				name="jadinec.test.api.cases.GetLedgerPageListTest">
+				name="jadinec.test.api.cases.GetUnitPageListTest">
 				<methods>
-					<include name="getLedgerPageListTest" />
+					<include name="getUnitPageListTest" />
 				</methods>
 			</class>
 			
-
+			<class
+				name="jadinec.test.api.cases.UpdateUnitTest">
+				<methods>
+					<include name="updateUnitTest" />
+				</methods>
+			</class>
+			
+			<class
+				name="jadinec.test.api.cases.DelUnitTest">
+				<methods>
+					<include name="delUnitTest" />
+				</methods>
+			</class>
+						
 		</classes>
 	</test>
 

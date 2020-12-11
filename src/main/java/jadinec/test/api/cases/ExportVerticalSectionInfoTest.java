@@ -42,8 +42,13 @@ public class ExportVerticalSectionInfoTest {
 		HttpPost post = new HttpPost(TestConfig.exportVerticalSectionInfoUrl);
 		System.out.println(TestConfig.exportVerticalSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("keyWords", "");// 关键字
+		param2.put("keyWords", "");// 关键字
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

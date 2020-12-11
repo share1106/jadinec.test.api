@@ -42,21 +42,26 @@ public class UpdateCrossSectionInfoTest {
 		HttpPost post = new HttpPost(TestConfig.updateCrossSectionInfoUrl);
 		System.out.println(TestConfig.updateCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", GetCrossSectionInfoPageListTest.stringId);
-		param1.put("engineeringTypeCode", "FX235");
-		param1.put("completeFillColor", "#000000");
-		param1.put("completeFillTransparency", 0);
-		param1.put("completeLineColor", "#09e63d");
-		param1.put("fillColor", "#000000");
-		param1.put("geometry", "4");
-		param1.put("lineColor", "#ea0f0f");
-		param1.put("lineShape", "solid");
-		param1.put("lineTransparency", "");
-		param1.put("lineWidth", 2);
-		param1.put("remarks", "测试横断面信息备注");
-		param1.put("transparency", 0);
-		param1.put("completeFillTransparency", 0);
+		param2.put("id", GetCrossSectionInfoPageListTest.stringId);
+		param2.put("engineeringTypeCode", "FX235");
+		param2.put("completeFillColor", "#000000");
+		param2.put("completeFillTransparency", 0);
+		param2.put("completeLineColor", "#09e63d");
+		param2.put("fillColor", "#000000");
+		param2.put("geometry", "4");
+		param2.put("lineColor", "#ea0f0f");
+		param2.put("lineShape", "solid");
+		param2.put("lineTransparency", "");
+		param2.put("lineWidth", 2);
+		param2.put("remarks", "测试横断面信息备注");
+		param2.put("transparency", 0);
+		param2.put("completeFillTransparency", 0);
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

@@ -42,10 +42,15 @@ public class DelCrossSectionInfoTest {
 		HttpPost post = new HttpPost(TestConfig.delCrossSectionInfoUrl);
 		System.out.println(TestConfig.delCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
 		String id = GetCrossSectionInfoPageListTest.stringId;
 		String[] paramStr = {id};
-		param1.put("ids", paramStr);// 横断面id数组
+		param2.put("ids", paramStr);// 横断面id数组
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

@@ -43,8 +43,8 @@ public class GetBillCodecheckTest {
 		System.out.println(TestConfig.getBillCodecheckUrl);
 		JSONObject param1 = new JSONObject();
 		
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

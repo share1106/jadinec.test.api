@@ -12,13 +12,15 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
 
 public class GetLedgerPageListTest {
 
+	public static String stringId = null;
 	// 分页列表
 	@Test
 	public void getLedgerPageListTest() throws IOException {
@@ -27,15 +29,42 @@ public class GetLedgerPageListTest {
 		JSONArray result = getJsonResult();
 		System.out.println(result);
 
-		String data = null;
+		String data1 = null;
+		String data2 = null;
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("msg");
+			data1 = jsonObject.getString("msg");
+			data2 = jsonObject.getString("data");
+		}
+		//System.out.println(data2);
+
+		List<String> list1 = Arrays.asList(data2);
+		JSONArray result1 = JSONArray.parseArray(list1.toString());
+		//System.out.println(result1);
+		
+		
+		String data3 = null;
+		for (int j = 0; j < result1.size(); j++) {
+			JSONObject jsonObject = result1.getJSONObject(j);
+			data3 = jsonObject.getString("list");
+			}
+		//System.out.println(data3);
+		
+		JSONArray ja = JSONArray.parseArray(data3);
+		//System.out.println(ja);
+		JSONObject jsonObj = null;
+		for (int k = 0; k < ja.size(); k++) {
+			jsonObj = (JSONObject) JSONObject.parse(ja.get(k).toString());
+			if (jsonObj.get("ledgerCode").toString().contains("203-1-a")) {
+				stringId = jsonObj.get("id").toString();
+				System.out.println(stringId);
+			}
+
 		}
 
 		// 验证结果
-		Assert.assertEquals("执行成功", data);
+		Assert.assertEquals("执行成功", data1);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
@@ -47,23 +76,23 @@ public class GetLedgerPageListTest {
 		String[] strNum = {};
 		String[] strCode = {};
 
-		param2.put("proCode", "7");// 项目编码
+		param2.put("proCode", "2");// 项目编码
 		param2.put("sectionNumber", strNum);//章节号编号(多个)
 		param2.put("engineeringCode", "");//工程编号
 		param2.put("subunitEngineeringName", "");//子单位工程名称
 		param2.put("engineeringName", "");//工程名称
-		param2.put("ledgerCode", "");//项目清单编号
-		param2.put("ledgerName", "");//细目名称
+		param2.put("ledgerCode", "203-1-a");//项目清单编号
+		param2.put("ledgerName", "挖土方");//细目名称
 		param2.put("unitCode", strCode);//单位编号(多个)
 		param2.put("changeQuantityStart", null);//变更数量-开始
 		param2.put("changeQuantityEnd", null);//变更数量-结束
 		param2.put("changeCountStart", null);//变更次数-开始
 		param2.put("changeCountEnd", null);//变更次数-结束
 		param2.put("pageNum", 1);//当前页
-		param2.put("pageSize", 10);//页大小
+		param2.put("pageSize", 100);//页大小
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
@@ -78,7 +107,7 @@ public class GetLedgerPageListTest {
 		result = EntityUtils.toString(response.getEntity(), "UTF-8");
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
-		JSONArray array = JSONArray.fromObject(list);
+		JSONArray array = JSONArray.parseArray(list.toString());
 		return array;
 	}
 }

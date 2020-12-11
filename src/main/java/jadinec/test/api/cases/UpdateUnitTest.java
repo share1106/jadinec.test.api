@@ -44,14 +44,14 @@ public class UpdateUnitTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("id", "77207270198480896");//单位id
-		param2.put("unitName", "根");// 单位名称
-		param2.put("unitCode", "1001");// 单位编号
+		param2.put("id", GetUnitPageListTest.stringId);//单位id
+		param2.put("unitName", "单位");// 单位名称
+		param2.put("unitCode", "7777");// 单位编号
 		param2.put("sort", 1);// 排序号
 		param2.put("remarks", "测试新增单位");// 备注
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

@@ -51,13 +51,13 @@ public class SaveDeviceWorkingInfoTest {
 		param2.put("photoPath", "ASF/ca80ca1c658f4941a463e3ad3d379747.jpg");//照片
 		param2.put("recordId", 1);//记录ID，为workingType=2时必填
 
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

@@ -47,10 +47,11 @@ public class UpdatePhoneNumTest {
 		param2.put("phoneNum", "18611599121");
 		param2.put("verificationCode", VerificationCodeLoginTest.getCurrentTime());
 
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
+		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", VerificationCodeLoginTest.token);
 		post.setHeader("client", ConfigFile.client);

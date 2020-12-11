@@ -70,12 +70,17 @@ public class GetSubsidiaryFacilitiesTypeInfoPageListTest {
 		HttpPost post = new HttpPost(TestConfig.getSubsidiaryFacilitiesTypeInfoPageListUrl);
 		System.out.println(TestConfig.getSubsidiaryFacilitiesTypeInfoPageListUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 		
-		param1.put("lineShape", "");
-		param1.put("geometry", "");
-		param1.put("keyWords", "");
-		param1.put("pageNum", 1);
-		param1.put("pageSize", 10);
+		param2.put("lineShape", "");
+		param2.put("geometry", "");
+		param2.put("keyWords", "");
+		param2.put("pageNum", 1);
+		param2.put("pageSize", 10);
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

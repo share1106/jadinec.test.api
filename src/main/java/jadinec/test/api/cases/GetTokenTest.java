@@ -57,13 +57,13 @@ public class GetTokenTest {
 		param2.put("password", "2019");
 		param2.put("extra", param3);
 				
-		param1.put("client", "android");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
-		param1.put("version", "1.0");
-		
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token",VerificationCodeLoginTest.token);
-		post.setHeader("client",ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 		
 		System.out.println(VerificationCodeLoginTest.token);
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

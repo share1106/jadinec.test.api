@@ -28,17 +28,12 @@ public class AddEngineeringLedgerTypeTest {
 		System.out.println(result);
 
 		String data1 = null;
-		String data2 = null;
-
+		
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
 			data1 = jsonObject.getString("msg");
-			data2 = jsonObject.getString("data");
 		}
-		System.out.println(data2);
-		JSONArray jArray = new JSONArray();
-		jArray.add(data2);
-
+		
 		// 验证结果
 		Assert.assertEquals("执行成功", data1);
 	}
@@ -49,12 +44,12 @@ public class AddEngineeringLedgerTypeTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("ledgerTypeName", "混凝土");// 细目种类
-		param2.put("ledgerTypeCode", "3");// 细目代码
+		param2.put("ledgerTypeName", "新增细目种类1");// 细目种类
+		param2.put("ledgerTypeCode", "8888");// 细目代码
 		param2.put("remark", "测试增加细目种类备注");//备注
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

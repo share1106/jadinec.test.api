@@ -59,8 +59,8 @@ public class BaseExportTest {
 		param2.put("type", "quantitiesBill");
 		param2.put("query", param3);
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

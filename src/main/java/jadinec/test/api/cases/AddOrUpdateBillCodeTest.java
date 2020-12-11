@@ -44,15 +44,15 @@ public class AddOrUpdateBillCodeTest {
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("sectionNumber", "300");//章节号
-		param2.put("billCode", "313-5-222");// 清单编号
-		param2.put("billName", "路面细目1");// 细目名称
-		param2.put("unit", "m");//单位
-		param2.put("billType", "2");//细目种类
+		param2.put("sectionNumber", "400");//章节号
+		param2.put("billCode", "401-3-b");// 清单编号
+		param2.put("billName", "细目名称8888");// 细目名称
+		param2.put("unit", "km");//单位
+		param2.put("billType", "11");//细目种类
 		param2.put("remarks", "测试添加清单编码");//备注
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

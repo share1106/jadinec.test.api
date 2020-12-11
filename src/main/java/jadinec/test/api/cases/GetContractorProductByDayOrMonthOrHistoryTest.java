@@ -48,13 +48,13 @@ public class GetContractorProductByDayOrMonthOrHistoryTest {
 		param2.put("date", "");// type为month的时候date格式【2019-10】；ype为day的时候date格式【2019-10-10】
 		param2.put("proCode", "5");// 项目编码
 
-		param1.put("client", ConfigFile.Content_Type);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

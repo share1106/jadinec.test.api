@@ -38,20 +38,20 @@ public class DelQuantitiesBillTest {
 		Assert.assertEquals("执行成功", data);
 	}
 
-	// 删除附属类型成功
+	
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 		HttpPost post = new HttpPost(TestConfig.delQuantitiesBillUrl);
 		System.out.println(TestConfig.delQuantitiesBillUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		// String id = GetSubsidiaryFacilitiesTypeInfoPageListTest.stringId;
-		String[] paramStr = { "90" };
+		String id = GetQuantitiesBillPageListTest.stringId;
+		String[] paramStr = { id };
 		param2.put("ids", paramStr);//项目工程量清单id(多个)
-		param2.put("proCode", "7");//项目编码
+		param2.put("proCode", "2");//项目编码
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

@@ -42,9 +42,14 @@ public class GetCrossSectionInfoTest {
 		HttpPost post = new HttpPost(TestConfig.getCrossSectionInfoUrl);
 		System.out.println(TestConfig.getCrossSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("id", "1");// 横断面id
+		param2.put("id", "1");// 横断面id
 		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
+
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);

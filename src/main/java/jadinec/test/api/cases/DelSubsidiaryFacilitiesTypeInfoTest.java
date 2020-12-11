@@ -62,10 +62,15 @@ public class DelSubsidiaryFacilitiesTypeInfoTest {
 		HttpPost post = new HttpPost(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
 		System.out.println(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
 		String id = GetSubsidiaryFacilitiesTypeInfoPageListTest.stringId;
 		String[] paramStr = {id};
-		param1.put("ids", paramStr);
+		param2.put("ids", paramStr);
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);
@@ -88,10 +93,15 @@ public class DelSubsidiaryFacilitiesTypeInfoTest {
 			HttpPost post = new HttpPost(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
 			System.out.println(TestConfig.delSubsidiaryFacilitiesTypeInfoUrl);
 			JSONObject param1 = new JSONObject();
+			JSONObject param2 = new JSONObject();
 
 			String id = "88888888";
 			String[] paramStr = {id};
-			param1.put("ids", paramStr);
+			param2.put("ids", paramStr);
+			
+			param1.put("version", ConfigFile.version);
+			param1.put("client", ConfigFile.client_pc);
+			param1.put("content", param2);
 			
 			post.setHeader("Content-Type", ConfigFile.Content_Type);
 			post.setHeader("access_token", ConfigFile.access_token_pc);

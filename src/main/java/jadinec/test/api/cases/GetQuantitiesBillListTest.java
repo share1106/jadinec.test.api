@@ -48,8 +48,8 @@ public class GetQuantitiesBillListTest {
 		param2.put("sectionNumber", "100");// 章节号编号
 		param2.put("keyWords", "");// 模糊搜索条件
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

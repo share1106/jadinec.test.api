@@ -42,19 +42,24 @@ public class AddVerticalSectionInfoTest {
 		HttpPost post = new HttpPost(TestConfig.addVerticalSectionInfoUrl);
 		System.out.println(TestConfig.addVerticalSectionInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
-		param1.put("engineeringTypeCode", "FX12");
-		param1.put("lineColor", "#627EC9");
-		param1.put("completeLineColor", "#7699E7");
-		param1.put("lineWidth", 3);
-		param1.put("lineShape", "dashed");
-		param1.put("lineTransparency", "0.5");
-		param1.put("fillColor", "#000000");
-		param1.put("completeFillColor", "#000000");
-		param1.put("transparency", 0);
-		param1.put("remarks", "测试纵断面信息备注");
-		param1.put("geometry", "4");
-		param1.put("completeFillTransparency", 0);
+		param2.put("engineeringTypeCode", "FX21");
+		param2.put("lineColor", "#627EC9");
+		param2.put("completeLineColor", "#7699E7");
+		param2.put("lineWidth", 3);
+		param2.put("lineShape", "dashed");
+		param2.put("lineTransparency", "0.5");
+		param2.put("fillColor", "#000000");
+		param2.put("completeFillColor", "#000000");
+		param2.put("transparency", 0);
+		param2.put("remarks", "测试纵断面信息备注");
+		param2.put("geometry", "4");
+		param2.put("completeFillTransparency", 0);
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

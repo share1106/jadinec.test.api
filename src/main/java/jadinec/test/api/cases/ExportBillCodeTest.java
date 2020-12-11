@@ -48,8 +48,8 @@ public class ExportBillCodeTest {
 		param2.put("pageNum", 1);// 当前页
 		param2.put("pageSize", 10);// 每页条数
 
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

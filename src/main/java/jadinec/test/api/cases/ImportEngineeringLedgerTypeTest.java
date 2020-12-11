@@ -50,7 +50,7 @@ public class ImportEngineeringLedgerTypeTest {
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
 
 		restTemplate = new RestTemplate();
-		filePath = "src/main/resources/细目种类.xls";
+		filePath = "src/main/resources/细目种类.xlsx";
 		fileSystemResource = new FileSystemResource(filePath);
 		System.out.println(fileSystemResource.getURL());
 		if (!fileSystemResource.exists()) {
@@ -62,12 +62,14 @@ public class ImportEngineeringLedgerTypeTest {
 		headers.setContentType(type);
 		headers.add("access_token", ConfigFile.access_token_pc);
 		headers.add("Accept", ConfigFile.Content_Type);
+		
+		//headers.add("Content-Type", "application/json;charset=UTF-8");
 
 		MultiValueMap<String, Object> form = new LinkedMultiValueMap<String, Object>();
 
 		form.add("file", fileSystemResource);
-		form.add("filename", "细目种类.xls");
-		form.add("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+		form.add("filename", "细目种类.xlsx");
+		form.add("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8");
 
 		HttpEntity<MultiValueMap<String, Object>> files = new HttpEntity<>(form, headers);
 		ResponseEntity<String> responseEntity = restTemplate.postForEntity(TestConfig.importEngineeringLedgerTypeUrl, files,

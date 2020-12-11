@@ -47,13 +47,13 @@ public class ListMaterialDetailTest {
 		param2.put("engineeringCode", "KS-1-003-000-001-003-001-000");//分项编号
 		param2.put("type", "2");//物料类型 1-光圆钢筋;2-带肋钢筋;21-钢筋网片
 
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

@@ -46,13 +46,13 @@ public class GetOrgListTest {
 
 		param2.put("orgCategory", 5);// 1-业主单位 2-设计单位 3-监理单位 4-施工单位 5-专业承包商单位
 
-		param1.put("client", ConfigFile.client);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

@@ -50,13 +50,13 @@ public class GetListTest {
 		param2.put("engineeringCategoryCode", "2");//工程类别编码
 		param2.put("engineeringTypeCodeList", param);//工程类型编码集合 （选择全部按钮时 此集合传空）
 
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

@@ -47,8 +47,8 @@ public class GetSearchBillCodeListTest {
 		param2.put("sectionNumber", "300");// 章节号
 		param2.put("billCode", "");// 清单编号
 		
-		param1.put("version", ConfigFile.version);
 		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);

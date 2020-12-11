@@ -48,13 +48,13 @@ public class GetStatisticUserOnlineByDeptIdTest {
 		param2.put("proCode", "7"); // 项目编号
 		param2.put("deptId", 452);//部门ID
 
-		param1.put("client", ConfigFile.Content_Type);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

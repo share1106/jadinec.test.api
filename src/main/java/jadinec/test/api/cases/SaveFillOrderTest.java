@@ -47,13 +47,13 @@ public class SaveFillOrderTest {
 		param2.put("orderOdd", "TOD190719223726521620");// 运输工单
 		param2.put("eventCode", "TSF0004");// 事件节点：TSF0004-立即出发；TSF0005-到达填方区
 		
-		param1.put("client", "android");
-		param1.put("version", "1.0");
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

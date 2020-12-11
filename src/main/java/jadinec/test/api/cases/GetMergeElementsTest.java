@@ -48,13 +48,13 @@ public class GetMergeElementsTest {
 		param2.put("engineeringCode", "JTSG-1-402-001-001-001-002-000");// 基准单分项工程编码
 		param2.put("processCode", "GX3701");// 基准单工序编码
 		
-		param1.put("client", ConfigFile.client);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

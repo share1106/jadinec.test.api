@@ -49,13 +49,13 @@ public class DeleteContTeamItemByConditionTest {
 		param2.put("deptId", 1303);// 施工队id
 		param2.put("engineeringList", null);// 工程编码集合 只有单位工程 传单位工程，有子单位传子单位依次类推
 
-		param1.put("client", ConfigFile.client);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);

@@ -42,10 +42,15 @@ public class DelGeometryInfoTest {
 		HttpPost post = new HttpPost(TestConfig.delGeometryInfoUrl);
 		System.out.println(TestConfig.delGeometryInfoUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 
 		String id = GetGeometryInfoPageListTest.stringId;
 		String[] paramId = { id };
-		param1.put("ids", paramId);// 几何信息id
+		param2.put("ids", paramId);// 几何信息id
+		
+		param1.put("version", ConfigFile.version);
+		param1.put("client", ConfigFile.client_pc);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
 		post.setHeader("access_token", ConfigFile.access_token_pc);

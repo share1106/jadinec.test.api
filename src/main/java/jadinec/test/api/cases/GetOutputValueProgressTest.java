@@ -48,13 +48,13 @@ public class GetOutputValueProgressTest {
 		param2.put("startDate", "");// 开始日期-用于搜索
 		param2.put("endDate", "");// 结束日期-用于搜索
 
-		param1.put("client", ConfigFile.Content_Type);
+		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
-		post.setHeader("client", ConfigFile.client);
+		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
 		post.setEntity(entity);
