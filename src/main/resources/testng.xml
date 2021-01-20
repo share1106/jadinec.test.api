@@ -1770,8 +1770,8 @@
 
 
 			<!-- 11.11版本 -->
+			
 			<!-- 单位管理 -->
-
 
 			<class name="jadinec.test.api.cases.AddUnitTest">
 				<methods>
@@ -2479,6 +2479,633 @@
 			<class name="jadinec.test.api.cases.ListTest">
 				<methods>
 					<include name="listTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.TokenTest">
+				<methods>
+					<include name="tokenTest" />
+				</methods>
+			</class>
+			
+			<!-- 公司管理 -->
+			
+			<class name="jadinec.test.api.cases.AddOrgInfoTest">
+				<methods>
+					<include name="addOrgInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetAllOrgNamesTest">
+				<methods>
+					<include name="getAllOrgNamesTest" />
+				</methods>
+			</class>			
+			<class name="jadinec.test.api.cases.UpdateOssOrgInfoTest">
+				<methods>
+					<include name="updateOssOrgInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgInfoByOrgIdTest">
+				<methods>
+					<include name="getOrgInfoByOrgIdTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.GetOrgListByPageTest">
+				<methods>
+					<include name="getOrgListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOssOrgBaseInfoTest">
+				<methods>
+					<include name="updateOssOrgBaseInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetEntireOrgTreeByOrgIdTest">
+				<methods>
+					<include name="getEntireOrgTreeByOrgIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetAllOrgWithoutDefaultTest">
+				<methods>
+					<include name="getAllOrgWithoutDefaultTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetParentOrgByOrgCategoryTest">
+				<methods>
+					<include name="getParentOrgByOrgCategoryTest" />
+				</methods>
+			</class>
+						
+			<!-- 项目部 -->
+			
+			
+			<class name="jadinec.test.api.cases.AddOrgProInfoTest">
+				<methods>
+					<include name="addOrgProInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgProListByPageTest">
+				<methods>
+					<include name="getOrgProListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOssOrgProInfoTest">
+				<methods>
+					<include name="updateOssOrgProInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgProInfoByProIdTest">
+				<methods>
+					<include name="getOrgProInfoByProIdTest" />
+				</methods>
+			</class>
+			
+			
+			<class name="jadinec.test.api.cases.GetEntireOrgProTreeByProIdTest">
+				<methods>
+					<include name="getEntireOrgProTreeByProIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProsByOrgIdsTest">
+				<methods>
+					<include name="getProsByOrgIdsTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProsByOrgIdTest">
+				<methods>
+					<include name="getProsByOrgIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetSpecifyProOutputValueTest">
+				<methods>
+					<include name="getSpecifyProOutputValueTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgProInfoByProIdTest">
+				<methods>
+					<include name="delOrgProInfoByProIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgInfoByOrgIdTest">
+				<methods>
+					<include name="delOrgInfoByOrgIdTest" />
+				</methods>
+			</class>
+			
+			<!-- 部门 -->
+			
+			<class name="jadinec.test.api.cases.AddOssOrgDeptInfoTest">
+				<methods>
+					<include name="addOssOrgDeptInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetEntireOrgDeptTreeByUserIdTest">
+				<methods>
+					<include name="getEntireOrgDeptTreeByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOssDeptInfoTest">
+				<methods>
+					<include name="updateOssDeptInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgDeptInfoByDeptIdTest">
+				<methods>
+					<include name="getOrgDeptInfoByDeptIdTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.AddOrgDeptInfoTest">
+				<methods>
+					<include name="addOrgDeptInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateDeptInfoTest">
+				<methods>
+					<include name="updateDeptInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProDeptsByProIdTest">
+				<methods>
+					<include name="getProDeptsByProIdTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.GetOrgDeptsByUserIdTest">
+				<methods>
+					<include name="getOrgDeptsByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgUsersWithoutWorkerByDeptIdTest">
+				<methods>
+					<include name="getOrgUsersWithoutWorkerByDeptIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgDeptWithoutProDeptsByOrgIdTest">
+				<methods>
+					<include name="getOrgDeptWithoutProDeptsByOrgIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetEntireProDeptTreeByProIdTest">
+				<methods>
+					<include name="getEntireProDeptTreeByProIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProUsersByProDeptIdTest">
+				<methods>
+					<include name="getProUsersByProDeptIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetDeptTypeByDeptIdTest">
+				<methods>
+					<include name="getDeptTypeByDeptIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgDeptInfoByDeptIdTest">
+				<methods>
+					<include name="delOrgDeptInfoByDeptIdTest" />
+				</methods>
+			</class>
+			
+			<!-- 岗位 -->
+			
+			<class name="jadinec.test.api.cases.AddOrgJobInfoTest">
+				<methods>
+					<include name="addOrgJobInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgJobInfoListByPageTest">
+				<methods>
+					<include name="getOrgJobInfoListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOrgJobTest">
+				<methods>
+					<include name="updateOrgJobTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgJobInfoByJobIdTest">
+				<methods>
+					<include name="getOrgJobInfoByJobIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgJobInfoByJobIdTest">
+				<methods>
+					<include name="delOrgJobInfoByJobIdTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.GetProJobInfoListByPageTest">
+				<methods>
+					<include name="getProJobInfoListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgJobInfosByOrgDeptIdTest">
+				<methods>
+					<include name="getOrgJobInfosByOrgDeptIdTest" />
+				</methods>
+			</class>
+			
+			<!-- 角色管理 -->
+			
+			<class name="jadinec.test.api.cases.AddOrgRoleInfoTest">
+				<methods>
+					<include name="addOrgRoleInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgRoleInfoListByPageTest">
+				<methods>
+					<include name="getOrgRoleInfoListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgRoleInfoByRoleIdTest">
+				<methods>
+					<include name="getOrgRoleInfoByRoleIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOrgRoleInfoTest">
+				<methods>
+					<include name="updateOrgRoleInfoTest" />
+				</methods>
+			</class>
+			
+			
+			<class name="jadinec.test.api.cases.GetProRoleInfoListByPageTest">
+				<methods>
+					<include name="getProRoleInfoListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOrgRole2ResTest">
+				<methods>
+					<include name="updateOrgRole2ResTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgRolesByOrgIdTest">
+				<methods>
+					<include name="getOrgRolesByOrgIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProRolesByProIdTest">
+				<methods>
+					<include name="getProRolesByProIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgResByRoleIdTest">
+				<methods>
+					<include name="getOrgResByRoleIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgRoleInfoByRoleIdTest">
+				<methods>
+					<include name="delOrgRoleInfoByRoleIdTest" />
+				</methods>
+			</class>
+			
+			<!-- 个人信息及人员账号管理 -->
+			
+			<class name="jadinec.test.api.cases.GetUserAllInfoByUserIdTest">
+				<methods>
+					<include name="getUserAllInfoByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetUserBaseInfoByUserIdTest">
+				<methods>
+					<include name="getUserBaseInfoByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgUserCertificatesByUserIdTest">
+				<methods>
+					<include name="getOrgUserCertificatesByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgUserProExperiencesByUserIdTest">
+				<methods>
+					<include name="getOrgUserProExperiencesByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgUserWorkExperiencesByUserIdTest">
+				<methods>
+					<include name="getOrgUserWorkExperiencesByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOrgUserBaseInfoTest">
+				<methods>
+					<include name="updateOrgUserBaseInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetMyOssResListTest">
+				<methods>
+					<include name="getMyOssResListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetMyOrgResListTest">
+				<methods>
+					<include name="getMyOrgResListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetMyProResListTest">
+				<methods>
+					<include name="getMyProResListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProUserListByPageTest">
+				<methods>
+					<include name="getProUserListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgUserListByPageTest">
+				<methods>
+					<include name="getOrgUserListByPageTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.DisableUserLoginTest">
+				<methods>
+					<include name="disableUserLoginTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.EnableUserLoginTest">
+				<methods>
+					<include name="enableUserLoginTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateUserLoginPasswordTest">
+				<methods>
+					<include name="updateUserLoginPasswordTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateCompanyUserInfoTest">
+				<methods>
+					<include name="updateCompanyUserInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateOssUserInfoTest">
+				<methods>
+					<include name="updateOssUserInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetCompanyUserAuthorizationByUserIdTest">
+				<methods>
+					<include name="getCompanyUserAuthorizationByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOssUserAuthorizationByUserIdTest">
+				<methods>
+					<include name="getOssUserAuthorizationByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgAdminPageListByOrgIdTest">
+				<methods>
+					<include name="getOrgAdminPageListByOrgIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetProAdminPageListByProIdTest">
+				<methods>
+					<include name="getProAdminPageListByProIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.AddAdminTest">
+				<methods>
+					<include name="addAdminTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdateAdminTest">
+				<methods>
+					<include name="updateAdminTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.UpdateAdminResTest">
+				<methods>
+					<include name="updateAdminResTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.SendVerifyCodeTest">
+				<methods>
+					<include name="sendVerifyCodeTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdatePwdBySmsTest">
+				<methods>
+					<include name="updatePwdBySmsTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.UpdatePhoneBySmsTest">
+				<methods>
+					<include name="updatePhoneBySmsTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.ExportOrgUserTest">
+				<methods>
+					<include name="exportOrgUserTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.ExportProUserTest">
+				<methods>
+					<include name="exportProUserTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.AddOssUserBaseInfoTest">
+				<methods>
+					<include name="addOssUserBaseInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.AddCompanyUserInfoTest">
+				<methods>
+					<include name="addCompanyUserInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindProInfoListByUserIdTest">
+				<methods>
+					<include name="findProInfoListByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindOrgInfoListByUserIdTest">
+				<methods>
+					<include name="findOrgInfoListByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindOrgInfoByUserIdTest">
+				<methods>
+					<include name="findOrgInfoByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetAppResListTest">
+				<methods>
+					<include name="getAppResListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindProUserByProIdTest">
+				<methods>
+					<include name="findProUserByProIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindLoginInfoByUserIdTest">
+				<methods>
+					<include name="findLoginInfoByUserIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindOrgUserByOrgIdTest">
+				<methods>
+					<include name="findOrgUserByOrgIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetUserOrgAndProListTest">
+				<methods>
+					<include name="getUserOrgAndProListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetMyResListBySysIdTest">
+				<methods>
+					<include name="getMyResListBySysIdTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelUserInfoTest">
+				<methods>
+					<include name="delUserInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelAdminTest">
+				<methods>
+					<include name="delAdminTest" />
+				</methods>
+			</class>
+			
+			<!-- 资源管理 -->
+			
+			<class name="jadinec.test.api.cases.AddResInfoTest">
+				<methods>
+					<include name="addResInfoTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgResInfoListByPageTest">
+				<methods>
+					<include name="getOrgResInfoListByPageTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgResInfoByResIdTest">
+				<methods>
+					<include name="getOrgResInfoByResIdTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.UpdateOrgResInfoTest">
+				<methods>
+					<include name="updateOrgResInfoTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.GetOrgResInfoListBySysIdTest">
+				<methods>
+					<include name="getOrgResInfoListBySysIdTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.GetSystemApiTest">
+				<methods>
+					<include name="getSystemApiTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.EnableOrgResTest">
+				<methods>
+					<include name="enableOrgResTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetDefaultAdminOrgResTest">
+				<methods>
+					<include name="getDefaultAdminOrgResTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindBandsStatMenuTest">
+				<methods>
+					<include name="findBandsStatMenuTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindUserMenuTest">
+				<methods>
+					<include name="findUserMenuTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgResInfoByResIdTest">
+				<methods>
+					<include name="delOrgResInfoByResIdTest" />
+				</methods>
+			</class>
+			
+			<!-- 承包商 -->
+			
+			<class name="jadinec.test.api.cases.FindContractorListTest">
+				<methods>
+					<include name="findContractorListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.FindContractorDetailsTest">
+				<methods>
+					<include name="findContractorDetailsTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetEnumListTest">
+				<methods>
+					<include name="getEnumListTest" />
+				</methods>
+			</class>
+			
+			<!-- 岗位编码字典 -->
+			
+			<class name="jadinec.test.api.cases.AddOrgJobDicTest">
+				<methods>
+					<include name="addOrgJobDicTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgJobDicListByPageTest">
+				<methods>
+					<include name="getOrgJobDicListByPageTest" />
+				</methods>
+			</class>			
+			<class name="jadinec.test.api.cases.UpdateOrgJobDicTest">
+				<methods>
+					<include name="updateOrgJobDicTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.GetOrgJobDicListTest">
+				<methods>
+					<include name="getOrgJobDicListTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelOrgJobDicByIdTest">
+				<methods>
+					<include name="delOrgJobDicByIdTest" />
+				</methods>
+			</class>
+			
+			<!-- 税收类型管理 -->
+			
+			<class name="jadinec.test.api.cases.AddsTest">
+				<methods>
+					<include name="addsTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.ListsTest">
+				<methods>
+					<include name="listsTest" />
+				</methods>
+			</class>
+			
+			<class name="jadinec.test.api.cases.UpdatesTest">
+				<methods>
+					<include name="updatesTest" />
+				</methods>
+			</class>
+			<class name="jadinec.test.api.cases.DelsTest">
+				<methods>
+					<include name="delsTest" />
+				</methods>
+			</class>
+			
+			<!-- 物资管理 -->
+			<class name="jadinec.test.api.cases.GetMaterialRecordListTest">
+				<methods>
+					<include name="getMaterialRecordListTest" />
 				</methods>
 			</class>
 

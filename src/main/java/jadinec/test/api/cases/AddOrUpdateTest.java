@@ -79,7 +79,7 @@ public class AddOrUpdateTest {
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token);
+		post.setHeader("accessToken", ConfigFile.access_token);
 		post.setHeader("client", ConfigFile.client);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

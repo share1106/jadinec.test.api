@@ -46,7 +46,7 @@ public class GetOptPersionListTest {
 		param1.put("workAreaDeptId", 313);// 工区部门id
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("accessToken", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

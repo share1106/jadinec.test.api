@@ -50,7 +50,7 @@ public class GetWorkMonthPlanPageListTest {
 		param1.put("keyWords", "");//搜索关键字（工区名称）
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("accessToken", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

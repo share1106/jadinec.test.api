@@ -82,7 +82,7 @@ public class ImportSubsidiaryFacilitiesTypeInfoTest {
 		MediaType type = MediaType.parseMediaType("multipart/form-data");
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(type);
-		headers.add("access_token", ConfigFile.access_token_pc);
+		headers.add("accessToken", ConfigFile.access_token_pc);
 		headers.add("Accept", ConfigFile.Content_Type);
 
 		// headers.add("Accept", "*/*");

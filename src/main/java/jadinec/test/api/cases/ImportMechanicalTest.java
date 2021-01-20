@@ -53,7 +53,7 @@ public class ImportMechanicalTest {
 			HttpPost post = new HttpPost(TestConfig.importMechanicalUrl);
 			System.out.println(TestConfig.importMechanicalUrl);
 
-			post.setHeader("access_token", ConfigFile.access_token_pc);
+			post.setHeader("accessToken", ConfigFile.access_token_pc);
 
 			File file = new File(filePath);
 			FileInputStream fileInputStream = new FileInputStream(file);

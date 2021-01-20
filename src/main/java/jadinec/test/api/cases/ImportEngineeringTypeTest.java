@@ -53,7 +53,7 @@ public class ImportEngineeringTypeTest {
 			HttpPost post = new HttpPost(TestConfig.importEngineeringTypeUrl);
 			System.out.println(TestConfig.importEngineeringTypeUrl);
 
-			post.setHeader("access_token", ConfigFile.access_token_pc);
+			post.setHeader("accessToken", ConfigFile.access_token_pc);
 
 			File file = new File(filePath);
 			FileInputStream fileInputStream = new FileInputStream(file);

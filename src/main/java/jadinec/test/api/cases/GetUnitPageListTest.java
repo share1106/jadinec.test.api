@@ -56,7 +56,7 @@ public class GetUnitPageListTest {
 		JSONObject jsonObj = null;
 		for (int k = 0; k < ja.size(); k++) {
 			jsonObj = (JSONObject) JSONObject.parse(ja.get(k).toString());
-			if (jsonObj.get("unitName").toString().contains("单位")) {
+			if (jsonObj.get("unitName").toString().contains("测试新增单位")) {
 				stringId = jsonObj.get("id").toString();
 				//System.out.println(stringId);
 			}
@@ -75,14 +75,15 @@ public class GetUnitPageListTest {
 
 		param2.put("keyWords", "");// 搜索条件
 		param2.put("pageNum", 1);// 当前页
-		param2.put("pageSize", 10);// 每页条数
+		param2.put("pageSize", 100);// 每页条数
 
 		param1.put("client", ConfigFile.client_pc);
 		param1.put("version", ConfigFile.version);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("accessToken", ConfigFile.access_token_pc);
+		//post.setHeader("access_token_pc_uat", ConfigFile.access_token_pc_uat);
 		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

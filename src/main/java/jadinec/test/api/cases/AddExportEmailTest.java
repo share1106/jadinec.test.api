@@ -19,8 +19,8 @@ import net.sf.json.JSONObject;
 
 public class AddExportEmailTest {
 
-	//
-	@Test
+	//绑定邮箱
+	@Test(groups="bindEmail")
 	public void addExportEmailTest() throws IOException {
 
 		// 发送请求
@@ -42,11 +42,17 @@ public class AddExportEmailTest {
 		HttpPost post = new HttpPost(TestConfig.addExportEmailUrl);
 		System.out.println(TestConfig.addExportEmailUrl);
 		JSONObject param1 = new JSONObject();
+		JSONObject param2 = new JSONObject();
 		
-		param1.put("email", "18611599121@163.com");
+		param2.put("email", "18611599121@163.com");
+		
+		param1.put("clientType", 2);
+		param1.put("appVersion", 1.9);
+		param1.put("serverVersion", 1.9);
+		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("accessToken", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

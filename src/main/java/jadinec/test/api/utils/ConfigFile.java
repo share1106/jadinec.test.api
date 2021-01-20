@@ -14,7 +14,11 @@ public class ConfigFile {
 	public static String version = bundle.getString("version");
 	public static String client_pc = bundle.getString("client_pc");
 	public static String access_token_pc = bundle.getString("access_token_pc");
-
+	public static String access_token_pc_uat = bundle.getString("access_token_pc_uat");
+	
+	//项目管理后台token
+	public static String access_token_pc_pro = bundle.getString("access_token_pc_pro");
+	
 	public static String getUrl(InterfaceName name) {
 		// APP测试地址
 		// String address = bundle.getString("test.url");
@@ -1387,6 +1391,354 @@ public class ConfigFile {
 		}
 		if (name == InterfaceName.List) {
 			uri = bundle.getString("list.uri");
+		}
+		if (name == InterfaceName.Token) {
+			uri = bundle.getString("token.uri");
+		}
+		if (name == InterfaceName.GetAllOrgNames) {
+			uri = bundle.getString("getAllOrgNames.uri");
+		}
+		if (name == InterfaceName.AddOrgInfo) {
+			uri = bundle.getString("addOrgInfo.uri");
+		}
+		if (name == InterfaceName.UpdateOssOrgInfo) {
+			uri = bundle.getString("updateOssOrgInfo.uri");
+		}
+		if (name == InterfaceName.GetOrgInfoByOrgId) {
+			uri = bundle.getString("getOrgInfoByOrgId.uri");
+		}
+		if (name == InterfaceName.DelOrgInfoByOrgId) {
+			uri = bundle.getString("delOrgInfoByOrgId.uri");
+		}
+		if (name == InterfaceName.GetOrgListByPage) {
+			uri = bundle.getString("getOrgListByPage.uri");
+		}
+		if (name == InterfaceName.UpdateOssOrgBaseInfo) {
+			uri = bundle.getString("updateOssOrgBaseInfo.uri");
+		}
+		if (name == InterfaceName.GetEntireOrgTreeByOrgId) {
+			uri = bundle.getString("getEntireOrgTreeByOrgId.uri");
+		}
+		if (name == InterfaceName.GetAllOrgWithoutDefault) {
+			uri = bundle.getString("getAllOrgWithoutDefault.uri");
+		}
+		if (name == InterfaceName.GetParentOrgByOrgCategory) {
+			uri = bundle.getString("getParentOrgByOrgCategory.uri");
+		}
+		if (name == InterfaceName.GetOrgProInfoByProId) {
+			uri = bundle.getString("getOrgProInfoByProId.uri");
+		}
+		if (name == InterfaceName.AddOrgProInfo) {
+			uri = bundle.getString("addOrgProInfo.uri");
+		}
+		if (name == InterfaceName.UpdateOssOrgProInfo) {
+			uri = bundle.getString("updateOssOrgProInfo.uri");
+		}
+		if (name == InterfaceName.DelOrgProInfoByProId) {
+			uri = bundle.getString("delOrgProInfoByProId.uri");
+		}
+		if (name == InterfaceName.GetOrgProListByPage) {
+			uri = bundle.getString("getOrgProListByPage.uri");
+		}
+		if (name == InterfaceName.GetEntireOrgProTreeByProId) {
+			uri = bundle.getString("getEntireOrgProTreeByProId.uri");
+		}
+		if (name == InterfaceName.GetProsByOrgIds) {
+			uri = bundle.getString("getProsByOrgIds.uri");
+		}
+		if (name == InterfaceName.GetSpecifyProOutputValue) {
+			uri = bundle.getString("getSpecifyProOutputValue.uri");
+		}
+		if (name == InterfaceName.AddOssOrgDeptInfo) {
+			uri = bundle.getString("addOssOrgDeptInfo.uri");
+		}
+		if (name == InterfaceName.UpdateOssDeptInfo) {
+			uri = bundle.getString("updateOssDeptInfo.uri");
+		}
+		if (name == InterfaceName.GetOrgDeptInfoByDeptId) {
+			uri = bundle.getString("getOrgDeptInfoByDeptId.uri");
+		}
+		if (name == InterfaceName.DelOrgDeptInfoByDeptId) {
+			uri = bundle.getString("delOrgDeptInfoByDeptId.uri");
+		}
+		if (name == InterfaceName.AddOrgDeptInfo) {
+			uri = bundle.getString("addOrgDeptInfo.uri");
+		}
+		if (name == InterfaceName.UpdateDeptInfo) {
+			uri = bundle.getString("updateDeptInfo.uri");
+		}
+		if (name == InterfaceName.GetEntireOrgDeptTreeByUserId) {
+			uri = bundle.getString("getEntireOrgDeptTreeByUserId.uri");
+		}
+		if (name == InterfaceName.GetOrgDeptsByUserId) {
+			uri = bundle.getString("getOrgDeptsByUserId.uri");
+		}
+		if (name == InterfaceName.GetProDeptsByProId) {
+			uri = bundle.getString("getProDeptsByProId.uri");
+		}
+		if (name == InterfaceName.GetOrgUsersWithoutWorkerByDeptId) {
+			uri = bundle.getString("getOrgUsersWithoutWorkerByDeptId.uri");
+		}
+		if (name == InterfaceName.GetOrgDeptWithoutProDeptsByOrgId) {
+			uri = bundle.getString("getOrgDeptWithoutProDeptsByOrgId.uri");
+		}
+		if (name == InterfaceName.GetEntireProDeptTreeByProId) {
+			uri = bundle.getString("getEntireProDeptTreeByProId.uri");
+		}
+		if (name == InterfaceName.GetProUsersByProDeptId) {
+			uri = bundle.getString("getProUsersByProDeptId.uri");
+		}
+		if (name == InterfaceName.GetDeptTypeByDeptId) {
+			uri = bundle.getString("getDeptTypeByDeptId.uri");
+		}
+		if (name == InterfaceName.AddOrgJobInfo) {
+			uri = bundle.getString("addOrgJobInfo.uri");
+		}
+		if (name == InterfaceName.UpdateOrgJob) {
+			uri = bundle.getString("updateOrgJob.uri");
+		}
+		if (name == InterfaceName.GetOrgJobInfoByJobId) {
+			uri = bundle.getString("getOrgJobInfoByJobId.uri");
+		}
+		if (name == InterfaceName.DelOrgJobInfoByJobId) {
+			uri = bundle.getString("delOrgJobInfoByJobId.uri");
+		}
+		if (name == InterfaceName.GetOrgJobInfoListByPage) {
+			uri = bundle.getString("getOrgJobInfoListByPage.uri");
+		}
+		if (name == InterfaceName.GetProJobInfoListByPage) {
+			uri = bundle.getString("getProJobInfoListByPage.uri");
+		}
+		if (name == InterfaceName.GetOrgJobInfosByOrgDeptId) {
+			uri = bundle.getString("getOrgJobInfosByOrgDeptId.uri");
+		}
+		if (name == InterfaceName.AddOrgRoleInfo) {
+			uri = bundle.getString("addOrgRoleInfo.uri");
+		}
+		if (name == InterfaceName.GetOrgRoleInfoByRoleId) {
+			uri = bundle.getString("getOrgRoleInfoByRoleId.uri");
+		}
+		if (name == InterfaceName.UpdateOrgRoleInfo) {
+			uri = bundle.getString("updateOrgRoleInfo.uri");
+		}
+		if (name == InterfaceName.DelOrgRoleInfoByRoleId) {
+			uri = bundle.getString("delOrgRoleInfoByRoleId.uri");
+		}
+		if (name == InterfaceName.GetOrgRoleInfoListByPage) {
+			uri = bundle.getString("getOrgRoleInfoListByPage.uri");
+		}
+		if (name == InterfaceName.GetProRoleInfoListByPage) {
+			uri = bundle.getString("getProRoleInfoListByPage.uri");
+		}
+		if (name == InterfaceName.UpdateOrgRole2Res) {
+			uri = bundle.getString("updateOrgRole2Res.uri");
+		}
+		if (name == InterfaceName.GetOrgRolesByOrgId) {
+			uri = bundle.getString("getOrgRolesByOrgId.uri");
+		}
+		if (name == InterfaceName.GetProRolesByProId) {
+			uri = bundle.getString("getProRolesByProId.uri");
+		}
+		if (name == InterfaceName.GetOrgResByRoleId) {
+			uri = bundle.getString("getOrgResByRoleId.uri");
+		}
+		if (name == InterfaceName.GetUserAllInfoByUserId) {
+			uri = bundle.getString("getUserAllInfoByUserId.uri");
+		}
+		if (name == InterfaceName.GetUserBaseInfoByUserId) {
+			uri = bundle.getString("getUserBaseInfoByUserId.uri");
+		}
+		if (name == InterfaceName.GetOrgUserCertificatesByUserId) {
+			uri = bundle.getString("getOrgUserCertificatesByUserId.uri");
+		}
+		if (name == InterfaceName.GetOrgUserProExperiencesByUserId) {
+			uri = bundle.getString("getOrgUserProExperiencesByUserId.uri");
+		}
+		if (name == InterfaceName.GetOrgUserWorkExperiencesByUserId) {
+			uri = bundle.getString("getOrgUserWorkExperiencesByUserId.uri");
+		}
+		if (name == InterfaceName.UpdateOrgUserBaseInfo) {
+			uri = bundle.getString("updateOrgUserBaseInfo.uri");
+		}
+		if (name == InterfaceName.GetMyOssResList) {
+			uri = bundle.getString("getMyOssResList.uri");
+		}
+		if (name == InterfaceName.GetMyOrgResList) {
+			uri = bundle.getString("getMyOrgResList.uri");
+		}
+		if (name == InterfaceName.GetMyProResList) {
+			uri = bundle.getString("getMyProResList.uri");
+		}
+		if (name == InterfaceName.GetProUserListByPage) {
+			uri = bundle.getString("getProUserListByPage.uri");
+		}
+		if (name == InterfaceName.GetOrgUserListByPage) {
+			uri = bundle.getString("getOrgUserListByPage.uri");
+		}
+		if (name == InterfaceName.DelUserInfo) {
+			uri = bundle.getString("delUserInfo.uri");
+		}
+		if (name == InterfaceName.DisableUserLogin) {
+			uri = bundle.getString("disableUserLogin.uri");
+		}
+		if (name == InterfaceName.EnableUserLogin) {
+			uri = bundle.getString("enableUserLogin.uri");
+		}
+		if (name == InterfaceName.UpdateUserLoginPassword) {
+			uri = bundle.getString("updateUserLoginPassword.uri");
+		}
+		if (name == InterfaceName.UpdateCompanyUserInfo) {
+			uri = bundle.getString("updateCompanyUserInfo.uri");
+		}
+		if (name == InterfaceName.UpdateOssUserInfo) {
+			uri = bundle.getString("updateOssUserInfo.uri");
+		}
+		if (name == InterfaceName.GetCompanyUserAuthorizationByUserId) {
+			uri = bundle.getString("getCompanyUserAuthorizationByUserId.uri");
+		}
+		if (name == InterfaceName.GetOssUserAuthorizationByUserId) {
+			uri = bundle.getString("getOssUserAuthorizationByUserId.uri");
+		}
+		if (name == InterfaceName.GetOrgAdminPageListByOrgId) {
+			uri = bundle.getString("getOrgAdminPageListByOrgId.uri");
+		}
+		if (name == InterfaceName.GetProAdminPageListByProId) {
+			uri = bundle.getString("getProAdminPageListByProId.uri");
+		}
+		if (name == InterfaceName.AddAdmin) {
+			uri = bundle.getString("addAdmin.uri");
+		}
+		if (name == InterfaceName.UpdateAdmin) {
+			uri = bundle.getString("updateAdmin.uri");
+		}
+		if (name == InterfaceName.DelAdmin) {
+			uri = bundle.getString("delAdmin.uri");
+		}
+		if (name == InterfaceName.UpdateAdminRes) {
+			uri = bundle.getString("updateAdminRes.uri");
+		}
+		if (name == InterfaceName.SendVerifyCode) {
+			uri = bundle.getString("sendVerifyCode.uri");
+		}
+		if (name == InterfaceName.UpdatePwdBySms) {
+			uri = bundle.getString("updatePwdBySms.uri");
+		}
+		if (name == InterfaceName.UpdatePhoneBySms) {
+			uri = bundle.getString("updatePhoneBySms.uri");
+		}
+		if (name == InterfaceName.ExportOrgUser) {
+			uri = bundle.getString("exportOrgUser.uri");
+		}
+		if (name == InterfaceName.FindProInfoListByUserId) {
+			uri = bundle.getString("findProInfoListByUserId.uri");
+		}
+		if (name == InterfaceName.FindOrgInfoListByUserId) {
+			uri = bundle.getString("findOrgInfoListByUserId.uri");
+		}
+		if (name == InterfaceName.FindOrgInfoByUserId) {
+			uri = bundle.getString("findOrgInfoByUserId.uri");
+		}
+		if (name == InterfaceName.GetAppResList) {
+			uri = bundle.getString("getAppResList.uri");
+		}
+		if (name == InterfaceName.FindProUserByProId) {
+			uri = bundle.getString("findProUserByProId.uri");
+		}
+		if (name == InterfaceName.FindLoginInfoByUserId) {
+			uri = bundle.getString("findLoginInfoByUserId.uri");
+		}
+		if (name == InterfaceName.FindOrgUserByOrgId) {
+			uri = bundle.getString("findOrgUserByOrgId.uri");
+		}
+		if (name == InterfaceName.GetUserOrgAndProList) {
+			uri = bundle.getString("getUserOrgAndProList.uri");
+		}
+		if (name == InterfaceName.GetMyResListBySysId) {
+			uri = bundle.getString("getMyResListBySysId.uri");
+		}
+		if (name == InterfaceName.GetOrgResInfoByResId) {
+			uri = bundle.getString("getOrgResInfoByResId.uri");
+		}
+		if (name == InterfaceName.AddResInfo) {
+			uri = bundle.getString("addResInfo.uri");
+		}
+		if (name == InterfaceName.UpdateOrgResInfo) {
+			uri = bundle.getString("updateOrgResInfo.uri");
+		}
+		if (name == InterfaceName.DelOrgResInfoByResId) {
+			uri = bundle.getString("delOrgResInfoByResId.uri");
+		}
+		if (name == InterfaceName.GetOrgResInfoListBySysId) {
+			uri = bundle.getString("getOrgResInfoListBySysId.uri");
+		}
+		if (name == InterfaceName.GetOrgResInfoListByPage) {
+			uri = bundle.getString("getOrgResInfoListByPage.uri");
+		}
+		if (name == InterfaceName.GetSystemApi) {
+			uri = bundle.getString("getSystemApi.uri");
+		}
+		if (name == InterfaceName.EnableOrgRes) {
+			uri = bundle.getString("enableOrgRes.uri");
+		}
+		if (name == InterfaceName.GetDefaultAdminOrgRes) {
+			uri = bundle.getString("getDefaultAdminOrgRes.uri");
+		}
+		if (name == InterfaceName.FindBandsStatMenu) {
+			uri = bundle.getString("findBandsStatMenu.uri");
+		}
+		if (name == InterfaceName.FindUserMenu) {
+			uri = bundle.getString("findUserMenu.uri");
+		}
+		if (name == InterfaceName.FindContractorList) {
+			uri = bundle.getString("findContractorList.uri");
+		}
+		if (name == InterfaceName.FindContractorDetails) {
+			uri = bundle.getString("findContractorDetails.uri");
+		}
+		if (name == InterfaceName.GetEnumList) {
+			uri = bundle.getString("getEnumList.uri");
+		}
+		if (name == InterfaceName.GetProsByOrgId) {
+			uri = bundle.getString("getProsByOrgId.uri");
+		}
+		if (name == InterfaceName.GetOrgJobDicListByPage) {
+			uri = bundle.getString("getOrgJobDicListByPage.uri");
+		}
+		if (name == InterfaceName.AddOrgJobDic) {
+			uri = bundle.getString("addOrgJobDic.uri");
+		}
+		if (name == InterfaceName.UpdateOrgJobDic) {
+			uri = bundle.getString("updateOrgJobDic.uri");
+		}
+		if (name == InterfaceName.GetOrgJobDicList) {
+			uri = bundle.getString("getOrgJobDicList.uri");
+		}
+		if (name == InterfaceName.DelOrgJobDicById) {
+			uri = bundle.getString("delOrgJobDicById.uri");
+		}
+		if (name == InterfaceName.ExportProUser) {
+			uri = bundle.getString("exportProUser.uri");
+		}
+		if (name == InterfaceName.AddOssUserBaseInfo) {
+			uri = bundle.getString("addOssUserBaseInfo.uri");
+		}
+		if (name == InterfaceName.AddCompanyUserInfo) {
+			uri = bundle.getString("addCompanyUserInfo.uri");
+		}
+		if (name == InterfaceName.Lists) {
+			uri = bundle.getString("lists.uri");
+		}
+		if (name == InterfaceName.Adds) {
+			uri = bundle.getString("adds.uri");
+		}
+		if (name == InterfaceName.Updates) {
+			uri = bundle.getString("updates.uri");
+		}
+		if (name == InterfaceName.Dels) {
+			uri = bundle.getString("dels.uri");
+		}
+		if (name == InterfaceName.GetMaterialRecordList) {
+			uri = bundle.getString("getMaterialRecordList.uri");
 		}
 		
 		testUrl = address + uri;

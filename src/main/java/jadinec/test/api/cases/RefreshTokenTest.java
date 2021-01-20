@@ -52,7 +52,7 @@ public class RefreshTokenTest {
 
 		
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", VerificationCodeLoginTest.token);
+		post.setHeader("accessToken", VerificationCodeLoginTest.token);
 		post.setHeader("client", ConfigFile.client);
 		
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");

@@ -12,17 +12,16 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
 import jadinec.test.api.config.TestConfig;
 import jadinec.test.api.utils.ConfigFile;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 
-public class ListTest {
+public class UpdateDeptInfoTest {
 
-	// 税收类型分页列表
-	@Test(enabled=false)
-	public void listTest() throws IOException {
+	// 修改组织机构部门信息
+	@Test
+	public void updateDeptInfoTest() throws IOException {
 
 		// 发送请求
 		JSONArray result = getJsonResult();
@@ -32,28 +31,35 @@ public class ListTest {
 
 		for (int i = 0; i < result.size(); i++) {
 			JSONObject jsonObject = result.getJSONObject(i);
-			data = jsonObject.getString("success");
+			data = jsonObject.getString("msg");
 		}
 
 		// 验证结果
-		Assert.assertEquals("true", data);
+		Assert.assertEquals("执行成功", data);
 	}
 
 	private JSONArray getJsonResult() throws ClientProtocolException, IOException {
-		HttpPost post = new HttpPost(TestConfig.listUrl);
-		System.out.println(TestConfig.listUrl);
+		HttpPost post = new HttpPost(TestConfig.updateDeptInfoUrl);
+		System.out.println(TestConfig.updateDeptInfoUrl);
 		JSONObject param1 = new JSONObject();
 		JSONObject param2 = new JSONObject();
 
-		param2.put("pageNum", 1);// 当前页 默认1
-		param2.put("pageSize", 10);// 页大小 默认10
-		
-		param1.put("version", ConfigFile.version);
-		param1.put("client", ConfigFile.client_pc);
+		param2.put("orgDeptId", "99461256");
+		param2.put("orgDeptName", "测试添加部门1");
+		param2.put("parentOrgDeptId", "99461221");
+		param2.put("orgId", "541");
+		param2.put("proId", "1003");
+		param2.put("contractorId", "");
+		param2.put("deptFunc", "5");
+		param2.put("leaderId", "");
+
+		param1.put("clientType", 2);
+		param1.put("appVersion", 1.9);
+		param1.put("serverVersion", 1.9);
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("accessToken", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
@@ -64,7 +70,7 @@ public class ListTest {
 		result = EntityUtils.toString(response.getEntity(), "UTF-8");
 		// System.out.println(result);
 		List<String> list = Arrays.asList(result);
-		JSONArray array = JSONArray.parseArray(list.toString());
+		JSONArray array = JSONArray.fromObject(list);
 		return array;
 	}
 }

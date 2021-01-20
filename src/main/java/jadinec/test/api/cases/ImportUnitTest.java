@@ -52,7 +52,7 @@ public class ImportUnitTest {
 			HttpPost post = new HttpPost(TestConfig.importUnitUrl);
 			System.out.println(TestConfig.importUnitUrl);
 
-			post.setHeader("access_token", ConfigFile.access_token_pc);
+			post.setHeader("accessToken", ConfigFile.access_token_pc);
 
 			File file = new File(filePath);
 			FileInputStream fileInputStream = new FileInputStream(file);
@@ -64,7 +64,7 @@ public class ImportUnitTest {
 			response = TestConfig.defaultHttpClient.execute(post);
 
 			int statusCode = response.getStatusLine().getStatusCode();
-			System.out.println(statusCode);
+			//System.out.println(statusCode);
 			String str = EntityUtils.toString(response.getEntity(), "UTF-8");
 
 			if (200 == statusCode) {

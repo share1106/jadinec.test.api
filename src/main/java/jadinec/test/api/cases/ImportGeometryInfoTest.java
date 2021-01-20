@@ -59,7 +59,7 @@ public class ImportGeometryInfoTest {
 		MediaType type = MediaType.parseMediaType("multipart/form-data");
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(type);
-		headers.add("access_token", ConfigFile.access_token_pc);
+		headers.add("accessToken", ConfigFile.access_token_pc);
 				
 		MultiValueMap<String,Object> form = new LinkedMultiValueMap<String,Object>();
 		

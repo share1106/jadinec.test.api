@@ -20,7 +20,7 @@ import net.sf.json.JSONObject;
 public class ExportUnitTest {
 
 	// 运营平台-单位管理-导出
-	@Test
+	@Test(dependsOnGroups= {"bindEmail"})
 	public void exportUnitTest() throws IOException {
 
 		// 发送请求
@@ -51,7 +51,7 @@ public class ExportUnitTest {
 		param1.put("content", param2);
 
 		post.setHeader("Content-Type", ConfigFile.Content_Type);
-		post.setHeader("access_token", ConfigFile.access_token_pc);
+		post.setHeader("accessToken", ConfigFile.access_token_pc);
 		post.setHeader("client", ConfigFile.client_pc);
 
 		StringEntity entity = new StringEntity(param1.toString(), "UTF-8");
